@@ -12,6 +12,10 @@ Mamma Spa realiza sus servicios con los mejores productos cosméticos que tambi�
 Decidimos elegir este emprendimiento para el proyecto porque nos pareció una buena idea empezar con un negocio real para ofreccer nuestro sitio. Mamma Spa pertenece a la tía de uno de los integrantes y nos facilitó la información de base que requerimos para empezar el proyecto. Gracias a que el emprendimiento ya existe también ahorramos tiempos en la elección de logo, paleta de colores y temática del Market Place. 
 
 
+#### Link de Trello:
+*https://trello.com/b/Sli0sqFK/grupo9mammaspa
+
+
 #### Referencias:
 * https://skinlabs-sticky.webflow.io/
    •
