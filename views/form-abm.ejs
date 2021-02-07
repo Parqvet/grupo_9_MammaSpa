@@ -4,16 +4,22 @@
 <!-- Head -->
 <%- include('partials/head') %>
 <body>
-     <!-- Navigation --> 
-     <div class="container"> 
-       <div class="text-center py-5">
+    <%- include('partials/header') %>
+     
+    <div class="abm">
+     <div class="container-fluid"> 
+     
+       <div class="shadow p-3 mb-5 bg-white rounded text-center ">
           <h2>Mis productos | servicios | ABM</h2>
        </div>  
      </div>  
-     <div class="container"> 
+     <div class="container-fluid"> 
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 bg-primary">
-                <form action="" method="POST">
+            
+            <form action="" method="POST">
+                <div class="col-12 col-md-6 col-lg-6 "></div>
+
+
                     <p><label class="form-label"  for="nombre">Crear producto | servicio:</label></p>
                     <input type="text" class="form-control"  name="nombre" id="nombre" placeholder="Ingrese nombre producto o servicio" ><br>
 
@@ -24,29 +30,27 @@
                     <label for= "" class="form-label">Descripcion del producto | servicio</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea><br>
 
-
-                    <p><input class="btn btn-primary" type="submit" value="Submit"></p>
                     
-                    <input class="btn btn-primary" type="reset" value="Reset"></p>
-                   
-                    <a class="btn btn-primary" href="#" role="button">Link</a>
 
-                </form>
-            </div>
-            <div class="col-12 col-md-6 col-lg-6 bg-success"> 
-                <section id="imagen" class="container">
-                <img src="../imagenes/centro-de-manicura-bilbao.jpg" alt="foto"class="img-fluid">
-                </section>
-            </div>
-        
- 
-            </div>                
+                
+                </div>
             
+                <div class="col-12 col-md-6 col-lg-6 "> 
+
+                
+                <img src="/images/face-b-02.jpg" class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
+               
+                </div>  
+                <input class="btn btn-primary" type="reset" value="Reset">
+                   
+                <input class="btn btn-primary" type="submit" value="Submit">
+                 <a class="btn btn-primary" href="#" role="button">Link</a>            
+            </form>
         </div>
     </div> 
     
      
-   
+</div>   
 
 </body>
 </html> 

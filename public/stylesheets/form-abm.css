@@ -1,15 +1,16 @@
-* {
-    box-sizing: border-box;
+.abm {
 
-}
-body {
-    font-family:14px "Lucida Grande", Helvetica, Arial, sans-serif; ;
-
+     background-color: #fcfaf6 ;
 }
 h2 {
-    background-color: aqua;
+    background-color: #d3b8a3 ;
+    color: azure;
+    position:sticky;
+    box-shadow: black 0px 0px 0em peachpuff ;
 }
-#imagen img{
-    width: 100%;
 
-}
+.btn { 
+    background-color: rgb(252, 128, 114);
+   
+}    
+
