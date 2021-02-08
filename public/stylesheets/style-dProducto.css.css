@@ -23,10 +23,7 @@ div .cart{
  background:#fbe2ce;
     
 }
-div .content{
-    display: block;
-    margin: auto;
-}
+
 .Products img{
     border: 1px solid black;
 }
@@ -38,3 +35,4 @@ div .content{
     flex-direction: column;
     align-items: center;
 }
+
