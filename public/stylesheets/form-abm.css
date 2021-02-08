@@ -1,16 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
 .abm {
 
      background-color: #fcfaf6 ;
 }
-h2 {
-    background-color: #d3b8a3 ;
-    color: azure;
-    position:sticky;
-    box-shadow: black 0px 0px 0em peachpuff ;
-}
 
-.btn { 
+.btn-primary {
+    color: #fff;
     background-color: rgb(252, 128, 114);
+    border-color:#fbe2ce ;
    
-}    
-
+} 
+   
+.abm h3 {
+    
+    font-size: 1.3em;
+    background-color:#fbe2ce ;
+}

@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.bg-nav-mms {
+    background-color: #fcfaf6;
+}
+
+header nav a {
+    color: black;
+}
+/* ---------- */
+
+/* Home Image */
+.home-main {
+    background: url(../images/portada01.jpg);
+    height: 91vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-main .i-bag {
+    margin-top: 3px;
+}
