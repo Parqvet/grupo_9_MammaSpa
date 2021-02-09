@@ -9,7 +9,7 @@
     background-color: #fcfaf6;
 }
 
-header nav a {
+.header-main nav a {
     color: black;
 }
 
@@ -17,7 +17,6 @@ header nav a {
     background-color: #d3b8a3;
 }
 
-.header-main .navbar
 /* ---------- */
 
 /* Home Image */
@@ -57,27 +56,20 @@ header nav a {
     justify-content: center;
 }
 
-/* Box de presentación de Servicios */
+.ns-box .box-t .btn {
+    background-color: rgb(252, 128, 114);
+}
+
+/* Box de la sección de Servicios */
 .box-s-main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.ns-box .box-t .btn {
-    background-color: #d3b8a3;
+.box-s-main .btn {
+    background-color: rgb(252, 128, 114);
 }
-
-/* Box principal de Productos y Servicios */
-/* .box-s-main .col-md-4 {
-    border: 1px solid blue;
-    height: 300px;
-}
-
-.box-s-main img {
-    border: 1px solid red;
-    height: 100%;
-} */
 
 /* Medias Queries */
 @media (min-width: 1024px) {
