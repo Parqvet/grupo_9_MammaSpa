@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('partials/head') %>
+  
 <body>
     <%- include('partials/header') %>
     <div class="container">
         <div class="row">
     
-        
-    
-          <div class="col-12 col-md-6 col-lg-6">
+        <div class="col-12 col-md-6 col-lg-6">
             <img src="/images/producto-01.png" height="500" alt="">
           </div>
     
-          <div class=" box-product col-12 col-md-6 col-lg-6">
+          <div class="box-product col-12 col-md-6 col-lg-6">
             <div class="container-d-product">
               <h2 class="mt-5">Nombre del Producto</h2>
     
               <h3 class="my-3">$ Precio</h3>
                
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In molestias cupiditate doloremque hic sequi quam mollitia possimus eligendi sed placeat.</p>
-              <div class="btn btn-primary mt-5">+ / -</div><br>
+              <div class="botones">
+               <form action=""><div class="btn btn-primary">-</div><input type="number"><div class="btn btn-primary">+</div></form>
+              </div>
+              
               <button class="btn btn-success mt-3">Agregar al carrito</button>
             </div>
           

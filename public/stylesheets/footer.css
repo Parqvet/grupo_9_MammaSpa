@@ -1,16 +1,13 @@
+
+
 footer .container .row .contact{
     text-align: center;
     align-content: center;
     align-items: center;
     margin: auto;
     justify-content: space-around;
-
 }
-
-
 h1{
-    
- position: relative;
    color: #d3b8a3;
    font-weight: 500;
    margin: auto;
@@ -18,32 +15,24 @@ h1{
    border-bottom: solid red 5px;
    display: inline-block;
    text-align: center;
-   
-
 }
-
-
 .sci{
+    margin: auto;
     margin-top: 20px;
     display: flex;
-    
+    justify-content: space-between;
+    width: 40%;
+    padding: 0;
 }
 .sci li {
     list-style: none;
-  
 }
 .sci li a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    padding: 10px;
     background: #fcdca9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
     text-decoration: none;
     border-radius: 4px;
-    
 }
 .sci li a:hover{
     background: #d3b8a3;
@@ -55,10 +44,8 @@ h1{
 
 @media (min-width: 990px) {
     h1 {
-        position: relative;
-        color: #d3b8a3;
+         color: #d3b8a3;
         font-weight: 500;
         margin-bottom: 15px;
-        left: 150px;
     }
   }
