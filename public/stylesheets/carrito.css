@@ -1,9 +1,12 @@
-*{
+
+.title{
     background-color:#fcfaf6;
     position: relative;
 }
 
-.header{
+.container-fluid-headerCarrito{
+    background-color:#fcfaf6;
+    position: relative;
     display: flex;
     margin: 0px;
     flex-wrap: wrap;
@@ -13,6 +16,8 @@
 }
 
 .home {
+    background-color:#fcfaf6;
+    position: relative;
     text-align: center;
     font-weight: 80;
     font-size: 15px;
@@ -21,11 +26,16 @@
     color: #666666;
 }
 
-.btn.btn-primary.btn-sm{
+#cart{
+    background-color: #fcfaf6;
+
+}
+.btn.btn-primary.btn-sm-carrito{
     background-color: #d3b8a3;
     color: #fbe2ce;
     border: 0px;
 }
+
 
 #vaciarcarrito{
     color: #d3b8a3;
@@ -39,20 +49,29 @@
 
 }
 
-.container{
+#containerCart{
+    background-color:#fcfaf6;
+    position: relative;
     border: solid 0.5px #666666;
     padding: 15px 5px 0px ;
-    margin-left: 0px;
+    margin: auto;
+    
 }
 
 
 #bodycarrito{
+    background-color:#fcfaf6;
+    position: relative;
     padding: 12px;
+    border: solid 0.5px #666666;
     color: #666666;
+    margin: auto;
 }
 
 
 .cierre{
+    background-color:#fcfaf6;
+    position: relative;
     padding: 15px 0px;
     display: flex;
     flex-direction: row-reverse;
