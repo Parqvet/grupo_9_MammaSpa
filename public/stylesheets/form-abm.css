@@ -1,13 +1,14 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding:0;
 }
 
-
-.abm {
-
+div .container-fluid{
+     padding-top: 5em;
      background-color: #fcfaf6 ;
-}
+}     
+
 
 .btn-primary {
     color: #fff;
@@ -15,9 +16,12 @@
     border-color:#fbe2ce ;
    
 } 
-   
-.abm h3 {
+h3 {
     
-    font-size: 1.3em;
-    background-color:#fbe2ce ;
+    font-size: 2.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#f6d2ae ;
+    color:aliceblue
+   
 }

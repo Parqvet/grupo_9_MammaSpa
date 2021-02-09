@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <%- include('partials/head') %>
+
+    <body>
+        <!-- header  -->
+        <%- include('partials/header') %>
+  <div class="container-fluid">
+    <div class="header"> 
+      <p class="home">Home / Carrito</p>
+      <button type="button" class="btn btn-primary btn-sm">Cerrar Sesion</button>  </div>
+      
+      <!-- titulo -->
+      <div class="title">  
+        <h1 > CARRITO </h1>
+        <hr>
+      </div>
+      
+      <!--body carrito-->
+      
+      <section>
+        
+        <!--Parte superior del cart-->
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-7 col-5 col-sm-7">Servicio/Producto</div>
+
+            <div class="col-lg-2 col-3 col-sm-2"><p class="text-right">Precio</p></div>
+
+            <div class="col-lg-3 col-3 col-sm-3"><p class="col-lg-1 text-right">Total</p></div>
+
+          </div>
+        </div>
+        
+        
+        <!--Parte body del cart-->
+        <div class="container" id="bodycarrito">
+          <div class="row">
+            
+            
+            <div class="col-xl-3 col-lg-2 col-12 col-sm-3"> <img height= "150px"src="/images/producto-03.png" alt="producto-03">
+            </div>
+            
+            <div class="col-xl-4 col-lg-5 col-5 col-sm-4">
+              <h6>Nombre del producto</h6>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. ea iusto vitae quasi deleniti nam repudiandae!
+              </p>
+            </div>
+            
+            <div class="col-xl-2 col-lg-2 col-3 col-sm-2"> <p class="text-left">$100</p></div>
+            
+            <div class="col-xl-2 col-lg-2 col-3 col-sm-2"><p class="text-left"> $2000 </p></div>
+            
+            
+            <div class="col-xl-1 col-lg-1 col-1 col-sm-1">
+              <button type="button" class="btn-close btn-sm" disabled aria-label="Close"></button>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+  <!--Cierre carrito-->
+  
+  <div class="container-fluid">
+    <div class="cierre"> 
+      
+      <button type="button" class="btn btn-primary btn-sm">Finalizar compra</button> 
+      <button id="vaciarcarrito" type="button" class="btn btn-primary btn-sm">Vaciar carrito</button> 
+      <button type="button" class="btn btn-primary btn-sm">Seguir comprando</button> 
+      
+    </div>
+    
+    <%- include('partials/scripts') %>
+  </body>
+  </html>
+  
+  
