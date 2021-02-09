@@ -1,0 +1,60 @@
+*{
+    background-color:#fcfaf6;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid 8px #fcfaf6;
+;
+}
+
+.home {
+    text-align: center;
+    font-weight: 80;
+    font-size: 15px;
+    text-overflow: inherit;
+    margin-top: 0px;
+    color: #666666;
+}
+
+.btn.btn-primary.btn-sm{
+    background-color: #d3b8a3;
+    color: #fbe2ce;
+    border: 0px;
+}
+
+#vaciarcarrito{
+    color: #d3b8a3;
+    background-color: #fbe2ce;
+}
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #d3b8a3;
+    text-shadow: 2px 1px #f6d2ae;
+    border: solid 10px #fcfaf6;
+
+}
+
+.container{
+    border: solid 0.5px #666666;
+    padding: 15px 5px 0px ;
+    margin-left: 0px;
+}
+
+
+#bodycarrito{
+    padding: 12px;
+    color: #666666;
+}
+
+
+.cierre{
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
