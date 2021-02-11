@@ -1,5 +1,7 @@
-
-.title{
+#bodyCart{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
     background-color:#fcfaf6;
     position: relative;
 }
@@ -48,21 +50,17 @@
     border: solid 10px #fcfaf6;
 
 }
-
-#containerCart{
-    background-color:#fcfaf6;
-    position: relative;
+#cartTitulo {
+    padding: 0px;
+}
+.tituloCart{
     border: solid 0.5px #666666;
-    padding: 15px 5px 0px ;
-    margin: auto;
-    
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 
 #bodycarrito{
-    background-color:#fcfaf6;
-    position: relative;
-    padding: 12px;
     border: solid 0.5px #666666;
     color: #666666;
     margin: auto;
@@ -70,8 +68,7 @@
 
 
 .cierre{
-    background-color:#fcfaf6;
-    position: relative;
+    background-color: #fcfaf6;
     padding: 15px 0px;
     display: flex;
     flex-direction: row-reverse;
