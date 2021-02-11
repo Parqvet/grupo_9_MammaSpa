@@ -1,4 +1,7 @@
-*{
+#bodyCart{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
     background-color:#fcfaf6;
     position: relative;
 }
@@ -38,21 +41,24 @@
     border: solid 10px #fcfaf6;
 
 }
-
-.container{
+#cartTitulo {
+    padding: 0px;
+}
+.tituloCart{
     border: solid 0.5px #666666;
-    padding: 15px 5px 0px ;
-    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 
 #bodycarrito{
-    padding: 12px;
+    border: solid 0.5px #666666;
     color: #666666;
 }
 
 
 .cierre{
+    background-color: #fcfaf6;
     padding: 15px 0px;
     display: flex;
     flex-direction: row-reverse;
