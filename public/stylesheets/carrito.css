@@ -6,20 +6,16 @@
     position: relative;
 }
 
-.container-fluid-headerCarrito{
-    background-color:#fcfaf6;
-    position: relative;
+.header{
     display: flex;
     margin: 0px;
     flex-wrap: wrap;
     justify-content: space-between;
     border: solid 8px #fcfaf6;
-;
+    ;
 }
 
 .home {
-    background-color:#fcfaf6;
-    position: relative;
     text-align: center;
     font-weight: 80;
     font-size: 15px;
@@ -28,16 +24,11 @@
     color: #666666;
 }
 
-#cart{
-    background-color: #fcfaf6;
-
-}
 .btn.btn-primary.btn-sm-carrito{
     background-color: #d3b8a3;
     color: #fbe2ce;
     border: 0px;
 }
-
 
 #vaciarcarrito{
     color: #d3b8a3;
@@ -63,7 +54,6 @@
 #bodycarrito{
     border: solid 0.5px #666666;
     color: #666666;
-    margin: auto;
 }
 
 
