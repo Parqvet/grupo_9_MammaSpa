@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border: solid 8px #fcfaf6;
+    background-color: #fcfaf6
     ;
 }
 
@@ -22,6 +23,7 @@
     text-overflow: inherit;
     margin-top: 0px;
     color: #666666;
+    background-color: #fcfaf6;
 }
 
 .btn.btn-primary.btn-sm-carrito{
