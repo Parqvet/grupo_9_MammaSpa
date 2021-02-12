@@ -1,23 +1,36 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding:0;
 }
+div .container-fluid-title {
+    padding-top: 5em;
+    background-color: #fcfaf6 ;
+    color:#666666
 
-
-.abm {
-
-     background-color: #fcfaf6 ;
 }
-
+div .abm {
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    
+}
+    
 .btn-primary {
     color: #fff;
     background-color: rgb(252, 128, 114);
     border-color:#fbe2ce ;
-   
 } 
-   
-.abm h3 {
+.btn-primary:hover{
+    background-color: #d3b8a3;
+    border-color: #fbe2ce; 
+ 
+ } 
+#abm {
     
-    font-size: 1.3em;
-    background-color:#fbe2ce ;
+    font-size: 2.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#d3b8a3 ;
+    color:aliceblue
+   
 }

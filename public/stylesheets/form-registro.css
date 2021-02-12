@@ -2,12 +2,22 @@
 
     background-color: #fcfaf6 ;
 }
+.form-horizontal i {
+   color: #d3b8a3;
+   
+
+}
 
 .btn-primary {
    color: #fff;
    background-color: rgb(252, 128, 114);
    border-color:#fbe2ce ;
   
+}
+.btn-primary:hover{
+   background-color: #d3b8a3;
+   border-color: #fbe2ce; 
+
 } 
   
 .abm h3 {

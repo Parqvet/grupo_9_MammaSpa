@@ -5,8 +5,9 @@
 
 
 #login {
-
+    padding-top: 5em;
     background-color: #fcfaf6 ;
+    color:#666666;
     margin-bottom: 2em;
 }
 
@@ -16,6 +17,11 @@
    border-color:#fbe2ce ;
   
 }
+.btn-primary:hover{
+    background-color: #d3b8a3;
+    border-color: #fbe2ce; 
+ 
+ } 
 
  
 h3 {

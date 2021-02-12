@@ -1,4 +1,5 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -8,9 +9,14 @@ body {
     background-color: #fcfaf6;
 }
 
-header nav a {
+.header-main nav a {
     color: black;
 }
+
+.header-main .bg-mms {
+    background-color: #d3b8a3;
+}
+
 /* ---------- */
 
 /* Home Image */
@@ -23,6 +29,159 @@ header nav a {
     background-position: center center;
 }
 
+/* Icon Shopping-bag */
 .header-main .i-bag {
     margin-top: 3px;
+}
+
+/* Box e imagenes del titulo de: Nuestros Servicios */
+.box-t {
+    width: 25rem;
+}
+
+.box-f {
+    margin-right: 10px;
+}
+
+.box-h {
+    margin-left: 10px;
+}
+
+.img-ns-h {
+    height: 270px;
+}
+
+.ns-box {
+    display: flex;
+    justify-content: center;
+}
+
+.ns-box .box-t .btn {
+    background-color: rgb(252, 128, 114);
+}
+
+/* Box de la sección de Servicios */
+.box-s-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-s-main .btn {
+    background-color: rgb(252, 128, 114);
+}
+
+/* Sección de Productos */
+.container-p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7rem;
+}
+
+.box-products {
+    height: 80vh;
+    width: 40vw;
+    border: 1px solid rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+}
+
+.box-pl {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+.box-pr {
+    width: 50%;
+}
+
+.box-p-top {
+    height: 50%;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.box-p-bottom {
+    height: 50%;
+}
+
+.img-p {
+    height: 100%;
+    width: 100%;
+}
+
+/* Medias Queries */
+@media (min-width: 1024px) {
+    .title-ns {
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* Medias Queries de la sección de Nuestros Servicios*/
+    .title-ns {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .img-ns-f {
+        height: 80%;
+    }
+
+    .img-ns-h {
+        height: 80%;
+    }
+    /* ---------- */
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .title-ns {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .img-ns-f {
+        height: 65%;
+    }
+
+    .img-ns-h {
+        height: 65%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .title-ns {
+        font-size: 22px;
+        margin-left: 0px;
+    }
+
+    .ns-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-t {
+        width: 18rem;
+    }
+
+    .img-ns-f {
+        height: 65%;
+    }
+
+    .img-ns-h {
+        height: 65%;
+    }
+
+    /* Sección de Nuestros Produtos */
+    .box-products-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
 }

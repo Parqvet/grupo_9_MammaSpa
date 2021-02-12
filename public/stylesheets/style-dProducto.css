@@ -1,32 +1,9 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    background: #fcfaf6;
-}
+
 
 div{
     display: flex;
 }
-div .cart{
- display: block;
- margin-top: 50px;
- width: 250px;
- height: 35px;
- background:#fbe2ce;
-    
-}
-div .content{
-    display: block;
-    margin: auto;
-}
+
 .Products img{
     border: 1px solid black;
 }
