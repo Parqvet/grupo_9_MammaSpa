@@ -1,14 +1,16 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding:0;
 }
-div .container-fluid-title {
-    padding-top: 5em;
+
+div .container-abm {
+    padding-top: 4em;
     background-color: #fcfaf6 ;
     color:#666666
 
-}
+} 
+
 div .abm {
     margin-left: 0.9em;
     margin-right: 0.9em;
@@ -27,7 +29,7 @@ div .abm {
  } 
 #abm {
     
-    font-size: 2.5em;
+  
     padding-top: 10px;
     padding-bottom: 10px;
     background-color:#d3b8a3 ;
