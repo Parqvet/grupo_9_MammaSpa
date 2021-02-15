@@ -1,20 +1,22 @@
 
+footer{
+    width: 100%;
+}
 
 footer .container .row .contact{
-   /* text-align: center;
+   text-align: center;
     align-content: center;
     align-items: center;
     margin: auto;
-    justify-content: space-around; */
-    border: 1px solid blue;
+    justify-content: space-around; 
+  
 }
 .sci-contenido{
    color: #d3b8a3;
    font-weight: 500;
-   margin: auto;
-   margin-bottom: 15px;
+   margin:auto;
+   margin-bottom: 5px;
    border-bottom: solid #fcd2ae 5px;
-  
   
 }
 .sci{
@@ -23,12 +25,14 @@ footer .container .row .contact{
     display: flex;
     justify-content: space-between;
     width: 40%;
-    padding:0;
+    padding:0px;
  
     
 }
 .sci li {
     list-style: none;
+    padding: 12px;
+
 }
 .sci li a {
     display: inline-block;
@@ -41,11 +45,11 @@ footer .container .row .contact{
     background: #d3b8a3;
 }
 .sci li a .fab{
-    color: #fcfaf6;
+    color: black;
     font-size: 20px;
 }
-.iframe-footer{
-    border: 1px solid blue;
+.footer-copy{
+    text-align: center;
 }
 
 
