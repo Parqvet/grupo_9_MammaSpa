@@ -14,16 +14,18 @@ footer .container .row .contact{
    margin: auto;
    margin-bottom: 15px;
    border-bottom: solid #fcd2ae 5px;
-   display: inline-block;
-   text-align: center;
+  
+  
 }
 .sci{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
     width: 40%;
-    padding: 0;
+    padding:0;
+ 
+    
 }
 .sci li {
     list-style: none;
@@ -45,6 +47,7 @@ footer .container .row .contact{
 .iframe-footer{
     border: 1px solid blue;
 }
+
 
 /* Media Queries del footer */
 @media screen and (min-width: 320px) and (max-width: 425px) {
