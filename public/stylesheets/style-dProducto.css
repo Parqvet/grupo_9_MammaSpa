@@ -1,10 +1,4 @@
-@media(min-width: 768px){
-    .container-d-product{
-        display:flex;
-        align-items: stretch;
-        flex-direction: column;
-    }
-}
+
 .container-d-product h2,h4{
     color: #adadad;
 }
