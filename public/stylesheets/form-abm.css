@@ -8,6 +8,7 @@ div .container-abm {
     padding-top: 4em;
     background-color: #fcfaf6 ;
     color:#666666
+    
 
 } 
 
@@ -29,7 +30,7 @@ div .abm {
  } 
 #abm {
     
-  
+    font-size: 2rem;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color:#d3b8a3 ;
