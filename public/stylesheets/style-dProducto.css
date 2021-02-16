@@ -2,14 +2,9 @@
 .container-d-product h2,h4{
     color: #adadad;
 }
-
-
 .div{
     display: flex;
 }
-
-
-
 .container-d-product{
     display: flex;
     flex-direction: column;
@@ -19,7 +14,6 @@
   
  
   
-
 
 
   
