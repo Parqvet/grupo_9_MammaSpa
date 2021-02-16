@@ -1,29 +1,38 @@
+
+footer{
+    width: 100%;
+}
+
 footer .container .row .contact{
-    text-align: center;
+   text-align: center;
     align-content: center;
     align-items: center;
     margin: auto;
-    justify-content: space-around;
+    justify-content: space-around; 
+  
 }
 .sci-contenido{
    color: #d3b8a3;
    font-weight: 500;
-   margin: auto;
-   margin-bottom: 15px;
+   margin:auto;
+   margin-bottom: 5px;
    border-bottom: solid #fcd2ae 5px;
-   display: inline-block;
-   text-align: center;
+  
 }
 .sci{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
     width: 40%;
-    padding: 0;
+    padding:0px;
+ 
+    
 }
 .sci li {
     list-style: none;
+    padding: 12px;
+
 }
 .sci li a {
     display: inline-block;
@@ -36,9 +45,13 @@ footer .container .row .contact{
     background: #d3b8a3;
 }
 .sci li a .fab{
-    color: #fcfaf6;
+    color: black;
     font-size: 20px;
 }
+.footer-copy{
+    text-align: center;
+}
+
 
 /* Media Queries del footer */
 @media screen and (min-width: 320px) and (max-width: 425px) {

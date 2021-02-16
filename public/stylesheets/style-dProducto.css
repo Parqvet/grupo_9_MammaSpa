@@ -1,15 +1,25 @@
 
+.container-d-product h2,h4{
+    color: #adadad;
+}
 
-.botones form{
+
+.div{
     display: flex;
-    align-items: center;
-    align-content: center;
-    padding: 0;
-   
-}
-.botones form button{
-    margin: 0;
-   
-    
 }
 
+
+
+.container-d-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  
+ 
+  
+
+
+
+  

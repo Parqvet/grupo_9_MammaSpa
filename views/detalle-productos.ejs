@@ -4,31 +4,32 @@
   
 <body>
     <%- include('partials/header') %>
-    <div class="contenedor-fluid">
-        <div class="row">
-          
-        <section class="main">
-          <div class="col-12 col-md-6 col-lg-6">
-            <img src="/images/producto-01.png"  height="100%" alt="">
-          </div>
-        </section>
-        
-    
-          <div class="box-product col-12 col-md-6 col-lg-6">
-            <div class="container-d-product">
-              <h2 class="mt-5">Nombre del Producto</h2>
-              <h4>$PRECIO</h4>
-               
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In molestias cupiditate doloremque hic sequi quam mollitia possimus eligendi sed placeat.</p>
-              <div class="botones">
-               <form action=""><input type="number" placeholder="Cantidad" style="text-align:center;"></form>
-              </div>
-              
-              <button class="btn btn-success mt-3" style="color: #707B7C; background: #fcdca9; border-color:  #fbe2ce;">Agregar al carrito</button>
-      
+    <div class="container-d-product">
+      <div class="row mt-5 ">
+        <div class="caja-img col-12 col-md-6 col-lg-6">
+          <img src="/images/producto-01.png" class="img-fluid" height="100%" alt="">
         </div>
+        
+             <div class="box-product col-12 col-md-6 col-lg-6">
+                 <div class=" container-d-product">
+                    <h2 class="mt-5">Nombre del Producto</h2>
+                        <h4>$PRECIO</h4>
+               
+              <div class="text pt-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing    elit. In molestias cupiditate doloremque
+                   hic sequi quam mollitia possimus eligendi sed placeat.</p>
+              </div>
+            
+              <div class="botones pt-5">
+               <form action=""><input type="number" placeholder="Cantidad" style="text-align:center;"></form>
+                  </div>
+                  <div class="boton2 pt-5">
+                    <button class="btn btn-secondary mb-2 p-3" type="button">Agrega al carrito</button>
+                  </div>
+                 </div>
+             </div>
       </div>
-
+    </div>
       <%- include('partials/footer') %>
 </body>
 </html>
