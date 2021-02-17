@@ -15,20 +15,29 @@
 }
 
 /* Box e imagenes del titulo de: Nuestros Servicios */
+.ns-box {
+    height: 70vh;
+}
+
 .box-t {
     width: 25rem;
+    height: 370px;
 }
 
-.box-f {
-    margin-right: 10px;
+.box-face {
+    height: 270px;
 }
 
-.box-h {
-    margin-left: 10px;
+.box-hand {
+    height: 270px;
 }
 
 .img-ns-h {
-    height: 270px;
+    height: 100%;
+}
+
+.img-ns-f {
+    height: 100%;
 }
 
 .ns-box {
@@ -137,9 +146,32 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
+    /* Nuestros Servicios Home */
+    .ns-box {
+        height: 100%;
+    }
+
+    .box-t {
+        width: 90%;
+        height: 75%;
+    }
+
+    .box-face {
+        height: 65%;
+    }
+
+    .box-hand {
+        height: 65%;
+    }
+
+    /* Servicios */
     .title-ns {
         font-size: 22px;
         margin-left: 0px;
+    }
+
+    .card-ns {
+        width: 80%;
     }
 
     .ns-box {
@@ -148,16 +180,12 @@
         align-items: center;
     }
 
-    .box-t {
-        width: 18rem;
-    }
-
     .img-ns-f {
-        height: 65%;
+        height: 100%;
     }
 
     .img-ns-h {
-        height: 65%;
+        height: 100%;
     }
 
     /* Sección de Nuestros Productos */
@@ -185,8 +213,8 @@
         
     }
 
-}
-
-@media screen and (min-width: 320px) and (max-width: 425px) {
+    .btn-service {
+        margin-bottom: 5px;
+    }
 
 }
