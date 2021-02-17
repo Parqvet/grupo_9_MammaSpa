@@ -11,6 +11,10 @@
     background-color: #d3b8a3;
 }
 
+.header-main .navbar-toggler-icon {
+    border: 1px solid black;
+}
+
 /* Icon Shopping-bag */
 .header-main .i-bag {
     margin-top: 3px;
