@@ -52,4 +52,11 @@
     .title-price-dp {
         font-size: 25px;
     }
+
+    .btn-dp {
+        width: 70%;
+        height: 30px;
+        border: 1px solid grey;
+        border-radius: 2px;
+    }
 }
