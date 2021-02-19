@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const { renderProductsMain, renderProduct } = require('../controllers/productosController');
+const { renderProductsMain, renderProduct } = require('../controllers/productsController');
 
 // renderizar vista de productos
 router.get('/', renderProductsMain);
