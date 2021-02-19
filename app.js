@@ -33,7 +33,7 @@ app.use('/admin', adminRouter);
 app.use('/carrito',carritoRouter);
 
 app.use('/productos',productsRouter);
-app.use('/productos/detalle',productsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

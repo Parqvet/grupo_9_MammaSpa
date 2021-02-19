@@ -1,3 +1,5 @@
+const productos = require('../data/productos')
+
 module.exports={
 
     renderProduct: (req,res) =>{
@@ -5,7 +7,7 @@ module.exports={
     },
 
     indexProductos: (req,res) =>{
-        res.render('vista-productos')
+        res.render('vista-productos',{productos})
     },
 
     

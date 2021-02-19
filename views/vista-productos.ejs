@@ -8,10 +8,27 @@
     <main>
         <div class="container mt-5">
             <h1>Listado de Productos y Servicios</h1>
-
-
-          
-        
+            <div class="row">
+                <% productos.forEach(producto => { %>
+                    <div class="col-12 col-md-4 col-lg-4 my-2 ">
+                        
+                        <div class="card-group" style="width: 98%vh;">
+                            <img src="/images/<%= producto.img %>" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><%= producto.name %> </h5>
+                              <p class="card-text"><%= producto.description %> </p>
+                              <a href="/productos/detalle<%= producto.id %>" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                <% }) %>
+                   
+                       
+                     
+                </div>
+            </div>
           
 
         </div>    
