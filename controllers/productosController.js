@@ -1,12 +1,13 @@
-const productos = require('../data/productos')
+const products = require('../data/productos')
 
 module.exports= {
-    renderProductsMain: (req,res) =>{
-        res.render('detalle-productos')
+    renderProductsMain: (req,res) => {
+        res.render('detalle-productos', {
+            products
+        })
     },
 
-    renderProductos: (req,res) =>{
-        res.render('vista-productos',{
-            productos})
+    renderProducts: (req,res) => {
+        res.render('vista-productos');
     },
 }
