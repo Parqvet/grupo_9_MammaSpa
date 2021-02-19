@@ -9,6 +9,4 @@ router.get('/', renderProductsMain);
 // renderizar vista de detalle de producto
 router.get('/detalle/:id', renderProduct);
 
-
-
 module.exports = router;

@@ -1,19 +1,12 @@
-const fs = require('fs');
+const productos = require('../data/productos')
 
-const products = JSON.parse(fs.readFileSync('./data/productos.json', 'utf-8'));
-
-module.exports={
-    renderProductsMain: (req, res) => {
-        res.render('products', {
-            products
-        });
+module.exports= {
+    renderProductsMain: (req,res) =>{
+        res.render('detalle-productos')
     },
-    renderProduct: (req,res) =>{
-        const id = req.params.id;
-        const product = products.find(product => product.id == id);
 
-        res.render('detalle-productos', {
-            product
-        });
-    }
+    renderProductos: (req,res) =>{
+        res.render('vista-productos',{
+            productos})
+    },
 }
