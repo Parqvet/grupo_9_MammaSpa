@@ -13,7 +13,7 @@
             </div>  
        
         <div class="container-abm">
-            <form action="" method="POST"> 
+            <form action="/users/register" enctype="multipart/form-data" method="POST" > 
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6 col-xl-6"> 
                         <div class="abm" >                  
@@ -31,10 +31,11 @@
 
             
                     <div class="col-12 col-md-6 col-lg-6 col-xl-6 ">                    
-                        <div class="abm" >                    
-                          <img src="/images/face-b-02.jpg" class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
-                
-                     
+                        <div class="abm" >
+                          <label for="">Avatar</label>
+                          <input type="file" name="avatar">
+
+                          <img src="/images/face-b-02.jpg" class="img-fluid shadow p-3 mb-5 bg-white rounded"alt="foto">                                 
                           <input class="btn btn-primary" type="reset" value="Modificar">
                    
                           <input class="btn btn-primary" type="submit" value="Enviar">
