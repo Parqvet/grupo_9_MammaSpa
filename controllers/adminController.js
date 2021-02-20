@@ -33,7 +33,7 @@ module.exports = {
 
         products.push(newProduct);
 
-        fs.writeFileSync('./data/productos.json', JSON.stringify(newProduct), 'utf-8');
+        fs.writeFileSync('./data/productos.json', JSON.stringify(products), 'utf-8');
         res.redirect('/admin/products/list');
     },
     renderEditProduct: (req, res) => {
@@ -55,6 +55,17 @@ module.exports = {
                 product.category = category;
                 product.brand = brand;
                 product.price = price;
+            }
+        });
+
+        fs.writeFileSync('./data/productos.json', JSON.stringify(products), 'utf-8');
+        res.redirect('/admin/products/list');
+    },
+    deleteProduct: (req, res) => {
+        products.forEach(product => {
+            if(product.id === +req.params.id) {
+                let indexProduct = products.indexOf(product);
+                products.splice(indexProduct, 1);
             }
         });
 

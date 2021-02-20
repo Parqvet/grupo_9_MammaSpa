@@ -30,4 +30,12 @@
     "category": "servicio",
     "body-part": "manos",
     "price": 1000
+}, {
+    "id": 5,
+    "title": "Test",
+    "description": "Some description",
+    "img": "Foto de manos.jpg",
+    "category": "Manos",
+    "brand": "Alguna",
+    "price": "456"
 }]
