@@ -14,26 +14,25 @@
                     </div>
 
                     <div class="container-abm">
-                        <form action="/admin/products/new-product" method="POST">
+                        <form action="/admin/products/update/<%= product.id %>?_method=PUT" method="POST">
                             <div class="row">
                                 <div class="col-12 col-md-6 col-lg-5">
                                     <div class="abm">
                                         <label class="form-label" for="nombre">Título:</label>
-                                        <input type="text" class="form-control mb-3" name="title" id="title"
-                                            placeholder="">
+                                        <input type="text" class="form-control mb-3" name="title" id="title" value="<%= product.title %>">
 
                                         <label for="valor">Valor:</label>
-                                        <input type="number" class="form-control mb-3" name="price" id="valor">
+                                        <input type="number" class="form-control mb-3" name="price" id="valor" value="<%= product.price %>">
 
                                         <label for="">Marca:</label>
-                                        <input type="text" class="form-control mb-3" name="brand">
+                                        <input type="text" class="form-control mb-3" name="brand" value="<%= product.brand %>">
 
                                         <label for="">Categoría:</label>
-                                        <input type="text" class="form-control mb-3" name="category">
+                                        <input type="text" class="form-control mb-3" name="category" value="<%= product.category %>">
 
                                         <label for="" class="form-label">Descripción:</label>
                                         <textarea class="form-control" id="textarea1" rows="3"
-                                            name="description"></textarea>
+                                            name="description" value=""><%= product.description %></textarea>
                                     </div>
                                 </div>
 
@@ -42,6 +41,8 @@
                                         <img src="/images/face-b-02.jpg"
                                             class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
                                     </div>
+                                    <label for="" class="">Imagen:</label>
+                                    <input type="text" class="form-control mb-3" name="img" value="<%= product.img %>">
                                     <button type="submit" class="btn btn-success">Guardar Cambios</button>
                                 </div>
                         </form>

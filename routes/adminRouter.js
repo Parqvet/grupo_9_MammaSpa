@@ -1,15 +1,20 @@
 const { Router } = require('express');
 const router = Router();
 
-const { renderProductsList, renderProductForm } = require('../controllers/adminController');
+const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct } = require('../controllers/adminController');
 
 // renderizar listado de productos
-router.get('/products', renderProductsList);
+router.get('/products/list', renderProductsList);
 
-// renderizar vista de abm para agregar producto
+// renderizar vista para agregar producto
 router.get('/products/add', renderProductForm);
 // procesar el agregado del nuevo producto
-router.post('/products/new-product');
+router.post('/products/new-product', createNewProduct);
+
+// renderizar vista para editar
+router.get('/products/edit/:id', renderEditProduct);
+// procesar la edición del producto
+router.put('/products/update/:id', updateProduct);
 
 /* const multer = require('multer'); 
 const adminController = require('../controllers/adminController');
@@ -30,9 +35,9 @@ var storage = multer.diskStorage({
 
 
 
-router.get('/registroProd',adminController.renderAbm);
+/* router.get('/registroProd',adminController.renderAbm);
 
-router.post('/registroProd', upload.any(), adminController.crearProd);
+router.post('/registroProd', upload.any(), adminController.crearProd); */
 
 
 module.exports = router

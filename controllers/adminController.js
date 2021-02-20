@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 const products = require('../data/productos');
+
+const fs = require('fs');
 
 module.exports = {
     renderProductsList: (req, res) => {
@@ -8,7 +9,7 @@ module.exports = {
         });
     },
     renderProductForm: (req, res) => {
-        res.render('admin/form-abm');
+        res.render('admin/products-create');
     },
     createNewProduct: (req, res) => {
         let lastID = 1;
@@ -20,21 +21,44 @@ module.exports = {
 
         const { title, description, img, category, brand, price } = req.body;
 
-        res.send(req.body)
+        const newProduct = {
+            id: Number(lastID + 1),
+            title,
+            description,
+            img,
+            category,
+            brand,
+            price
+        }
+
+        products.push(newProduct);
+
+        fs.writeFileSync('./data/productos.json', JSON.stringify(newProduct), 'utf-8');
+        res.redirect('/admin/products/list');
+    },
+    renderEditProduct: (req, res) => {
+        const product = products.find(product => product.id === +req.params.id);
+
+        res.render('admin/products-edit', {
+            product
+        });
+    },
+    updateProduct: (req, res) => {
+        const { title, description, img, category, brand, price } = req.body;
+
+        products.forEach(product => {
+            if(product.id === +req.params.id) {
+                product.id = Number(req.params.id);
+                product.title = title;
+                product.description = description;
+                product.img = img;
+                product.category = category;
+                product.brand = brand;
+                product.price = price;
+            }
+        });
+
+        fs.writeFileSync('./data/productos.json', JSON.stringify(products), 'utf-8');
+        res.redirect('/admin/products/list');
     }
 }
-=======
-module.exports = { 
-    renderAbm: (req, res)=>{
-        res.render('form-abm')
-    },
-    crearProd: function(req, res, next) {
-        let producto = {
-            nombre: req.body.nombre,
-            valor: req.body.valor
-
-         
-        }
-    },
-}    
->>>>>>> 965a66c46dd5594db6c2cacd873c2dfc8e701ae0

@@ -1,40 +1,33 @@
-[
-    {
-        "id":"producto1",
-         "title" : "Face oil",
-         "description":"Aceite 100% natural - tratamiento para mejorar la aparación de mancahas y cicatrices en la cara. Contiene numerosos ingredientes que ayudan a la piel a volverse más suave y lisa, mejorando así el aspecto del envejecimiento y la piel arrugada.",
-         "img": "producto-01.png",
-         "category":"productos",
-         "brand":"Natura",
-         "price":800
-    },
-
-    {
-        "id":"producto2",
-         "title" : "Body up",
-         "description":"Aceite corporal 100% natural con aroma a jazmín - tratamiento para tonificar la piel, desaparecer estrías, celulitis, manchas y marcas. Combate y previene el envejecimiento prematuro de la piel, mejora su elasticidad, humectación y suavidad, dejándola notablemente más suave.",
-         "img": "producto-02.png",
-         "category":"productos",
-         "brand":"Natural Beauty",
-         "price":1200
-    },
-
-    {
-        "id":"servicio01",
-         "title" : "Glow Skin",
-         "description":"Tratamiento de 50 minutos que destaca el brillo de tu piel. Devuelve luminosidad a la piel, logra un tono uniforme, radiante y da el schock de luz deseado. Hidrata y oxigena",
-         "img": "producto-03.png",
-         "category":"servicio",
-         "body-part":"rostro",
-         "price":2500
-    },
-    {
-        "id":"servicio02",
-         "title" : "Hands Spa",
-         "description":"Tratamiento de 30 minutos que exfolia, limpia y libera celulas muertas e impurezas de las manos. Ofrece hidratación y suavidad. Aporta reparación y defensa para manos trabajadoras, reconstruye la piel lastimada, suaviza el tacto de manera inmediata.",
-         "img": "producto-01.png",
-         "category":"servicio",
-         "body-part":"manos",
-         "price":1000
-    }
-]
+[{
+    "id": 1,
+    "title": "Face oil",
+    "description": "Aceite 100% natural - tratamiento para mejorar la aparación de mancahas y cicatrices en la cara. Contiene numerosos ingredientes que ayudan a la piel a volverse más suave y lisa, mejorando así el aspecto del envejecimiento y la piel arrugada.",
+    "img": "producto-01.png",
+    "category": "Productos",
+    "brand": "Natura",
+    "price": "800"
+}, {
+    "id": 2,
+    "title": "Body up",
+    "description": "Aceite corporal 100% natural con aroma a jazmín - tratamiento para tonificar la piel, desaparecer estrías, celulitis, manchas y marcas. Combate y previene el envejecimiento prematuro de la piel, mejora su elasticidad, humectación y suavidad, dejándola notablemente más suave.",
+    "img": "producto-02.png",
+    "category": "productos",
+    "brand": "Natural Beauty",
+    "price": 1200
+}, {
+    "id": 3,
+    "title": "Glow Skin",
+    "description": "Tratamiento de 50 minutos que destaca el brillo de tu piel. Devuelve luminosidad a la piel, logra un tono uniforme, radiante y da el schock de luz deseado. Hidrata y oxigena",
+    "img": "producto-03.png",
+    "category": "servicio",
+    "body-part": "rostro",
+    "price": 2500
+}, {
+    "id": 4,
+    "title": "Hands Spa",
+    "description": "Tratamiento de 30 minutos que exfolia, limpia y libera celulas muertas e impurezas de las manos. Ofrece hidratación y suavidad. Aporta reparación y defensa para manos trabajadoras, reconstruye la piel lastimada, suaviza el tacto de manera inmediata.",
+    "img": "producto-01.png",
+    "category": "servicio",
+    "body-part": "manos",
+    "price": 1000
+}]
