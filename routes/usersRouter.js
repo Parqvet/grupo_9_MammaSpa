@@ -8,8 +8,6 @@ const {renderRegister, renderLogin} = require('../controllers/usersController');
 //enrutador de login
 router.get('/login', renderLogin);
 
-
-
 //enrutador de registro
 router.get('/register', renderRegister);
 

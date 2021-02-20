@@ -3,53 +3,50 @@
 
 <!-- Head -->
 <%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
-     
-    <div class="registroabm">
-        <div class="container"> 
-            <div class="shadow mb-5 mt-5 bg-white rounded text-center">
-               <h4 id="abm">Panel de Control</h4>
-            </div>  
-       
-        <div class="container-abm">
-            <form action="" method="POST"> 
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-5"> 
-                        <div class="abm" >                  
-                          <label class="form-label"  for="nombre">Crear producto | servicio:</label>
-                          <input type="text" class="form-control"  name="nombre" id="nombre" placeholder="Ingrese nombre producto o servicio">
-                    
-                          <label for="valor">Valor:</label>
-                          <input type="number"class="form-control" name="valor" id="valor">
-                   
-                          <label for="" class="form-label">Descripcion del producto | servicio: </label>
-                          <textarea class="form-control" id="textarea1" rows="3"></textarea><br>
-                        </div>    
+
+    <body>
+        <%- include('./partials/header') %>
+
+            <div class="registroabm">
+                <div class="container">
+                    <div class="shadow mb-5 mt-5 bg-white rounded text-center">
+                        <h4 id="abm">Panel de Control</h4>
                     </div>
 
-            
-                    <div class="col-12 col-md-6 col-lg-5">                    
-                        <div class="abm" >                    
-                          <img src="/images/face-b-02.jpg" class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
-                
-                     
-                          <input class="btn btn-primary" type="reset" value="Modificar">
-                   
-                          <input class="btn btn-primary" type="submit" value="Enviar">
-                         <a class="btn btn-primary" href="#" role="button">Salir</a> 
-                        </div>    
-            
+                    <div class="container-abm">
+                        <form action="/admin/products/new-product" method="POST">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-5">
+                                    <div class="abm">
+                                        <label class="form-label" for="nombre">Título:</label>
+                                        <input type="text" class="form-control mb-3" name="title" id="title"
+                                            placeholder="">
+
+                                        <label for="valor">Valor:</label>
+                                        <input type="number" class="form-control mb-3" name="price" id="valor">
+
+                                        <label for="">Marca:</label>
+                                        <input type="text" class="form-control mb-3" name="brand">
+
+                                        <label for="">Categoría:</label>
+                                        <input type="text" class="form-control mb-3" name="category">
+
+                                        <label for="" class="form-label">Descripción:</label>
+                                        <textarea class="form-control" id="textarea1" rows="3"
+                                            name="description"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-5">
+                                    <div class="abm">
+                                        <img src="/images/face-b-02.jpg"
+                                            class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                                </div>
+                        </form>
                     </div>
-            </form>    
-        </div> 
-        </div> 
-    </div> 
-    
-     
-      
-
-</body>
-</html> 
-        
-
+                </div>
+            </div>
+    </body>
+</html>

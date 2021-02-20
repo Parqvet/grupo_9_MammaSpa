@@ -7,7 +7,7 @@
     <%- include('./partials/header') %>
     <main>
         <div class="container mt-5">
-            <a href="/admin/add" class="btn btn-success mt-3 mb-5 btn-ap">Agregar Producto</a>
+            <a href="/admin/products/add" class="btn btn-success mt-3 mb-5 btn-ap">Agregar Producto</a>
             <div class="row">
                 <% products.forEach(product => { %>
                     <div class="col-12 col-md-4 col-lg-4">
@@ -16,7 +16,7 @@
                             <div class="card-body">
                               <h5 class="card-title"><%= product.title %> </h5>
                               <p class="card-text"><%= product.description %> </p>
-                              <a href="/admin/products/add" class="btn btn-dark">Editar</a>
+                              <a href="/admin/products" class="btn btn-dark">Editar</a>
                               <a href="" class="btn btn-danger">Eliminar</a>
                             </div>
                         </div>

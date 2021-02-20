@@ -4,10 +4,10 @@ const router = Router();
 const { renderProductsList, renderProductForm } = require('../controllers/adminController');
 
 // renderizar listado de productos
-router.get('/', renderProductsList);
+router.get('/products', renderProductsList);
 
 // renderizar vista de abm para agregar producto
-router.get('/products', renderProductForm);
+router.get('/products/add', renderProductForm);
 // procesar el agregado del nuevo producto
 router.post('/products/new-product');
 

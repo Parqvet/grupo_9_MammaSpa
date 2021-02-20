@@ -8,5 +8,17 @@ module.exports = {
     },
     renderProductForm: (req, res) => {
         res.render('admin/form-abm');
+    },
+    createNewProduct: (req, res) => {
+        let lastID = 1;
+        products.forEach(product => {
+            if (product.id > lastID) {
+                lastID = product.id;
+            }
+        });
+
+        const { title, description, img, category, brand, price } = req.body;
+
+        res.send(req.body)
     }
 }
