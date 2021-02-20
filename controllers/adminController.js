@@ -1,6 +1,9 @@
-const products = require('../data/productos');
-
 const fs = require('fs');
+const path = require('path');
+
+const { getProducts, setProducts } = require(path.join('..', 'data', 'productos'));
+
+const products = getProducts();
 
 module.exports = {
     renderProductsList: (req, res) => {
@@ -33,7 +36,7 @@ module.exports = {
 
         products.push(newProduct);
 
-        fs.writeFileSync('./data/productos.json', JSON.stringify(products), 'utf-8');
+        setProducts(products);
         res.redirect('/admin/products/list');
     },
     renderEditProduct: (req, res) => {
@@ -58,7 +61,7 @@ module.exports = {
             }
         });
 
-        fs.writeFileSync('./data/productos.json', JSON.stringify(products), 'utf-8');
+        setProducts(products);
         res.redirect('/admin/products/list');
     },
     deleteProduct: (req, res) => {
@@ -69,7 +72,7 @@ module.exports = {
             }
         });
 
-        fs.writeFileSync('./data/productos.json', JSON.stringify(products), 'utf-8');
+        setProducts(products);
         res.redirect('/admin/products/list');
     }
 }
