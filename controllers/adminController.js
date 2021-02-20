@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const products = require('../data/productos');
 
 module.exports = {
@@ -22,3 +23,18 @@ module.exports = {
         res.send(req.body)
     }
 }
+=======
+module.exports = { 
+    renderAbm: (req, res)=>{
+        res.render('form-abm')
+    },
+    crearProd: function(req, res, next) {
+        let producto = {
+            nombre: req.body.nombre,
+            valor: req.body.valor
+
+         
+        }
+    },
+}    
+>>>>>>> 965a66c46dd5594db6c2cacd873c2dfc8e701ae0

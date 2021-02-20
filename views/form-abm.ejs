@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Head -->
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+     
+    <div class="registroabm">
+        <div class="container"> 
+            <div class="shadow-lg mb-5 mt-5 bg-white rounded text-center">
+               <h2 id="abm"> Mis productos | servicios | ABM </h2>
+            </div>  
+       
+        <div class="container-abm">
+            <form action="/users/register" enctype="multipart/form-data" method="POST" > 
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6"> 
+                        <div class="abm" >                  
+                          <p><label class="form-label"  for="nombre">Crear producto | servicio:</label></p>
+                    
+                          <input type="text" class="form-control"  name="nombre" id="nombre" placeholder="Ingrese nombre producto o servicio" ><br>
+                    
+                          <p><label for="valor">Valor:</label></p>
+                          <input type="number"class="form-control" name="valor" id="valor"><br>
+                   
+                          <p><label for= "" class="form-label">Descripcion del producto | servicio: </label></p>
+                          <textarea class="form-control" id="textarea1" rows="3"></textarea><br>
+                        </div>    
+                    </div>
+
+            
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 ">                    
+                        <div class="abm" >
+                          <label for="">Avatar</label>
+                          <input type="file" name="avatar">
+
+                          <img src="/images/face-b-02.jpg" class="img-fluid shadow p-3 mb-5 bg-white rounded"alt="foto">                                 
+                          <input class="btn btn-primary" type="reset" value="Modificar">
+                   
+                          <input class="btn btn-primary" type="submit" value="Enviar">
+                         <a class="btn btn-primary" href="#" role="button">Salir</a> 
+                        </div>    
+            
+                    </div>
+            </form>    
+        </div> 
+        </div> 
+    </div> 
+    
+     
+      
+
+</body>
+</html> 
+        
+
