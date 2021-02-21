@@ -1,4 +1,6 @@
 const products = require('../data/productos')
+const servicios = require('../data/servicios')
+
 
 module.exports= {
     renderProductsMain: (req,res) => {
@@ -18,4 +20,23 @@ module.exports= {
         })
        
     },
+
+    renderServiciosMain: (req, res) => {
+        res.render('vista-servicios', {
+            servicios
+        })
+    },
+
+    renderServicio: (req,res) => {
+        const id = req.params.id;
+        const servicio = servicios.find(servicio => servicio.id == id);
+    
+    
+        res.render('detalle-servicios', {
+           
+            servicio
+        })
+    }
+
+
 }
