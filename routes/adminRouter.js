@@ -1,6 +1,9 @@
 const { Router } = require('express');
 const router = Router();
 
+// multer para carga de imágenes de productos
+const upload = require('../middlewares/multerProducts');
+
 // metodos de los productos
 const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct, deleteProduct } = require('../controllers/adminController');
 
@@ -10,7 +13,7 @@ router.get('/products/list', renderProductsList);
 // renderizar vista para agregar producto
 router.get('/products/add', renderProductForm);
 // procesar el agregado del nuevo producto
-router.post('/products/new-product', createNewProduct);
+router.post('/products/new-product', upload.any(), createNewProduct);
 
 // renderizar vista para editar
 router.get('/products/edit/:id', renderEditProduct);
