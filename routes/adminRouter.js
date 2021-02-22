@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct, deleteProduct } = require('../controllers/adminController');
+const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct, deleteProduct, renderServicesList, renderServisForm, createNewServis, renderEditServis, updateServis, deleteServis } = require('../controllers/adminController');
 
 // renderizar listado de productos
 router.get('/products/list', renderProductsList);
@@ -18,6 +18,28 @@ router.put('/products/update/:id', updateProduct);
 
 // eliminar producto
 router.delete('products/delete/:id', deleteProduct);
+
+
+ // SERVICIOS
+
+
+//renderiza listado de servicios
+router.get('/services/list', renderServicesList);
+
+// renderizar vista para agregar servicio
+router.get('/services/add', renderServisForm);
+// procesar el agregado del nuevo servicio
+router.post('/services/new-servis', createNewServis);
+
+// renderizar vista para editar servicio
+router.get('/services/edit/:id', renderEditServis);
+// procesar la edición del servicio
+router.put('/services/update/:id', updateServis);
+
+// eliminar servicio
+router.delete('services/delete/:id', deleteServis);
+ 
+
 
 /* const multer = require('multer'); 
 const adminController = require('../controllers/adminController');
