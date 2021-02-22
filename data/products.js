@@ -1,6 +1,6 @@
 const fs = require ('fs');
 const path = require('path');
-const products_db = path.join('data', 'productos.json');
+const products_db = path.join('data', 'products.json');
 
 module.exports = {
     getProducts: () => {

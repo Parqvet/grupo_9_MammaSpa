@@ -1,5 +1,5 @@
 const path = require('path');
-const { getProducts } = require(path.join('..', 'data', 'productos'));
+const { getProducts } = require(path.join('..', 'data', 'products'));
 
 const products = getProducts();
 

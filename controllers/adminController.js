@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getProducts, setProducts } = require(path.join('..', 'data', 'productos'));
+const { getProducts, setProducts } = require(path.join('..', 'data', 'products'));
 
 const products = getProducts();
 
