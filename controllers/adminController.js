@@ -5,7 +5,7 @@ const { getProducts, setProducts } = require(path.join('..', 'data', 'productos'
 
 const products = getProducts();
 
-const { getServices, setServices } = require(path.join('..', 'data', 'servicios'));
+const { getServices, setServices } = require(path.join('..', 'data', 'services'));
 const services = getServices();
 
 
