@@ -27,13 +27,11 @@ div .abm {
     background-color: #d3b8a3;
     border-color: #fbe2ce; 
  
- } 
+ }
 #abm {
-    
     font-size: 2rem;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color:#d3b8a3 ;
-    color:aliceblue
-   
+    color:aliceblue;
 }

@@ -33,7 +33,7 @@ module.exports = {
             id: Number(lastID + 1),
             title,
             description,
-            img,
+            img: req.files[0].filename,
             category,
             brand,
             price
