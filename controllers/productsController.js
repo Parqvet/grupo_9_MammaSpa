@@ -1,4 +1,7 @@
-const products = require('../data/productos');
+const path = require('path');
+const { getProducts } = require(path.join('..', 'data', 'productos'));
+
+const products = getProducts();
 
 module.exports= {
     renderProductsMain: (req,res) => {

@@ -19,15 +19,16 @@
     "title": "Glow Skin",
     "description": "Tratamiento de 50 minutos que destaca el brillo de tu piel. Devuelve luminosidad a la piel, logra un tono uniforme, radiante y da el schock de luz deseado. Hidrata y oxigena",
     "img": "producto-03.png",
-    "category": "servicio",
+    "category": "Producto",
     "body-part": "rostro",
-    "price": 2500
+    "price": "2500",
+    "brand": ""
 }, {
     "id": 4,
     "title": "Hands Spa",
     "description": "Tratamiento de 30 minutos que exfolia, limpia y libera celulas muertas e impurezas de las manos. Ofrece hidratación y suavidad. Aporta reparación y defensa para manos trabajadoras, reconstruye la piel lastimada, suaviza el tacto de manera inmediata.",
     "img": "producto-01.png",
-    "category": "servicio",
+    "category": "",
     "body-part": "manos",
     "price": 1000
 }, {
