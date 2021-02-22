@@ -125,7 +125,7 @@ module.exports = {
             servis
         });
     },
-    updateServis: (req, res) => {
+    updateServis: (req, res, ) => {
         const { title, description, img, category, bodypart, price } = req.body;
 
         services.forEach(servis => {

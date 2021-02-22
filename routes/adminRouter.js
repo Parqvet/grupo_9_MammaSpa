@@ -17,7 +17,7 @@ router.get('/products/edit/:id', renderEditProduct);
 router.put('/products/update/:id', updateProduct);
 
 // eliminar producto
-router.delete('products/delete/:id', deleteProduct);
+router.delete('/products/delete/:id', deleteProduct);
 
 
  // SERVICIOS
@@ -37,7 +37,7 @@ router.get('/services/edit/:id', renderEditServis);
 router.put('/services/update/:id', updateServis);
 
 // eliminar servicio
-router.delete('services/delete/:id', deleteServis);
+router.delete('/services/delete/:id', deleteServis);
  
 
 
