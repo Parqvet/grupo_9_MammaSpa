@@ -57,3 +57,40 @@ Agradecimiento a los profesores Eric y Jona por su predisposición para ayduar y
 • Subestimar las activiades y dejarlas para úLtimo momento. 
 • No tomarnos personal lo que algun integrante del equipo abre como conflicto ni enojarnos por ello. 
 • No querer abandonar cuando hay algun conflicto. 
+
+# Retrospectiva tercer sprint 
+
+# Conclusiones 
+  La comunicación entre el equipo es fundamental para resultados efectivos, transmitir cómo nos sentimos, qué creemos que esta faltando, qué podemos mejorar y sobre todo comunicar nuestras condiciones personales si creemos que pueden afectar o intervernir en el trabajo en equipo o el desarrollo del proyecto. La comunicación desde el respeto es una de las bases fundamentales que hacen al equipo de trabajo, es necesaria para que todos y todas nos sintamos conformes con los resultados, y que estos sean los mejores que podamos haber obtenido. 
+
+  # SEGUIR HACIENDO 
+   • Reuniones CONCISAS, cortas, claras y efectivas (Sin explayarnos con temas que no tienen que ver).
+   • Reparto de tareas efectivo.
+   • Uso de Trello.
+   • Resumen por escrito de las reuniones. 
+
+  # HACER MAS 
+   • Comunicar nuestras situaciones personales.
+   • Comunicar lo que pensamos.
+   • Pedir ayuda si nos trabamos.
+   • Cuando termino con mis tareas, ofrecer mi ayuda a otro integrante que no haya terminado.
+   • Uso de Trello.
+
+  # EMPEZAR A HACER 
+   • Trabajar en la rama DEV, para evitar problemas en la Master.
+   • Reuniones fijas semanales Martes 13:30hs y Jueves 20:00hs.
+   • Entregar el sprint en Slack, el día de entrega SI O SI. 
+   • Establecer condiciones de trabajo en equipo. 
+
+  # HACER MENOS 
+   • Colgar con los mensajes de WhatsApp y no contestar. 
+   • Esperar que otro responda y no contestar en el grupo. 
+
+  # DEJAR DE HACER
+   • Subestimar las tareas y postergar. 
+   • Dejar para ultimo momento. 
+   • No poner fecha de vencimiento en las tarjetas de Trello.
+   • Arrastrar errores por falta de comunicación.  
+
+  
+
