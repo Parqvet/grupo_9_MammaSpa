@@ -71,6 +71,11 @@ module.exports = {
     deleteProduct: (req, res) => {
         products.forEach(product => {
             if(product.id === +req.params.id) {
+
+                if(fs.existsSync(path.join('public', 'images', 'autos', auto.img))) {
+                    fs.unlinkSync(path.join('public', 'images', 'autos', auto.img))
+                }
+
                 let indexProduct = products.indexOf(product);
                 products.splice(indexProduct, 1);
             }
@@ -80,8 +85,7 @@ module.exports = {
         res.redirect('/admin/products/list');
     },
 
-    //SERVICIOS
-
+    /*--- SERVICIOS ---*/
     renderServicesList: (req, res) => {
         res.render('admin/services-list', {
             services
@@ -148,6 +152,11 @@ module.exports = {
     deleteService: (req, res) => {
         services.forEach(service => {
             if(servis.id === +req.params.id) {
+
+                if(fs.existsSync(path.join('public', 'images', 'autos', auto.img))) {
+                    fs.unlinkSync(path.join('public', 'images', 'autos', auto.img))
+                }
+
                 let indexService = services.indexOf(service);
                 services.splice(indexService, 1);
             }

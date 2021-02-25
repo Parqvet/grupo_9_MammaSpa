@@ -24,7 +24,7 @@ router.get('/products/edit/:id', renderEditProduct);
 router.put('/products/update/:id', updateProduct);
 
 // eliminar producto
-router.delete('products/delete/:id', deleteProduct);
+router.delete('/products/delete/:id', deleteProduct);
 
 // rutas de los servicios
 
