@@ -7,7 +7,9 @@
     <%- include('./partials/header') %>
     <main>
         <div class="container mt-5">
-            <a href="/admin/products/add" class="btn btn-success mt-3 mb-5 btn-ap">Agregar Producto</a>
+            <div class="row justify-content-end">
+                <a href="/admin/products/add" class="btn btn-success mt-3 mb-5">Agregar Producto</a>
+            </div>
             <div class="row">
                 <% products.forEach(product => { %>
                     <div class="col-12 col-md-4 col-lg-4">
@@ -16,12 +18,12 @@
                             <div class="card-body">
                               <h5 class="card-title"><%= product.title %> </h5>
                               <p class="card-text"><%= product.description %> </p>
-                              <a href="/admin/products/edit/<%= product.id %>" class="btn btn-dark">Editar</a>
-                            </div>
-                            <div class="card-body">
-                                <form action="/admin/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                              <div class="row px-3">
+                                  <a href="/admin/products/edit/<%= product.id %>" class="btn btn-dark mr-3">Editar</a>
+                                  <form action="/admin/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                                     <button class="btn btn-danger" type="submit">Eliminar</button>
-                                </form>
+                                    </form>
+                              </div>
                             </div>
                         </div>
                     </div>

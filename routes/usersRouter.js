@@ -1,4 +1,3 @@
-const { render } = require('ejs');
 const { Router } = require('express');
 const router = Router();
 const multer = require('multer'); 
@@ -14,17 +13,11 @@ var storage = multer.diskStorage({
    
   var upload = multer({ storage: storage })
 
-// requerir controlador registro
+
 const {renderRegister, renderLogin} = require('../controllers/usersController');
 
-//enrutador de login
 router.get('/login', renderLogin);
 
-//enrutador de registro
 router.get('/register', renderRegister);
 
 module.exports = router;
-
-
-/*app.use('/users/register', usersRouter);
-app.use('/users/login', usersRouter);*/

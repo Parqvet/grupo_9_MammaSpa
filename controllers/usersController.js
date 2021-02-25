@@ -3,7 +3,7 @@ module.exports = {
         res.render('form-registro')
     },
     renderLogin: (req, res)=>{
-        res.render('form-login')
+        res.render('login-view')
     },
 
 }

@@ -1,20 +1,38 @@
 [
     {
-        "id":"servicio01",
-         "title" : "Glow Skin",
-         "description":"Tratamiento de 50 minutos que destaca el brillo de tu piel. Devuelve luminosidad a la piel, logra un tono uniforme, radiante y da el schock de luz deseado. Hidrata y oxigena",
-         "img": "producto-03.png",
+        "id": 1,
+         "title" : "Facial Skin",
+         "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
+         "img": "face-b-02.jpg",
          "category":"servicio",
-         "bodypart":"rostro",
+         "bodypart":"Rostro",
          "price":2500
     },
     {
-        "id":"servicio02",
-         "title" : "Hands Spa",
-         "description":"Tratamiento de 30 minutos que exfolia, limpia y libera celulas muertas e impurezas de las manos. Ofrece hidratación y suavidad. Aporta reparación y defensa para manos trabajadoras, reconstruye la piel lastimada, suaviza el tacto de manera inmediata.",
-         "img": "producto-01.png",
+        "id": 2,
+         "title" : "Manos Spa",
+         "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
+         "img": "manos-04.jpeg",
          "category":"servicio",
-         "bodypart":"manos",
+         "bodypart":"Manos",
+         "price":1000
+    },
+    {
+        "id": 2,
+         "title" : "Manos Spa",
+         "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
+         "img": "manos-04.jpeg",
+         "category":"servicio",
+         "bodypart":"Manos",
+         "price":1000
+    },
+    {
+        "id": 2,
+         "title" : "Manos Spa",
+         "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
+         "img": "manos-04.jpeg",
+         "category":"servicio",
+         "bodypart":"Manos",
          "price":1000
     }
 
