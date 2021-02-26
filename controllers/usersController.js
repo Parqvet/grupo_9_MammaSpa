@@ -15,7 +15,7 @@ module.exports = {
 
         if(!errors.isEmpty()) {
             return res.render('register-view', {
-                errors: errors.errors
+                errors: errors.mapped()
             })
         } else {
             const { firstname, lastname, email, password } = req.body;
