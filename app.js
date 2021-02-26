@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
+var session = require('express-session');
 
 // enrutadores
 var indexRouter = require('./routes/indexRouter');
@@ -26,7 +27,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-
+app.use(session({
+  secret: 'secretkey',
+  resave: true,
+  saveUninitialized: true
+}));
 
 // routes
 app.use('/', indexRouter);

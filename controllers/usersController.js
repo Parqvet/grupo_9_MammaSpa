@@ -35,7 +35,7 @@ module.exports = {
                 firstname: firstname,
                 lastname: lastname,
                 email: email,
-                pass: hashPass
+                password: hashPass
             }
 
             users.push(newUser);
@@ -51,9 +51,31 @@ module.exports = {
     processLogin: (req, res) => {
         const { email, password } = req.body;
 
-        let result = users.find(user => user.email === email);
+        // buscar si existe el usuario
+        let result = users.find(user => user.email === email.trim());
 
-        
+        // si el usuario está registrado
+        if(result) {
+            // se comparan contraseñas
+            if(bcrypt.compareSync(password, result.password)) {
+
+                // una vez que se confirma autorización, almacenamos datos del usuario en session
+                req.session.userSession = {
+                    id: result.id,
+                    email: result.email
+                }
+
+                return res.redirect('/');
+            } else {
+                res.render('login-view', {
+                    error: 'Credenciales inválidas'
+                });
+            }
+        } else {
+            res.render('login-view', {
+                error: 'Credenciales inválidas'
+            })
+        }
     }
 
 }
