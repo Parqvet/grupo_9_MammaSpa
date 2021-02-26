@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getProducts, setProducts } = require(path.join('..', 'data', 'productos'));
-
+const { getProducts, setProducts } = require(path.join('..', 'data', 'products'));
 const products = getProducts();
 
 const { getServices, setServices } = require(path.join('..', 'data', 'services'));
@@ -89,21 +88,21 @@ module.exports = {
         });
     },
 
-    renderServiceForm: (req, res) => {
+    renderServicesForm: (req, res) => {
         res.render('admin/services-create');
     }, 
 
-    createNewServis: (req, res) => {
+    createNewService: (req, res) => {
         let lastID = 1;
-        services.forEach(servis => {
-            if (servis.id > lastID) {
+        services.forEach(service => {
+            if (service.id > lastID) {
                 lastID = servis.id;
             }
         });
 
         const { title, description, img, category, bodypart, price } = req.body;
 
-        const newServis = {
+        const newService = {
             id: Number(lastID + 1),
             title,
             description,
@@ -113,30 +112,32 @@ module.exports = {
             price
         }
 
-        services.push(newServis);
+        services.push(newService);
 
         setServices(services);
         res.redirect('/admin/services/list');
     },
-    renderEditServis: (req, res) => {
-        const servis = services.find(servis => servis.id === +req.params.id);
+
+    renderEditService: (req, res) => {
+        const service = services.find(service => service.id === +req.params.id);
 
         res.render('admin/services-edit', {
-            servis
+            service
         });
     },
-    updateServis: (req, res, ) => {
+
+    updateService: (req, res) => {
         const { title, description, img, category, bodypart, price } = req.body;
 
-        services.forEach(servis => {
-            if(servis.id === +req.params.id) {
-                servis.id = Number(req.params.id);
-                servis.title = title;
-                servis.description = description;
-                servis.img = img;
-                servis.category = category;
-                servis.bodypart = bodypart;
-                servis.price = price;
+        services.forEach(service => {
+            if(service.id === +req.params.id) {
+                service.id = Number(req.params.id);
+                service.title = title;
+                service.description = description;
+                service.img = img;
+                service.category = category;
+                service.bodypart = bodypart;
+                service.price = price;
             }
         });
 
@@ -144,18 +145,15 @@ module.exports = {
         res.redirect('/admin/services/list');
     },
 
-    deleteServis: (req, res) => {
-        services.forEach(servis => {
+    deleteService: (req, res) => {
+        services.forEach(service => {
             if(servis.id === +req.params.id) {
-                let indexServis = services.indexOf(servis);
-                services.splice(indexServis, 1);
+                let indexService = services.indexOf(service);
+                services.splice(indexService, 1);
             }
         });
 
         setServices(services);
         res.redirect('/admin/services/list');
     }
-
-    
-    
 }

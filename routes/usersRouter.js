@@ -15,7 +15,7 @@ var storage = multer.diskStorage({
   var upload = multer({ storage: storage })
 
 // requerir controlador registro
-const {renderRegister, renderLogin} = require('../controllers/usersController');
+const {renderRegister, renderLogin,} = require('../controllers/usersController');
 
 //enrutador de login
 router.get('/login', renderLogin);
@@ -23,8 +23,10 @@ router.get('/login', renderLogin);
 //enrutador de registro
 router.get('/register', renderRegister);
 
-module.exports = router;
 
+
+module.exports = router;
+//Lusis aca deberiamos crear el controlador de usuarios que renderizaria la vista del usuario
 
 /*app.use('/users/register', usersRouter);
 app.use('/users/login', usersRouter);*/

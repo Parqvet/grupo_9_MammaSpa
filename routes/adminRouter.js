@@ -7,6 +7,9 @@ const upload = require('../middlewares/multerProducts');
 // metodos de los productos
 const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct, deleteProduct } = require('../controllers/adminController');
 
+// metodos de los servicios
+const { renderServicesList, renderServicesForm, createNewService, renderEditService, updateService, deleteService } = require('../controllers/adminController');
+
 // renderizar listado de productos
 router.get('/products/list', renderProductsList);
 
@@ -23,50 +26,22 @@ router.put('/products/update/:id', updateProduct);
 // eliminar producto
 router.delete('/products/delete/:id', deleteProduct);
 
+// rutas de los servicios
 
- // SERVICIOS
-
-
-//renderiza listado de servicios
+// renderiza listado de servicios
 router.get('/services/list', renderServicesList);
 
 // renderizar vista para agregar servicio
-router.get('/services/add', renderServisForm);
+router.get('/services/add', renderServicesForm);
 // procesar el agregado del nuevo servicio
-router.post('/services/new-servis', createNewServis);
+router.post('/services/new-servis', createNewService);
 
 // renderizar vista para editar servicio
-router.get('/services/edit/:id', renderEditServis);
+router.get('/services/edit/:id', renderEditService);
 // procesar la edición del servicio
-router.put('/services/update/:id', updateServis);
+router.put('/services/update/:id', updateService);
 
 // eliminar servicio
-router.delete('/services/delete/:id', deleteServis);
- 
+router.delete('services/delete/:id', deleteService);
 
-
-/* const multer = require('multer'); 
-const adminController = require('../controllers/adminController');
-const { renderAbm } = require('../controllers/adminController');
-// requerir y demas MULTER
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'tmp/my-uploads')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now())
-    }
-  })
-   
-  var upload = multer({ storage: storage }) */
-
-
-
-
-
-/* router.get('/registroProd',adminController.renderAbm);
-
-router.post('/registroProd', upload.any(), adminController.crearProd); */
-
-
-module.exports = router
+module.exports = router;
