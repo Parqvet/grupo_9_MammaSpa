@@ -1,32 +1,19 @@
-const { render } = require('ejs');
 const { Router } = require('express');
 const router = Router();
-const multer = require('multer'); 
-// requerir y demas MULTER
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, '/tmp/my-uploads')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now())
-    }
-  })
-   
-  var upload = multer({ storage: storage })
 
-// requerir controlador registro
-const {renderRegister, renderLogin,} = require('../controllers/usersController');
+// requerir middleware de validación para registro de usuarios
+const registerValidation = require('../validation/register.validation');
+// requerir middleware de validación para login de usuarios
+const loginValidation = require('../validation/login.validation');
 
-//enrutador de login
+const { renderRegister, processRegister, renderLogin, processLogin } = require('../controllers/usersController');
+
+// renderizar y procesar login
 router.get('/login', renderLogin);
+router.post('/login', loginValidation, processLogin);
 
-//enrutador de registro
+// renderizar y procesar register
 router.get('/register', renderRegister);
-
-
+router.post('/register', registerValidation, processRegister);
 
 module.exports = router;
-//Lusis aca deberiamos crear el controlador de usuarios que renderizaria la vista del usuario
-
-/*app.use('/users/register', usersRouter);
-app.use('/users/login', usersRouter);*/
