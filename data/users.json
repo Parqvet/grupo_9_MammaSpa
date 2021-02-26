@@ -1,7 +1,16 @@
 [
-    {
-        "id": 1,
-        "email": "",
-        "password": ""
-    }
+  {
+    "id": 1,
+    "firstname": "test",
+    "lastname": "test",
+    "email": "test@gmail.com",
+    "pass": "$2b$12$F.Z6jS9Lhui6oEt72T/G.OnY4.xTS5w/5X7O4KocMw/JHAncNhgbm"
+  },
+  {
+    "id": 2,
+    "firstname": "pepe",
+    "lastname": "gonzalez",
+    "email": "pepe@gmail.com",
+    "pass": "$2b$12$5rkWj7wFxWZ6fd2KpOg6fOa9NCbYE48a2KC.txsLsylz0GfGPFaMG"
+  }
 ]

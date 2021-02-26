@@ -1,23 +1,16 @@
 const { Router } = require('express');
 const router = Router();
-const multer = require('multer'); 
-// requerir y demas MULTER
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, '/tmp/my-uploads')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now())
-    }
-  })
-   
-  var upload = multer({ storage: storage })
 
+// requerir validaciones
+const registerValidation = require('../validation/register.validation');
 
-const {renderRegister, renderLogin} = require('../controllers/usersController');
+const {renderRegister, processRegister, renderLogin} = require('../controllers/usersController');
 
+// renderizar y procesar login
 router.get('/login', renderLogin);
 
+// renderizar y procesar register
 router.get('/register', renderRegister);
+router.post('/register', registerValidation, processRegister);
 
 module.exports = router;
