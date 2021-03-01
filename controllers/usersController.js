@@ -3,8 +3,13 @@ const bcrypt = require('bcrypt');
 
 const { validationResult } = require('express-validator');
 
+// users db
 const { getUsers, setUsers } = require(path.join('..', 'data', 'users'));
 const users = getUsers();
+
+// admins db
+const { getAdmins } = require(path.join('..', 'data', 'admins'));
+const admins = getAdmins();
 
 module.exports = { 
     renderRegister: (req, res) => {
@@ -32,9 +37,9 @@ module.exports = {
 
             const newUser = {
                 id: +(lastID + 1),
-                firstname: firstname,
-                lastname: lastname,
-                email: email,
+                firstname,
+                lastname,
+                email,
                 password: hashPass
             }
 
@@ -49,7 +54,12 @@ module.exports = {
         res.render('login-view')
     },
     processLogin: (req, res) => {
+        const errors = validationResult(req);
+        
         const { email, password } = req.body;
+
+        // buscar si existe el admin
+        
 
         // buscar si existe el usuario
         let result = users.find(user => user.email === email.trim());
