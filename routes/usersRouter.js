@@ -7,7 +7,7 @@ const registerValidation = require('../validation/register.validation');
 // requerir middleware de validación para login de usuarios
 const loginValidation = require('../validation/login.validation');
 
-const { renderRegister, processRegister, renderLogin, processLogin } = require('../controllers/usersController');
+const { renderRegister, processRegister, renderLogin, processLogin, processLoginAdmin } = require('../controllers/usersController');
 
 // renderizar y procesar login
 router.get('/login', renderLogin);

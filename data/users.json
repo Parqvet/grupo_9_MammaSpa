@@ -1,9 +1,9 @@
 [
   {
-    "id": 1,
-    "firstname": "marcelo",
-    "lastname": "sena",
-    "email": "marcelosen4@gmail.com",
-    "password": "$2b$12$zFPjU37/bANDdA7wR09Zd.GdqS7gSIGvv2L/rOMlIm7IOy2RvCWXG"
+    "id": 2,
+    "firstname": "juan",
+    "lastname": "perez",
+    "email": "juan@gmail.com",
+    "password": "$2b$12$4KY5CWZu01ZZoNWDTMX8S.IT5c1zxXmaJYj1oDtoT0j63Lio1xs7q"
   }
 ]
