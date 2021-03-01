@@ -18,7 +18,7 @@ module.exports = {
                 errors: errors.mapped()
             })
         } else {
-            const { firstname, lastname, email, password } = req.body;
+            const { firstname, lastname, email, password, } = req.body;
 
             let lastID = 0;
             users.forEach(user => {
@@ -35,8 +35,9 @@ module.exports = {
                 firstname: firstname,
                 lastname: lastname,
                 email: email,
-                password: hashPass
-            }
+                password: hashPass,
+               // avatar : req.files[0].fieldname
+            };
 
             users.push(newUser);
             setUsers(users);
@@ -50,6 +51,13 @@ module.exports = {
     },
     processLogin: (req, res) => {
         const { email, password } = req.body;
+        let errors = validationResult(req);
+//validacion si hay errores
+        if (errors.isEmpty()) {
+//si hay errores vuelvo a loguin con el mensaje de errors
+        } else {
+            return res.render('login', {errors: errors.errors});
+        }
 
         // buscar si existe el usuario
         let result = users.find(user => user.email === email.trim());
@@ -76,6 +84,9 @@ module.exports = {
                 error: 'Credenciales inválidas'
             })
         }
+    },
+    renderProfile: (req,res)=> {
+        res.render('profileUser-view')
     }
 
 }

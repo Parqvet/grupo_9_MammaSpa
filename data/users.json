@@ -5,5 +5,33 @@
     "lastname": "Sena",
     "email": "marcelo@gmail.com",
     "password": "$2b$12$Jetkl79qWWZjGwtlYSumi.Nt3LIE3V7YfkV3eZC/oDm4fE/Wuz15O"
+  },
+  {
+    "id": 2,
+    "firstname": "andy",
+    "lastname": "moro",
+    "email": "a@gmail.com",
+    "password": "$2b$12$2kRw3/q0KBNb2t9AJkIqzONTj0taOb1DO5FKx2U9sBAzGjBi/gJja"
+  },
+  {
+    "id": 3,
+    "firstname": "andy",
+    "lastname": "moros",
+    "email": "am@gmail.com",
+    "password": "$2b$12$Lqmj9D7SHvn5YbRzYRr0h.oWTIPy8MZRZpuUfHbJuD8L.BaRksLga"
+  },
+  {
+    "id": 4,
+    "firstname": "ale",
+    "lastname": "mama",
+    "email": "ale@mail.com",
+    "password": "$2b$12$npQrtalq/j4adsCwpNuqBeTZpEeEFhZlaj3FoVs27Hp3yxJ39SyiS"
+  },
+  {
+    "id": 5,
+    "firstname": "pepe",
+    "lastname": "perez",
+    "email": "p@gmail.com",
+    "password": "$2b$12$JzRatlMF7stJ5uzww7jTZeOUb94OweWOD7MZCjtr3jwHo3zz3lF9."
   }
 ]

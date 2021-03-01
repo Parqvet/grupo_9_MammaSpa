@@ -14,10 +14,29 @@ module.exports = [
     check('email')
         .isEmail()
         .withMessage('Debe ingresar un correo electrónico válido'),
+       
 
     check('password')
         .notEmpty()
-        .withMessage('La contraseña es requerida'),
+        .withMessage('La contraseña es requerida'), 
+
+   /* check('password')
+        .isLength({
+            min: 6,
+            max: 10           
+
+        })
+        .withMessage('La contraseña debe tener al menos 8 caracter'),
+    
+       
+
+    body('password2').custom(( value, req) => {
+        if(value !== req.body.pass){
+            return false
+        }else{
+            return true
+        }
+    }). withMessage('Las contraseñas no coinciden'),
 
     body('email')
         .custom(value => {
@@ -29,5 +48,6 @@ module.exports = [
             } else {
                 return true;
             }
-        }).withMessage('El usuario ya está registrado')
+        }).withMessage('El usuario ya está registrado')*/
+     
 ]
