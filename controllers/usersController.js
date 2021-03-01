@@ -54,10 +54,12 @@ module.exports = {
         res.render('login-view')
     },
     processLogin: (req, res) => {
-        const { email, password } = req.body;
+        const { email, password, remember } = req.body;
 
         /* Inicio de sesión para el admin */
-        
+        /*  mail: admin@gmail.com
+            pass: admin */
+
         // buscar si existe el admin
         let adminResult = admins.find(admin => admin.email === email.trim());
 
@@ -69,6 +71,14 @@ module.exports = {
                     name: adminResult.firstname,
                     email: adminResult.email
                 }
+
+                // creamos cookie
+                if(remember != 'undefined') {
+                    res.cookie('adminSession', req.session.adminSession, {
+                        maxAge: 1000 * 60
+                    })
+                }
+
                 res.redirect('/admin/products/list');
             } else {
                 res.render('login-view');
@@ -88,7 +98,14 @@ module.exports = {
                 // una vez que se confirma autorización, almacenamos datos del usuario en session
                 req.session.userSession = {
                     id: result.id,
+                    name: result.firstname,
                     email: result.email
+                }
+
+                if(remember != 'undefined') {
+                    res.cookie('userSession', req.session.userSession, {
+                        maxAge: 1000 * 60
+                    })
                 }
 
                 return res.redirect('/');
@@ -107,8 +124,24 @@ module.exports = {
     },
 
     processLogout: (req, res) => {
-        delete req.session.adminSession;
+        req.session.destroy();
+
+        if(req.cookies.adminSession) {
+            res.cookie('adminSession', '', {
+                maxAge: -1
+            })
+        }
+
+        if(req.cookies.userSession) {
+            res.cookie('userSession', '', {
+                maxAge: -1
+            })
+        }
 
         res.redirect('/');
+    },
+
+    renderProfile: (req, res) => {
+        
     }
 }

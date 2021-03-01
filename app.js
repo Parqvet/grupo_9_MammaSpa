@@ -7,6 +7,7 @@ var methodOverride = require('method-override');
 var session = require('express-session');
 
 var localsCheck = require('./middlewares/localsCheck');
+var cookieCheck = require('./middlewares/cookieCheck');
 
 // enrutadores
 var indexRouter = require('./routes/indexRouter');
@@ -36,6 +37,7 @@ app.use(session({
 }));
 // middleware para variables locales
 app.use(localsCheck);
+app.use(cookieCheck);
 
 // routes
 app.use('/', indexRouter);

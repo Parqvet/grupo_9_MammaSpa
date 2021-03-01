@@ -17,17 +17,17 @@ const { renderServicesList, renderServicesForm, createNewService, renderEditServ
 router.get('/products/list', adminCheck, renderProductsList);
 
 // renderizar vista para agregar producto
-router.get('/products/add', renderProductForm);
+router.get('/products/add', adminCheck, renderProductForm);
 // procesar el agregado del nuevo producto
 router.post('/products/new-product', upload.any(), createNewProduct);
 
 // renderizar vista para editar
-router.get('/products/edit/:id', renderEditProduct);
+router.get('/products/edit/:id', adminCheck, renderEditProduct);
 // procesar la edición del producto
 router.put('/products/update/:id', updateProduct);
 
 // eliminar producto
-router.delete('/products/delete/:id', deleteProduct);
+router.delete('/products/delete/:id', adminCheck, deleteProduct);
 
 // rutas de los servicios
 

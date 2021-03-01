@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "firstname": "Marcelo",
-        "lastname": "Sena",
+        "firstname": "Admin",
+        "lastname": "Admin",
         "email": "admin@gmail.com",
         "password": "$2b$12$tgzRwkYYeXhGFGIfFzu81ePFd9.Wx/cv0vTiQhmgSijzi4r2z3dhq"
     }
