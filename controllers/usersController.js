@@ -57,23 +57,22 @@ module.exports = {
         const { email, password } = req.body;
 
         /* Inicio de sesión para el admin */
-
+        
         // buscar si existe el admin
-        let adminResult = admins.find(admin => admin.email === email);
+        let adminResult = admins.find(admin => admin.email === email.trim());
 
         if(adminResult) {
             if(bcrypt.compareSync(password, adminResult.password)) {
                 // levantamos sesión
                 req.session.adminSession = {
                     id: adminResult.id,
+                    name: adminResult.firstname,
                     email: adminResult.email
                 }
                 res.redirect('/admin/products/list');
             } else {
                 res.render('login-view');
             }
-        } else {
-            res.render('login-view');
         }
 
         /* Inicio de sesión para el usuario */
@@ -103,9 +102,13 @@ module.exports = {
             return res.render('login-view', {
                 error: 'Credenciales inválidas'
             })
-        } 
-
+        }
         
-    }
+    },
 
+    processLogout: (req, res) => {
+        delete req.session.adminSession;
+
+        res.redirect('/');
+    }
 }

@@ -6,6 +6,8 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 var session = require('express-session');
 
+var localsCheck = require('./middlewares/localsCheck');
+
 // enrutadores
 var indexRouter = require('./routes/indexRouter');
 var usersRouter = require('./routes/usersRouter');
@@ -32,6 +34,8 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+// middleware para variables locales
+app.use(localsCheck);
 
 // routes
 app.use('/', indexRouter);

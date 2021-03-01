@@ -7,7 +7,7 @@ const registerValidation = require('../validation/register.validation');
 // requerir middleware de validación para login de usuarios
 const loginValidation = require('../validation/login.validation');
 
-const { renderRegister, processRegister, renderLogin, processLogin, processLoginAdmin } = require('../controllers/usersController');
+const { renderRegister, processRegister, renderLogin, processLogin, processLogout } = require('../controllers/usersController');
 
 // renderizar y procesar login
 router.get('/login', renderLogin);
@@ -16,5 +16,8 @@ router.post('/login', loginValidation, processLogin);
 // renderizar y procesar register
 router.get('/register', renderRegister);
 router.post('/register', registerValidation, processRegister);
+
+// cerrar sesión
+router.get('/logout', processLogout);
 
 module.exports = router;
