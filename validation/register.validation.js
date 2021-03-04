@@ -14,6 +14,7 @@ module.exports = [
     check('email')
         .isEmail()
         .withMessage('Debe ingresar un correo electrónico válido'),
+       
 
     check('password')
     .isLength({

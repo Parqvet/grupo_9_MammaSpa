@@ -19,9 +19,15 @@ const { processUsersAdminLogin } = require('../controllers/users-controller/proc
 router.get('/login', renderLogin);
 router.post('/login', loginValidation, processUsersAdminLogin);
 
+
 // renderizar y procesar register
 router.get('/register', renderRegister);
 router.post('/register', registerValidation, processRegister);
+
+
+
+router.get('/register/profile',)
+//uploadImages debe coincidir con el nombre del middleware
 
 // cerrar sesión
 router.get('/logout', processLogout);
