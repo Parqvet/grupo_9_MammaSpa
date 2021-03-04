@@ -24,8 +24,4 @@ module.exports = {
 
         res.redirect('/');
     },
-
-    renderProfile: (req, res) => {
-        
-    }
 }
