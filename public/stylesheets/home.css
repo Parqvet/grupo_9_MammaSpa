@@ -1,9 +1,12 @@
-* {
+#homeIndex {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #fcfaf6;
 }
-
+.homeImageCF{
+    padding: 0px;
+}
 /* Home Image */
 .home-main {
     background: url(../images/portada01.jpg);
@@ -12,6 +15,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    padding: 0px;
 }
 
 /* Box e imagenes del titulo de: Nuestros Servicios */
