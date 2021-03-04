@@ -3,67 +3,67 @@
 
 <!-- Head -->
 <%- include('partials/head') %>
-<body>
+
+  <body>
     <%- include('partials/header') %>
-    
-    <div class="container">
+
+      <div class="container">
         <h2 class="text-center mt-5">Sumate a Mamma Spa!</h2>
         <div class="row justify-content-center mt-5">
-            <div class="card mb-3" style="max-width: 80%;">
-                <div class="row no-gutters">
-                  
-                  <div class="col-md-8">
-                    <div class="card-body">
-                        <form action="/users/register" method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="">Nombre</label>
-                                <input type="text" class="form-control" name="firstname">
-                                <span class="text-danger"><%= (typeof errors != 'undefined' && errors.firstname) ? errors.firstname.msg : "" %></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Apellido</label>
-                                <input type="text" class="form-control" name="lastname">
-                                <span class="text-danger"><%= (typeof errors != 'undefined' && errors.lastname) ? errors.lastname.msg : "" %></span>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Correo electrónico</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                              <span class="text-danger"><%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %></span>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1">Contraseña</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-                              <span class="text-danger"><%= (typeof errors != 'undefined' && errors.password) ? errors.password.msg : "" %></span>
-                            </div>
-<<<<<<< HEAD
-                            <div class="form-group">
-                              <label for="exampleInputPassword2">Reingrese contraseñ</label>
-                              <input type="password" class="form-control" id="exampleInputPassword2" name="password2">
-                              
-                            </div>
-
-=======
-                            
->>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
-                            <div class="card-footer">
-                                <p class="">¿Ya tenes cuenta? <a href="/users/login">Iniciar sesión</a></p>
-                                <button type="submit" class="btn btn-primary">Registrarse</button>
-                            </div>
-                          
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
+                  <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                      <input type="file" name="avatar">
+                      <label for="">Nombre</label>
+                      <input type="text" class="form-control" name="firstname">
+                      <span class="text-danger">
+                        <%= (typeof errors !='undefined' && errors.firstname) ? errors.firstname.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Apellido</label>
+                      <input type="text" class="form-control" name="lastname">
+                      <span class="text-danger">
+                        <%= (typeof errors !='undefined' && errors.lastname) ? errors.lastname.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Correo electrónico</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        name="email">
+                      <span class="text-danger">
+                        <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Contraseña</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                      <span class="text-danger">
+                        <%= (typeof errors !='undefined' && errors.password) ? errors.password.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Confirmar contraseña</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password2">
+                      <span class="text-danger">
+                        <%= (typeof errors !='undefined' && errors.password) ? errors.password2.msg : "" %>
+                      </span>
+                    </div>
+                    
+                    <div class="card-footer">
+                      <p class="">¿Ya tenes cuenta? <a href="/users/login">Iniciar sesión</a></p>
+                      <button type="submit" class="btn btn-primary">Registrarse</button>
                     </div>
                   </div>
-                </form> 
                 </div>
+              </form>
+              <div class="col-md-4">
+                <img src="/images/face-b.jpeg" class="card-img" alt="...">
+              </div>
             </div>
+          </div>
 
         </div>
-    </div>
-    
-</body>    
+      </div>
+
+  </body>
+
 </html>
