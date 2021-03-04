@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+  
+<body>
+  <!-- Navigation -->
+    <%- include('partials/header') %>
+
+      <div class="container-d-products mt-5 mb-5">
+
+        <div class="box-img-product">
+          <img src="/images/img-services/<%= service.img %>" alt="" class="img-fluid">
+        </div>
+  
+        <div class="box-detalle-product">
+          <div class="box-d-p">
+            <h3 class="title-dp mb-3"><%= service.title %></h3>
+            <h4 class="title-price-dp mb-3">$ <%= service.price %></h4>
+            <p><%= service.description %></p>
+
+            <input class="btn btn-primary mb-2" type="number" placeholder="Cantidad" style="text-align:center; background:#d3b8a3;">
+            <div class="btn btn-primary" style="background: #f6d2ae; color: #707B7C;">Agregar al carrito</div>
+          </div>
+        </div>
+
+      </div>
+    
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>
