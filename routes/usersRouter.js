@@ -7,12 +7,7 @@ const registerValidation = require('../validation/register.validation');
 // requerir middleware de validación para login de usuarios
 const loginValidation = require('../validation/login.validation');
 
-//requerir middleware de descarga archivos
-const uploadImages = require ('../middlewares/uploadImages');
-
-
-const { renderRegister, processRegister, renderLogin, processLogin } = require('../controllers/usersController');
-const { check } = require('express-validator');
+const { renderRegister, processRegister, renderLogin, processLogin, processLogout } = require('../controllers/usersController');
 
 // renderizar y procesar login
 router.get('/login', renderLogin);
@@ -27,5 +22,8 @@ router.post('/register', uploadImages.any(), registerValidation, processRegister
 
 router.get('/register/profile',)
 //uploadImages debe coincidir con el nombre del middleware
+
+// cerrar sesión
+router.get('/logout', processLogout);
 
 module.exports = router;
