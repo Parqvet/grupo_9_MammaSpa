@@ -5,6 +5,6 @@ const { renderServicesMain, renderService } = require('../controllers/servicesCo
 
 router.get('/', renderServicesMain);
 
-router.get('/service', renderService);
+router.get('/detalle/:id', renderService);
 
 module.exports = router;

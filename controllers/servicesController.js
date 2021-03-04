@@ -12,9 +12,9 @@ module.exports= {
 
     renderService: (req,res) => {
         const id = req.params.id;
-        const service = services.find(service => product.id == id);
+        const service = services.find(service => service.id === +id);
 
-        res.render('', {
+        res.render('detalle-servicios', {
             service
         });
     },

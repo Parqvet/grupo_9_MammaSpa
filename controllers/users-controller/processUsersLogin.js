@@ -1,29 +1,26 @@
 const path = require('path');
 const bcrypt = require('bcrypt');
-
 const { validationResult } = require('express-validator');
 
 // users db
-const { getUsers, setUsers } = require(path.join('..', 'data', 'users'));
+const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
 const users = getUsers();
 
 // admins db
-const { getAdmins } = require(path.join('..', 'data', 'admins'));
+const { getAdmins } = require(path.join('../../', 'data', 'admins'));
 const admins = getAdmins();
 
-module.exports = { 
-    renderRegister: (req, res) => {
-        res.render('register-view')
-    },
-    processRegister: (req, res) => {
+module.exports = {
+    processUsersAdminLogin: (req, res) => {
         const errors = validationResult(req);
 
-        if(!errors.isEmpty()) {
-            return res.render('register-view', {
+        if (!errors.isEmpty()) {
+            return res.render('login-view', {
                 errors: errors.mapped()
             })
+<<<<<<< HEAD:controllers/usersController.js
         } else {
-            const { firstname, lastname, email, password } = req.body;
+            const { firstname, lastname, email, password, } = req.body;
 
             let lastID = 0;
             users.forEach(user => {
@@ -47,13 +44,10 @@ module.exports = {
             setUsers(users);
 
             res.redirect('login');
+=======
+>>>>>>> 4d0dd3acbdd3f64ee74c9e784d66cf4f63df3cac:controllers/users-controller/processUsersLogin.js
         }
-    },
 
-    renderLogin: (req, res) => {
-        res.render('login-view')
-    },
-    processLogin: (req, res) => {
         const { email, password, remember } = req.body;
 
         /* Inicio de sesión para el admin */
@@ -65,6 +59,7 @@ module.exports = {
 
         if(adminResult) {
             if(bcrypt.compareSync(password, adminResult.password)) {
+                
                 // levantamos sesión
                 req.session.adminSession = {
                     id: adminResult.id,
@@ -120,28 +115,6 @@ module.exports = {
                 error: 'Credenciales inválidas'
             })
         }
-        
-    },
-
-    processLogout: (req, res) => {
-        req.session.destroy();
-
-        if(req.cookies.adminSession) {
-            res.cookie('adminSession', '', {
-                maxAge: -1
-            })
-        }
-
-        if(req.cookies.userSession) {
-            res.cookie('userSession', '', {
-                maxAge: -1
-            })
-        }
-
-        res.redirect('/');
-    },
-
-    renderProfile: (req, res) => {
         
     }
 }
