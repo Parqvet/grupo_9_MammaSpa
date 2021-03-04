@@ -48,10 +48,6 @@ module.exports = [
             } else {
                 return true;
             }
-<<<<<<< HEAD
         }).withMessage('El usuario ya está registrado')*/
      
-=======
-        }).withMessage('El email ya está registrado')
->>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
 ]

@@ -1,6 +1,5 @@
 [
   {
-<<<<<<< HEAD
     "id": 1,
     "firstname": "Marcelo",
     "lastname": "Sena",
@@ -34,26 +33,5 @@
     "lastname": "perez",
     "email": "p@gmail.com",
     "password": "$2b$12$JzRatlMF7stJ5uzww7jTZeOUb94OweWOD7MZCjtr3jwHo3zz3lF9."
-=======
-    "id": 2,
-    "firstname": "juan",
-    "lastname": "perez",
-    "email": "juan@gmail.com",
-    "password": "$2b$12$4KY5CWZu01ZZoNWDTMX8S.IT5c1zxXmaJYj1oDtoT0j63Lio1xs7q"
-  },
-  {
-    "id": 3,
-    "firstname": "pepe",
-    "lastname": "lopez",
-    "email": "pepe@gmail.com",
-    "password": "$2b$12$n4lzygSboLEbpkaK1Diebu2jwerWBMJYXWqavQDfB8V96Q46E6Xt6"
-  },
-  {
-    "id": 4,
-    "firstname": "juan",
-    "lastname": "perez",
-    "email": "pablo@gmail.com",
-    "password": "$2b$12$BiGM4.4MaJLSJ7gfMbI8i.sKW7.HCoeIKK0GNgKm1YjFuLXuuvD0y"
->>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
   }
 ]
