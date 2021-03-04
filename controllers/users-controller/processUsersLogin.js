@@ -1,5 +1,6 @@
 const path = require('path');
 const bcrypt = require('bcrypt');
+const { validationResult } = require('express-validator');
 
 // users db
 const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
@@ -11,6 +12,14 @@ const admins = getAdmins();
 
 module.exports = {
     processUsersAdminLogin: (req, res) => {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.render('login-view', {
+                errors: errors.mapped()
+            })
+        }
+
         const { email, password, remember } = req.body;
 
         /* Inicio de sesión para el admin */
