@@ -40,7 +40,7 @@ module.exports = [
 
     body('email')
         .custom(value => {
-            let result = users.find(user => user.username === value.trim());
+            let result = users.find(user => user.email === value.trim());
 
             // para verificar si el usuario ya está registrado
             if(result) {
@@ -48,6 +48,10 @@ module.exports = [
             } else {
                 return true;
             }
+<<<<<<< HEAD
         }).withMessage('El usuario ya está registrado')*/
      
+=======
+        }).withMessage('El email ya está registrado')
+>>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
 ]
