@@ -8,6 +8,23 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
             <div class="navbar-nav ml-auto">
+                
+                <% if (typeof adminSession != 'undefined') { %>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Hola! <%= adminSession.name %></span> 
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/admin/services/list">Mis Servicios</a>
+                            <a class="dropdown-item" href="/admin/products/list">Mis Productos</a>
+                            <a class="dropdown-item" href="">Mi Perfil</a>
+                            <a class="dropdown-item" href="/users/logout">Cerrar sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                <% } %>
+
                 <a class="nav-link" href="/services">Servicios</a>
                 <a class="nav-link" href="/products">Productos</a>
                 <a class="nav-link" href="/users/login">Login</a>
