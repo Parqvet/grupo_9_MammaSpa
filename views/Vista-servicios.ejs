@@ -8,9 +8,9 @@
    
       <main>
           <div class="container mt-5">
-            <h2 class="text-center mt-5">Nuestros Productos</h2>
+            <h2 class="text-center mt-5"></h2>
             <div class="shadow mb-5 mt-5 bg-white rounded text-center">
-                <h4 id="abm">Panel de Control</h4>
+                <h4 id="abm">Nuestros Servicios</h4>
             </div>
             <div class="container">
             <div class="row">
@@ -18,13 +18,14 @@
               <% services.forEach(servis=> { %>                                
                   <div class="col-12 col-md-6 col-lg-6">
                   
-                      <div class="card h-100" style="width: 540px;">
+                      <div class="card h-100" style="width: 540px">
                       <div class="container">
                         <div class="row">  
-                          <div class="col-md-4">   
-                              <img src="/images/img-services/<%= servis.img %>" class="card-img" alt="...">
+                          
+                          <div class="col-md-4">
+                              <img src="/images/img-services/<%= servis.img %>" class="img-fluid"  alt="...">
                            </div>
-                           
+                          
                           <div class="col-md-8">
                             <div class="card-body"> 
                                <h5 class="card-title"><%= servis.title %></h5>
