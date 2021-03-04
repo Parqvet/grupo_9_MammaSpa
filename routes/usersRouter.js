@@ -22,7 +22,7 @@ router.post('/login', loginValidation, processUsersAdminLogin);
 
 // renderizar y procesar register
 router.get('/register', renderRegister);
-router.post('/register', uploadImages.any(), registerValidation, processRegister);
+router.post('/register', registerValidation, processRegister);
 
 
 

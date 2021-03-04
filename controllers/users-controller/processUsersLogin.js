@@ -18,34 +18,6 @@ module.exports = {
             return res.render('login-view', {
                 errors: errors.mapped()
             })
-<<<<<<< HEAD:controllers/usersController.js
-        } else {
-            const { firstname, lastname, email, password, } = req.body;
-
-            let lastID = 0;
-            users.forEach(user => {
-                if(user.id > lastID) {
-                    lastID = user.id;
-                }
-            });
-
-            // hashear la pass
-            let hashPass = bcrypt.hashSync(password.trim(), 12);
-
-            const newUser = {
-                id: +(lastID + 1),
-                firstname,
-                lastname,
-                email,
-                password: hashPass
-            }
-
-            users.push(newUser);
-            setUsers(users);
-
-            res.redirect('login');
-=======
->>>>>>> 4d0dd3acbdd3f64ee74c9e784d66cf4f63df3cac:controllers/users-controller/processUsersLogin.js
         }
 
         const { email, password, remember } = req.body;

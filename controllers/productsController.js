@@ -23,7 +23,6 @@ module.exports= {
     renderServisMain: (req, res) =>{
         res.render('vista-Servicios', {
             services
-
         });
        
     },
