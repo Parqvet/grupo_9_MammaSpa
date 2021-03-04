@@ -17,26 +17,11 @@ module.exports = [
        
 
     check('password')
-        .notEmpty()
-        .withMessage('La contraseña es requerida'), 
-]
-   /* check('password')
-        .isLength({
-            min: 6,
-            max: 10           
-
-        })
-        .withMessage('La contraseña debe tener al menos 8 caracter'),
-    
-       
-
-    body('password2').custom(( value, req) => {
-        if(value !== req.body.pass){
-            return false
-        }else{
-            return true
-        }
-    }). withMessage('Las contraseñas no coinciden'),
+    .isLength({
+        min: 6,
+        max: 12
+    })
+    .withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
 
     body('email')
         .custom(value => {
@@ -48,5 +33,14 @@ module.exports = [
             } else {
                 return true;
             }
-        }).withMessage('El email ya está registrado')
-]*/
+        }).withMessage('El email ya está registrado'),
+
+    body('password2')
+        .custom( (value, {req}) => {
+        if(value != req.body.password) {
+            return false;
+        } else {
+            return true;
+        }
+    }).withMessage('Las contraseñas no coinciden')
+]
