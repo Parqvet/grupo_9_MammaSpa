@@ -19,5 +19,12 @@
     "lastname": "perez",
     "email": "pablo@gmail.com",
     "password": "$2b$12$BiGM4.4MaJLSJ7gfMbI8i.sKW7.HCoeIKK0GNgKm1YjFuLXuuvD0y"
+  },
+  {
+    "id": 5,
+    "firstname": "lucas",
+    "lastname": "lopeex",
+    "email": "luc@gmail.com",
+    "password": "$2b$12$4rviUD7O0ojf1DaeFoktVuYMEE.k0QSqzIniEoXWumjSl4wSon.JS"
   }
 ]

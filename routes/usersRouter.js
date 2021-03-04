@@ -1,17 +1,23 @@
 const { Router } = require('express');
 const router = Router();
 
-// requerir middleware de validación para registro de usuarios
+// middleware de validación para registro de usuarios
 const registerValidation = require('../validation/register.validation');
 
-// requerir middleware de validación para login de usuarios
+// middleware de validación para login de usuarios
 const loginValidation = require('../validation/login.validation');
 
-const { renderRegister, processRegister, renderLogin, processLogin, processLogout } = require('../controllers/usersController');
+const { renderRegister, renderLogin, processLogout } = require('../controllers/users-controller/usersController');
+
+// controlador para registro de users
+const { processRegister } = require('../controllers/users-controller/processUsersRegister');
+
+// controlador para login de users y admin
+const { processUsersAdminLogin } = require('../controllers/users-controller/processUsersLogin');
 
 // renderizar y procesar login
 router.get('/login', renderLogin);
-router.post('/login', loginValidation, processLogin);
+router.post('/login', loginValidation, processUsersAdminLogin);
 
 // renderizar y procesar register
 router.get('/register', renderRegister);
