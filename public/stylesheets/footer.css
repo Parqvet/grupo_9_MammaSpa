@@ -3,12 +3,16 @@ footer{
     width: 100%;
 }
 
+.iframe-footer{
+    margin-top: 20px;
+}
+
 .container-footer {
     margin-left:auto;
     box-sizing: content-box;
     width: 100%;
     padding-left: 10px;
-    padding-right: 200px;;
+    padding-right: 10px;;
     padding-top: 10px;
     box-shadow: 2px 2px 5px #d3b8a3;
 }
@@ -26,20 +30,25 @@ footer .container .row .contact{
    color: #d3b8a3;
 }
 
+.iconoFooterTransparente{
+    color:#fcfaf6
+}
+
 .sci-contenido{
    color: #d3b8a3;
    text-align: center;
    font-weight: 400;
-   margin-bottom: 4px;
+   margin-bottom: 0px;
    border-bottom: solid #fbe2ce 3px;
   
 }
 .sci{
-    margin-top: 0px;
+    margin-top: 35px;
     display: flex;
     width: 20%;
     padding:0px;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
+    flex-direction: row;
     justify-content: space-around;
     
 }
@@ -66,8 +75,12 @@ footer .container .row .contact{
 }
 .footer-copy{
     text-align: center;
+    margin-top: 10px;
 }
 
+.info{
+    margin-top: 45px;
+}
 
 /* Media Queries del footer */
 @media screen and (min-width: 320px) and (max-width: 425px) {
@@ -98,4 +111,12 @@ footer .container .row .contact{
 .footer-container {
     display: flex;
     border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .iconoFooter {
+        flex-direction: column;
+        align-items: center;
+    }
 }
