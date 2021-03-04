@@ -12,7 +12,7 @@ module.exports= {
 
     renderProduct: (req,res) => {
         const id = req.params.id;
-        const product = products.find(product => product.id == id);
+        const product = products.find(product => product.id === +id);
 
         res.render('detalle-productos', {
             product

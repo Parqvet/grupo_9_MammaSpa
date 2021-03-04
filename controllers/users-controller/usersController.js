@@ -1,14 +1,3 @@
-const path = require('path');
-const bcrypt = require('bcrypt');
-
-// users db
-const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
-const users = getUsers();
-
-// admins db
-const { getAdmins } = require(path.join('../../', 'data', 'admins'));
-const admins = getAdmins();
-
 module.exports = { 
     renderRegister: (req, res) => {
         res.render('register-view')

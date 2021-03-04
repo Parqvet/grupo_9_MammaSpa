@@ -6,28 +6,31 @@
 <body>
     <%- include('partials/header') %>
     <main>
-        <div class="container mt-5" >
-            <div class="row">
-
-                <% services.forEach(service => { %>
-                <div class="col-12">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="/images/img-services/<%= service.img %>" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title"><%= service.title %></h5>
-                              <p class="card-text"><%= service.description %></p>
-                            </div>
+      <div class="container mt-5" >
+        <div class="row">
+          
+          <% services.forEach(service => { %>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="/images/img-services/<%= service.img %>" class="card-img" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= service.title %></h5>
+                          <p class="card-text"><%= service.description %></p>
+                          <div class="row px-3">
+                            <a href="/services/detalle/<%= service.id %>" class="btn btn-primary mr-3">Ver mas</a>
                           </div>
                         </div>
+                      </div>
                     </div>
-                </div>  
-                <% }) %>   
-                
-            </div>
-        </div>    
+                </div>
+            </div>  
+          <% }) %> 
+  
+        </div>
+      </div>
     </main>
 </body>   
