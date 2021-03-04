@@ -3,3 +3,7 @@
 
 /* Css del Home */
 @import url('home.css');
+
+body {
+    background-color:#fcfaf6;
+}
