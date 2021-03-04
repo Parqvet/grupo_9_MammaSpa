@@ -33,6 +33,7 @@ module.exports = [
             } else {
                 return true;
             }
+/* HEAD*/ 
         }).withMessage('El email ya está registrado'),
 
     body('password2')

@@ -8,29 +8,6 @@ const admins = getAdmins();
 module.exports = [
     check('email')
         .notEmpty()
-<<<<<<< HEAD
-        .withMessage('Este campo es requerido'),
-    check('email')    
-        .isEmail()
-        .withMessage('credenciales inválidas'),
-
-
-
-    check('password')
-        .notEmpty()
-        .withMessage('Este campo es requerido'),
-    check('password')
-        .isLength({min: 8})
-        .withMessage('La contraseña debe tener al menos 8 caracteres ')    
-        
-]
-
-/*[ otras validaciones?
-    check('email').isEmail().withMessage('credenciales inválidas'),
-    check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres ')
-
-]*/
-=======
         .withMessage('El email es requerido'),
 
     body('email')
@@ -50,4 +27,3 @@ module.exports = [
         .notEmpty()
         .withMessage('La contraseña es requerida')
 ]
->>>>>>> 4d0dd3acbdd3f64ee74c9e784d66cf4f63df3cac
