@@ -1,3 +1,7 @@
+#detalleProductosGral{
+    background-color: #fcfaf6;
+}
+
 .container-d-products {
     display: flex;
     border: 1px solid gray;
