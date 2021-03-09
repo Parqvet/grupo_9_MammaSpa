@@ -16,19 +16,19 @@
               <div class="col-md-8">
                 <div class="card-body">
 
-                  <form action="/users/register" method="POST" enctype="multipart/form-data">
+                  <form action="/users/register" method="POST">
                     <div class="form-group">
                       <label for="">Nombre</label>
                       <input type="text" class="form-control" name="firstname">
                       <span class="text-danger">
-                        <%= (typeof errors !='undefined' && errors.firstname) ? errors.firstname.msg : "" %>
+                        <%= (typeof errors != 'undefined' && errors.firstname) ? errors.firstname.msg : "" %>
                       </span>
                     </div>
                     <div class="form-group">
                       <label for="">Apellido</label>
                       <input type="text" class="form-control" name="lastname">
                       <span class="text-danger">
-                        <%= (typeof errors !='undefined' && errors.lastname) ? errors.lastname.msg : "" %>
+                        <%= (typeof errors != 'undefined' && errors.lastname) ? errors.lastname.msg : "" %>
                       </span>
                     </div>
                     <div class="form-group">
@@ -43,14 +43,14 @@
                       <label for="exampleInputPassword1">Contraseña</label>
                       <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                       <span class="text-danger">
-                        <%= (typeof errors !='undefined' && errors.password) ? errors.password.msg : "" %>
+                        <%= (typeof errors != 'undefined' && errors.password) ? errors.password.msg : "" %>
                       </span>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Confirmar contraseña</label>
                       <input type="password" class="form-control" id="exampleInputPassword1" name="password2">
                       <span class="text-danger">
-                        <%= (typeof errors !='undefined' && errors.password) ? errors.password2.msg : "" %>
+                        <%= (typeof errors != 'undefined' && errors.password2) ? errors.password2.msg : "" %>
                       </span>
                     </div>
                     
@@ -69,6 +69,8 @@
 
         </div>
       </div>
+
+      <%- include('partials/footer') %>
 
   </body>
 
