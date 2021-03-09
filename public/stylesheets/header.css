@@ -1,10 +1,20 @@
 /* Navigation */
-.bg-nav-mms {
-    background-color: #fcfaf6;
+.header-nav-main {
+    background-color: #fbe2ce;
+    height: 10vh;
+    opacity: 90%;
 }
 
-.header-main nav a {
-    color: black;
+.bg-nav-mms {
+    /* background-color: #fcfaf6; */
+}
+
+.link-n {
+    color: rgb(0, 0, 0, .90);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .header-main .bg-mms {

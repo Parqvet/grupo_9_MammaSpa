@@ -1,21 +1,58 @@
-#homeIndex {
-    box-sizing: border-box;
+
+
+/* Home Image */
+.container-home-main {
+    height: 91vh;
+    width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #fcfaf6;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 0.7fr) 0.7fr 0.2fr;
+    grid-template-rows: 1fr repeat(2, 1.5fr) 150px;
 }
-.homeImageCF{
-    padding: 0px;
-}
-/* Home Image */
-.home-main {
+
+.box-img-home {
     background: url(../images/portada01.jpg);
-    height: 91vh;
-    width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 0px;
+    grid-row: 1 / 5;
+    grid-column: 2 / 6;
+}
+
+.box-title {
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+    background: rgb(211, 211, 211, 0);
+}
+
+.title-home {
+    font-family: 'Kurale', serif;
+    font-size: 7.5rem;
+    color: rgb(252, 128, 114);
+    letter-spacing: 0.5rem;
+    background: rgb(211, 211, 211, 0);
+}
+
+.box-img-two {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
+    border-radius: 7px 7px 0 0;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 1px 10px 0 rgba(252, 203, 230, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.hands-home {
+    width: 50%;
+    height: 80%;
+    background: rgba( 255, 255, 255, 0 );
+
 }
 
 /* Box e imagenes del titulo de: Nuestros Servicios */

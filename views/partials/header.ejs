@@ -1,6 +1,5 @@
-<header class="container header-main">
+<header class="container-fluid header-nav-main">
     <nav class="navbar navbar-expand-lg bg-nav-mms">
-        <a class="navbar-brand" href="/">Mamma Spa</a>
         <button class="navbar-toggler bg-mms" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,9 +24,10 @@
                     </ul>
                 <% } %>
 
-                <a class="nav-link" href="/services">Servicios</a>
-                <a class="nav-link" href="/products">Productos</a>
-                <a class="nav-link" href="/users/login">Login</a>
+                <a class="nav-link link-n" href="/">Home</a>
+                <a class="nav-link link-n" href="/services">Servicios</a>
+                <a class="nav-link link-n" href="/products">Productos</a>
+                <a class="nav-link link-n" href="/users/login">Login</a>
                 <% if (typeof userSession != 'undefined') { %>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
