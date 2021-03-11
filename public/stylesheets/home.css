@@ -1,4 +1,8 @@
-
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
 
 /* Home Image */
 .container-home-main {
@@ -7,7 +11,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr repeat(2, 0.7fr) 0.7fr 0.2fr;
+    grid-template-columns: 1fr repeat(2, 0.8fr) 0.6fr 0.3fr;
     grid-template-rows: 1fr repeat(2, 1.5fr) 150px;
 }
 
@@ -36,7 +40,7 @@
 
 .box-img-two {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
     grid-row: 4 / 5;
     grid-column: 4 / 5;
@@ -48,46 +52,134 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.hands-home {
+.hands-home-img {
     width: 50%;
     height: 80%;
     background: rgba( 255, 255, 255, 0 );
 
 }
 
-/* Box e imagenes del titulo de: Nuestros Servicios */
-.ns-box {
-    height: 70vh;
+.arrow-icon {
+    color: rgb(252, 128, 114);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
 }
 
-.box-t {
-    width: 25rem;
-    height: 370px;
-}
-
-.box-face {
-    height: 270px;
-}
-
-.box-hand {
-    height: 270px;
-}
-
-.img-ns-h {
-    height: 100%;
-}
-
-.img-ns-f {
-    height: 100%;
-}
-
-.ns-box {
+/* Box e imagenes de la sección: Nuestros Servicios */
+.container-ns {
+    height: 99vh;
+    width: 85%;
     display: flex;
     justify-content: center;
 }
 
-.ns-box .box-t .btn {
-    background-color: rgb(252, 128, 114);
+/* Contenedor de manos */
+.box-right-ns {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1.2fr) 0.4fr 0.5fr;
+    width: 40%;
+}
+
+.box-hands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / 6;
+    grid-column: 1 / 5;
+}
+
+.hands-img-ns {
+    height: 95%;
+    width: 85%;
+    border-radius: 3px;
+}
+
+.hands-box-title {
+    grid-row: 4 / 5;
+    grid-column: 1 / 5;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: rgb(252, 128, 114, 0.20);
+    box-shadow: 0 8px 16px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.3rem;
+}
+
+.hands-title {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0, .75);
+    font-size: 1.2rem;
+    height: 1rem;
+}
+
+/* Contenedor de rostro y productos */
+.box-left-ns {
+    width: 40%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.box-face {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 85%;
+    grid-row: 1 / 5;
+    grid-column: 1 / 7;
+}
+
+.face-img-ns {
+    width: 80%;
+    height: 100%;
+    border: 0.5px solid rgb(252, 128, 114, 0.25);
+    border-radius: 3px;
+}
+
+.face-box-title {
+    grid-row: 4 / 5;
+    grid-column: 1 / 6;
+    padding: 1rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 16px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.3rem;
+}
+
+.face-title {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0, .75);
+    font-size: 1.2rem;
+    height: 0.8rem;
+}
+
+.box-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    border: 0.5px solid rgb(252, 128, 114, 0.50);
+    border-radius: 3px;
+    grid-row: 5 / 7;
+    grid-column: 1 / 6;
+}
+
+.product-img-ns {
+    width: 47%;
+    height: 95%;
 }
 
 /* Box de la sección de Servicios */

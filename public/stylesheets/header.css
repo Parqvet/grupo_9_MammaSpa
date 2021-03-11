@@ -1,5 +1,7 @@
 /* Navigation */
 .header-nav-main {
+    display: flex;
+    justify-content: flex-end;
     background-color: #fbe2ce;
     height: 10vh;
     opacity: 90%;
