@@ -126,7 +126,7 @@ module.exports = {
         const service = services.find(service => service.id === +req.params.id);
 
         res.render('admin/services-edit', {
-            service
+            services
         });
     },
 

@@ -1,16 +1,19 @@
 
 footer{
+    
     width: 100%;
 }
 
 .iframe-footer{
+    
     margin-top: 20px;
 }
 
 .container-footer {
+    
     margin-left:auto;
     box-sizing: content-box;
-    width: 100%;
+    width: 90%;
     padding-left: 10px;
     padding-right: 10px;;
     padding-top: 10px;
@@ -79,6 +82,7 @@ footer .container .row .contact{
 }
 
 .info{
+    
     margin-top: 45px;
 }
 

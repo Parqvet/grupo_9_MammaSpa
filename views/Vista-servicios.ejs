@@ -5,43 +5,51 @@
 <%- include('partials/head') %>
 <body id= "ServiciosProductos">
     <%- include('partials/header') %>
-   
+
       <main>
-          <div class="container mt-5">
-            <h2 class="text-center mt-5"></h2>
-            <div class="shadow mb-5 mt-5 bg-white rounded text-center">
-                <h4 id="abm">Nuestros Servicios</h4>
-            </div>
-            <div class="container">
+        <div class="container mt-5">
+          <h2 class="text-center mt-5"></h2>
+          <div class="shadow mb-5 mt-5 bg-white rounded text-center">
+            <h4 id="abm">Nuestros Servicios</h4>
+          </div>
+
+          <div class="container">
             <div class="row">
-                               
-              <% services.forEach(servis=> { %>                                
-                  <div class="col-12 col-md-6 col-lg-6">
-                  
-                      <div class="card h-100" style="width: 540px">
-                      <div class="container">
-                        <div class="row">  
-                          
-                          <div class="col-md-4">
-                              <img src="/images/img-services/<%= servis.img %>" class="img-fluid"  alt="...">
-                           </div>
-                          
-                          <div class="col-md-8">
-                            <div class="card-body"> 
-                               <h5 class="card-title"><%= servis.title %></h5>
-                               <p class="card-text"><%= servis.description %></p>
-                               <a href="/servicios/detalle/<%= servis.id %>" class="btn btn-primary ">Ver mas</a>
-                            </div>
+
+              <% services.forEach(service=> { %>
+                <div class="col-12 col-md-6 col-lg-6 mb-4">
+
+                  <div class="card h-100" style="width: 540px">
+                    <div class="container">
+                      <div class="row">
+
+                        <div class="col-md-4">
+                          <img src="/images/img-services/<%= service.img %>" class="img-fluid" alt="...">
+                        </div>
+
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              <%= service.title %>
+                            </h5>
+                            <p class="card-text">
+                              <%= service.description %>
+                            </p>
+                            <a href="/services/detalle/<%= service.id %>" class="btn btn-primary ">Ver mas</a>
                           </div>
-                       </div>
-                        
+                        </div>
                       </div>
-                      </div> 
-                  </div>     
-                <% }) %>   
-                
+
+                    </div>
+                  </div>
+
+                </div>
+              <% }) %>
+
             </div>
-          
-          </div>    
-    </main>
-</body>   
+          </div>
+
+      </main>
+
+      <%- include('partials/footer') %>
+  </body>

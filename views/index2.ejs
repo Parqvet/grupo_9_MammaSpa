@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body id= "homeIndex">
+  <!-- Navigation -->
+  <%- include('partials/header') %>
+
+    <div class="container-fluid container-home-main">
+      <div class="box-img-home"></div>
+      <div class="box-img-two animate__animated animate__fadeInUp">
+        <a href="/#ns" class=""><i class="fas fa-arrow-down arrow-icon"></i></a>
+        <img class="hands-home-img" src="/images/img-manos/hands-09.png" alt="">
+      </div>
+      <div class="box-title text-center">
+        <h1 class="title-home animate__animated animate__fadeInLeft">Mamma</h1>
+        <h1 class="title-home animate__animated animate__fadeInLeft">Spa</h1>
+      </div>
+    </div>
+
+    <!-- Home Main Services-->
+    <div class="container-fluid container-ns mt-5" id="ns">
+
+
+      <div class="box-left-ns">
+        <div class="box-face">
+          <img src="/images/img-rostros/face-01.jpg" class="face-img-ns" alt="">
+        </div>
+        <div class="face-box-title">
+          <a href="/#services"><h4 class="face-title">Tatramientos Faciales</h4></a>
+        </div>
+        
+        <div class="box-products">
+          <img src="/images/products/producto-01.png" class="product-img-ns" alt="">
+          <img src="/images/products/skinlabs-01.png" class="product-img-ns" alt="">
+        </div>
+      </div>
+
+      <div class="box-right-ns">
+        <div class="box-hands">
+          <img src="/images/img-manos/hands-03.png" class="hands-img-ns" alt="">
+        </div>
+        <div class="hands-box-title">
+          <a href=""><h4 class="hands-title">Tratamiento de Manos</h4></a>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Sección de Servicios -->
+    <div class="container my-5" id="services">
+
+      <div class="box-s-main">
+
+        <div class="card card-ns mb-3 shadow rounded" style="max-width: 820px;">
+          <div class="row no-gutters">
+
+            <div class="col-md-4">
+              <img src="/images/face-b-02.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Titulo del servicio</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="btn btn-service">Agendar Consulta</div>
+                <div class="btn">Agregar a mi Cartera</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card card-ns mb-3 shadow rounded" style="max-width: 820px;">
+          <div class="row no-gutters">
+
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Titulo del servicio</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="btn btn-service">Agendar Consulta</div>
+                <div class="btn">Agregar a mi Cartera</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="/images/manos-08.jpeg" class="card-img" alt="...">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Sección de Productos -->
+    <div class="container-products mb-5">
+
+      <div class="box-t-product">
+        <div class="box-product">
+          <img src="/images/products/producto-01.png" alt="" class="img-p">
+        </div>
+        <div class="box-product">
+          <img src="/images/products/producto-02.png" alt="" class="img-p">
+        </div>
+      </div>
+
+      <div class="box-b-product">
+        <div class="box-product">
+          <img src="/images/products/producto-03.png" alt="" class="img-p">
+        </div>
+        <div class="box-product">
+          <img src="/images/products/producto-01.png" alt="" class="img-p">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+
+</html>

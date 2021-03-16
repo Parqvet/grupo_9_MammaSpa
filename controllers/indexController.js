@@ -1,5 +1,5 @@
 module.exports = {
     renderHome: (req, res) => {
-        res.render('index');
+        res.render('index2');
     }
 }

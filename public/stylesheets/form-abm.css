@@ -1,12 +1,7 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
-    background-color: #fcfaf6;
-}
 body{
     background-color: #fcfaf6;
 }
+
 div .container-abm {
     padding-top: 4em;
     background-color: #fcfaf6 ;
