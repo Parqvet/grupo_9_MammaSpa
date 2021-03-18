@@ -93,4 +93,45 @@ Agradecimiento a los profesores Eric y Jona por su predisposición para ayduar y
    • Arrastrar errores por falta de comunicación.  
 
   
+# Retrospectiva cuarto sprint 
+
+# CONCLUSIONES
+  Queremos iniciar esta retrospectiva agradeciendo especialmente a Vicky Lacroze de la Fundación Formar por asistirnos y dejarnos una valiosa enseñanza en este último sprint donde atravezamos una situación particular como equipo y al profesor Jonatan por acompañarnos en horarios extra para darnos una mano con el proyecto. Durante este período de tiempo terminamos de confirmar la importancia de la comunicación a la hora de trabajar en equipo; ya que dejamos que las situaciones personales nos pasen por encima, nos dejamos solos como equipo, nos saturamos de trabajo y permitimos que nuestro enojo afecte el desarrollo del proyecto. Después de hablar con Vicky y Jona, cada uno de nosotros realizó una instrospección sumamente importante y al reunirnos para hacer la retrospectiva, además de escucharnos y disculparnos, llegamos a la conclusión de que a partir de lo sucedido, cada uno de nosotros aprendió a buscar la manera de seguir con el trabajo a pesar de los problemas personales, a comunicar nuestras situaciones al resto del equipo, a empatizar con otros compañeros y sus dificultades fuera del proyecto, a hablar las cosas entre nosotros ya que puede que otro integrante vea soluciones donde nosotros no y avanzamos con el proyecto invirtiendo nuestra energía en eso y no en los contratiempos pasados. Este sprint en particular nos dejo una enseñanza para la vida y para nuestro desempeño el día de mañana en cualquier trabajo. 
+ 
+ # SEGUIR HACIENDO: 
+
+ • Reuniones para dividir las tareas de Trello (Si o si) 
+ • Mantener activo y actualizado Trello
+ • Reuniones cortas y concizas 
+ • Juntarnos cuando alguno se encuentra trabado en alguna tarea 
+ • Reuniones fijas
+
+ # HACER MAS: 
+
+ • Comunicar nuestros contratiempos si creemos que pueden influir en el desarrollo del trabajo en equipo
+ • Chequear que el sitio funcione correctamente tanto antes como después de subir cambios
+ • Preguntar si no entendemos algo de las tareas que nos tocaron hacer 
+ • Organizarnos como equipo y poner fecha de vencimiento en las tarjetas de Trello 
+
+ # EMPEZAR A HACER: 
+
+ • Preguntarnos en el grupo cómo vamos con las tareas que se nos asignaron
+ • No enojarnos y no tomarnos personal las cosas 
+ • Comunicar cuando tenemos algun problema personal para mantener al equipo al tanto y que tal vez puedan ayudarnos a solucionarlo 
+ • Organizarnos tanto individual como colectivamente 
+
+ # HACER MENOS: 
+
+ • Hacer la actividad que nos tocó y olvidarnos del resto del equipo 
+ • Suponer que otro integrante sabe más que todos y permimtir que se cargue con muchas actividades llevandolo a estresarse 
+ • No contestar los mensajes en el grupo de WhatsApp 
+
+ # DEJAR DE HACER: 
+
+ • Salir del grupo de WhatsApp sin dar explicaciones
+ • Actuar irresponsable e impulsivamente 
+ • No contestar a los compañeros cuando nos hablan por mensaje privado 
+ • Dejar para último momento las tareas
+
+
 
