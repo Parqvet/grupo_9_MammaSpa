@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         description: {
-            type: dataTypes.STRING(150),
+            type: dataTypes.STRING,
             allowNull: false
         },
         price: {
@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: 'products',
-        timeStamps: true
+        timestamps: false
     }
 
     const Product = sequelize.define(alias, cols, config);

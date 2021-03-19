@@ -1,39 +1,57 @@
-const path = require('path');
-const { getProducts } = require(path.join('..', 'data', 'products'));
-const { getServices } = require(path.join('..', 'data', 'services'));
-const services = getServices();
-const products = getProducts();
+const db = require('../database/models');
 
-module.exports= {
-    renderProductsMain: (req,res) => {
-        res.render('vista-productos', {
-            products
+
+module.exports = {
+    renderProductsMain: (req, res) => {
+        db.Product.findAll()
+            .then(function (products) {
+                return res.render('vista-productos', { products: products })
+            })
+            .catch(error => res.send(error))
+
+    },
+
+    renderProduct: (req, res) => {
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+                return res.render('detalle-productos', {
+                    product
+                });
+            })
+
+
+    },
+
+    renderServisMain: (req, res) => {
+        db.Service.findAll()
+            .then(services => {
+                return res.render('vista-Servicios', {
+                    services
+                });
+            })
+
+
+    },
+
+    renderServis: (req, res) => {
+        db.Service.findByPk(req.params.id)
+        .then(servis=>{
+            return res.render('detalle-servicios', {
+                servis
+            });
         })
+        .catch(error => res.send(error))
     },
+    create : (req,res)=>{
+        let
+    
+    }, 
+    edit : (req,res)=>{
 
-    renderProduct: (req,res) => {
-        const id = req.params.id;
-        const product = products.find(product => product.id === +id);
-
-        res.render('detalle-productos', {
-            product
-        });
     },
+    delete : (req,res)=>{
 
-    renderServisMain: (req, res) =>{
-        res.render('vista-Servicios', {
-            services
-        });
-       
-    },
-
-    renderServis: (req,res) => {
-        const id = req.params.id;
-        const servis = services.find(servis => servis.id == id);
-
-        res.render('detalle-servicios', {
-            servis
-        });
     }
-
 }
+
+
