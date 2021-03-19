@@ -5,45 +5,54 @@
   <%- include('partials/head') %>
 </head>
 
-<body>
+<body id= "homeIndex">
   <!-- Navigation -->
   <%- include('partials/header') %>
 
-    <!-- Home Image -->
-    <div class="container">
-      <div class="col-12 col-md-12 col-lg-12 home-main">
+    <div class="container-fluid container-home-main">
+      <div class="box-img-home"></div>
+      <div class="box-img-two animate__animated animate__fadeInUp">
+        <a href="/#ns" class=""><i class="fas fa-arrow-down arrow-icon"></i></a>
+        <img class="hands-home-img" src="/images/img-manos/hands-09.png" alt="">
+      </div>
+      <div class="box-title text-center">
+        <h1 class="title-home animate__animated animate__fadeInLeft">Mamma</h1>
+        <h1 class="title-home animate__animated animate__fadeInLeft">Spa</h1>
       </div>
     </div>
 
-    <!-- Home Main -->
-    <div class="container">
-      <h2 class="mt-5 title-ns">Nuestros Servicios</h2>
-      <div class="ns-box">
+    <!-- Home Main Services-->
+    <div class="container-fluid container-ns mt-5" id="ns">
 
 
-        <div class="card mt-3 box-t">
-          <div class="box-face">
-            <img src="/images/face-mitad.jpg" class="img-fluid card-img-top img-ns-f" alt="Imagen de rostro">
-          </div>
-          <div class="card-body">
-            <div class="btn btn-block">Tratamientos Faciales</div>
-          </div>
+      <div class="box-left-ns">
+        <div class="box-face">
+          <img src="/images/img-rostros/face-01.jpg" class="face-img-ns" alt="">
         </div>
-
-        <div class="card mt-3 box-t">
-          <div class="box-hand">
-            <img src="/images/manos-07.jpg" class="card-img-top img-ns-h" alt="Imagen de manos">
-          </div>
-          <div class="card-body">
-            <div class="btn btn-block">Tratamientos de Manos</div>
-          </div>
+        <div class="face-box-title">
+          <a href="/#services" class=""><h4 class="face-title">Tatramientos Faciales</h4></a>
         </div>
-
+        
+        <div class="box-products">
+          <img src="/images/products/producto-01.png" class="product-img-ns" alt="">
+          <img src="/images/products/skinlabs-01.png" class="product-img-ns" alt="">
+        </div>
       </div>
+
+      <div class="box-right-ns">
+        <div class="box-hands">
+          <img src="/images/img-manos/hands-03.png" class="hands-img-ns" alt="">
+        </div>
+        <div class="hands-box-title">
+          <a href="" class=""><h4 class="hands-title">Tratamiento de Manos</h4></a>
+        </div>
+      </div>
+
+
     </div>
 
     <!-- Sección de Servicios -->
-    <div class="container my-5">
+    <div class="container my-5" id="services">
 
       <div class="box-s-main">
 

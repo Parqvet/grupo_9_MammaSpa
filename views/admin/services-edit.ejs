@@ -1,0 +1,19 @@
+<div class="row">
+    <% services.forEach(service => { %>
+        <div class="col-12 col-md-4 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/img-services/<%= service.img %>" class="card-img-top img-fluid" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= service.title %> </h5>
+                  <p class="card-text"><%= service.description %> </p>
+                  <div class="row px-3">
+                      <a href="/admin/services/edit/<%= service.id %>" class="btn btn-dark mr-3">Editar</a>
+                      <form action="/admin/services/delete/<%= service.id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger" type="submit">Eliminar</button>
+                        </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

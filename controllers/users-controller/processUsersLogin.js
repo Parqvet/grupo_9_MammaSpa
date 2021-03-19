@@ -18,7 +18,7 @@ module.exports = {
             return res.render('login-view', {
                 errors: errors.mapped()
             })
-<<<<<<< HEAD:controllers/usersController.js
+
         } else {
             const { firstname, lastname, email, password, } = req.body;
 
@@ -34,52 +34,28 @@ module.exports = {
 
             const newUser = {
                 id: +(lastID + 1),
-<<<<<<< HEAD:controllers/users-controller/processUsersLogin.js
-=======
-<<<<<<< HEAD
-                firstname: firstname,
-                lastname: lastname,
-                email: email,
-                password: hashPass,
-               // avatar : req.files[0].fieldname
-            };
-=======
->>>>>>> dev:controllers/usersController.js
+
+
                 firstname,
                 lastname,
                 email,
                 password: hashPass
             }
-<<<<<<< HEAD:controllers/users-controller/processUsersLogin.js
-=======
->>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
->>>>>>> dev:controllers/usersController.js
+
+
+
 
             users.push(newUser);
             setUsers(users);
 
             res.redirect('login');
-=======
->>>>>>> 4d0dd3acbdd3f64ee74c9e784d66cf4f63df3cac:controllers/users-controller/processUsersLogin.js
+
+
         }
 
-<<<<<<< HEAD:controllers/users-controller/processUsersLogin.js
-=======
-    renderLogin: (req, res) => {
-        res.render('login-view')
-    },
+
+
     processLogin: (req, res) => {
-<<<<<<< HEAD
-        const { email, password } = req.body;
-        let errors = validationResult(req);
-//validacion si hay errores
-        if (errors.isEmpty()) {
-//si hay errores vuelvo a loguin con el mensaje de errors
-        } else {
-            return res.render('login', {errors: errors.errors});
-        }
-=======
->>>>>>> dev:controllers/usersController.js
         const { email, password, remember } = req.body;
 
         /* Inicio de sesión para el admin */
@@ -113,10 +89,7 @@ module.exports = {
         }
 
         /* Inicio de sesión para el usuario */
-<<<<<<< HEAD:controllers/users-controller/processUsersLogin.js
-=======
->>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
->>>>>>> dev:controllers/usersController.js
+
 
         // buscar si existe el usuario
         let result = users.find(user => user.email === email.trim());
@@ -151,21 +124,16 @@ module.exports = {
                 error: 'Credenciales inválidas'
             })
         }
-<<<<<<< HEAD:controllers/users-controller/processUsersLogin.js
-        
+
     }
-}
-=======
-<<<<<<< HEAD
-    },
     renderProfile: (req,res)=> {
         res.render('profileUser-view')
     }
 
 }
-=======
+
         
-    },
+    }
 
     processLogout: (req, res) => {
         req.session.destroy();
@@ -183,11 +151,6 @@ module.exports = {
         }
 
         res.redirect('/');
-    },
-
-    renderProfile: (req, res) => {
-        
     }
-}
->>>>>>> 1d9668b39ea43283dd7e215df1a3dcfc7caddf8d
->>>>>>> dev:controllers/usersController.js
+
+
