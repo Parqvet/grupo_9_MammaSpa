@@ -1,0 +1,14 @@
+const { check } = require("express-validator")
+const db = require('../database/models')
+
+module.exports = [
+
+    check('email')
+    .isEmail()
+    .withMessage('Debes escribir un email válido'),
+
+    check('password')
+    .notEmpty()
+    .withMessage('Debes escribir tu contraseña')
+
+]

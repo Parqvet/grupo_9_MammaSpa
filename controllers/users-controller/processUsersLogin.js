@@ -2,9 +2,14 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
+const db =require ('../../database/models');
+//aca traigo el modelo 
+
+
+
 // users db
-const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
-const users = getUsers();
+/*const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
+const users = getUsers();*/
 
 // admins db
 const { getAdmins } = require(path.join('../../', 'data', 'admins'));
@@ -18,44 +23,8 @@ module.exports = {
             return res.render('login-view', {
                 errors: errors.mapped()
             })
-
-        } else {
-            const { firstname, lastname, email, password, } = req.body;
-
-            let lastID = 0;
-            users.forEach(user => {
-                if(user.id > lastID) {
-                    lastID = user.id;
-                }
-            });
-
-            // hashear la pass
-            let hashPass = bcrypt.hashSync(password.trim(), 12);
-
-            const newUser = {
-                id: +(lastID + 1),
-
-
-                firstname,
-                lastname,
-                email,
-                password: hashPass
-            }
-
-
-
-
-            users.push(newUser);
-            setUsers(users);
-
-            res.redirect('login');
-
-
         }
 
-
-
-    processLogin: (req, res) => {
         const { email, password, remember } = req.body;
 
         /* Inicio de sesión para el admin */
@@ -90,7 +59,6 @@ module.exports = {
 
         /* Inicio de sesión para el usuario */
 
-
         // buscar si existe el usuario
         let result = users.find(user => user.email === email.trim());
 
@@ -124,33 +92,7 @@ module.exports = {
                 error: 'Credenciales inválidas'
             })
         }
-
-    }
-    renderProfile: (req,res)=> {
-        res.render('profileUser-view')
-    }
-
-}
-
         
     }
-
-    processLogout: (req, res) => {
-        req.session.destroy();
-
-        if(req.cookies.adminSession) {
-            res.cookie('adminSession', '', {
-                maxAge: -1
-            })
-        }
-
-        if(req.cookies.userSession) {
-            res.cookie('userSession', '', {
-                maxAge: -1
-            })
-        }
-
-        res.redirect('/');
-    }
-
-
+}
+    

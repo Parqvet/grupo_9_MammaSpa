@@ -10,29 +10,11 @@
       <div class="container">
         <h2 class="text-center mt-5">Sumate a Mamma Spa!</h2>
         <div class="row justify-content-center mt-5">
-                            <div class="form-group">
-                              <label for="exampleInputPassword1">Confirmar contraseña</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" name="password2">
-                              <span class="text-danger"><%= (typeof errors != 'undefined' && errors.password) ? errors.password2.msg : "" %></span>
-                            </div>
-
-
-                            
-
-                            <div class="card-footer">
-                                <p class="">¿Ya tenes cuenta? <a href="/users/login">Iniciar sesión</a></p>
-                                <button type="submit" class="btn btn-primary">Registrarse</button>
-                            </div>
-                          
-                    </div>
-                  </div>
-
           <div class="card mb-3" style="max-width: 80%;">
             <div class="row no-gutters">
 
               <div class="col-md-8">
                 <div class="card-body">
-
 
                   <form action="/users/register" method="POST">
                     <div class="form-group">

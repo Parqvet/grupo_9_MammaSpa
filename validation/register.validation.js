@@ -1,7 +1,7 @@
 const { check, validationResult, body } = require('express-validator');
-const { getUsers } = require('../data/users');
-const users = getUsers();
-
+//const { getUsers } = require('../data/users');
+//const users = getUsers();
+const db 
 module.exports = [
     check('firstname')
         .notEmpty()
@@ -33,7 +33,6 @@ module.exports = [
             } else {
                 return true;
             }
-/* HEAD*/ 
         }).withMessage('El email ya está registrado'),
 
     body('password2')
