@@ -2,9 +2,14 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
+const db =require ('../../database/models');
+//aca traigo el modelo 
+
+
+
 // users db
-const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
-const users = getUsers();
+/*const { getUsers, setUsers } = require(path.join('../../', 'data', 'users'));
+const users = getUsers();*/
 
 // admins db
 const { getAdmins } = require(path.join('../../', 'data', 'admins'));
@@ -90,3 +95,4 @@ module.exports = {
         
     }
 }
+    
