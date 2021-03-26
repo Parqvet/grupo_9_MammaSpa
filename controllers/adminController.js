@@ -1,88 +1,81 @@
+const db = require('../database/models');
 const fs = require('fs');
 const path = require('path');
 
-const { getProducts, setProducts } = require(path.join('..', 'data', 'products'));
+/*const { getProducts, setProducts } = require(path.join('..', 'data', 'products'));
 const products = getProducts();
 
 const { getServices, setServices } = require(path.join('..', 'data', 'services'));
-const services = getServices();
+const services = getServices();*/
 
 
 
 module.exports = {
     renderProductsList: (req, res) => {
-        res.render('admin/products-list', {
-            products
-        });
+        db.Product.findAll()
+            .then(function(products){
+                return   res.render('admin/products-list', {
+                    products
+                });
+            })
+            .catch(error => res.send(error))
+      
     },
     renderProductForm: (req, res) => {
         res.render('admin/products-create');
     },
     createNewProduct: (req, res) => {
-        let lastID = 1;
-        products.forEach(product => {
-            if (product.id > lastID) {
-                lastID = product.id;
-            }
-        });
-
         const { title, description, img, category, brand, price } = req.body;
-
-        const newProduct = {
-            id: Number(lastID + 1),
+        db.Product.create({
             title,
             description,
             img: req.files[0].filename,
             category,
             brand,
             price
-        }
-
-        products.push(newProduct);
-
-        setProducts(products);
-        res.redirect('/admin/products/list');
+        })
+        .then(function (){
+            return res.redirect('/admin/products/list');
+        })
+        .catch(error => res.send(error))
+    
     },
     renderEditProduct: (req, res) => {
-        const product = products.find(product => product.id === +req.params.id);
-
-        res.render('admin/products-edit', {
+       /*const product = products.find(product => product.id === +req.params.id);*/
+       db.Product.findByPk(req.params.id)
+       .then(product=>{
+        return res.render('admin/products-edit',{
             product
         });
+       })
+    
     },
     updateProduct: (req, res) => {
         const { title, description, img, category, brand, price } = req.body;
+        db.Product.update({
+            product:title,
+            product:description,
+            product:img,
+            product:category,
+            product:brand,
+            productprice,
 
-        products.forEach(product => {
-            if(product.id === +req.params.id) {
-                product.id = Number(req.params.id);
-                product.title = title;
-                product.description = description;
-                product.img = img;
-                product.category = category;
-                product.brand = brand;
-                product.price = price;
-            }
-        });
-
-        setProducts(products);
-        res.redirect('/admin/products/list');
+        })
+        .then(function (){
+            return res.redirect('/admin/products/list');
+        })
+        .catch(error => res.send(error))
     },
     deleteProduct: (req, res) => {
-        products.forEach(product => {
-            if(product.id === +req.params.id) {
-
-                if(fs.existsSync(path.join('public', 'images', 'autos', auto.img))) {
-                    fs.unlinkSync(path.join('public', 'images', 'autos', auto.img))
-                }
-
-                let indexProduct = products.indexOf(product);
-                products.splice(indexProduct, 1);
+        db.Product.destroy({
+            where:{
+                id:req.params.id
             }
-        });
-
-        setProducts(products);
-        res.redirect('/admin/products/list');
+        })
+        .then(function (){
+            return res.redirect('/admin/products/list');
+        })
+        .catch(error => res.send(error))
     },
 
     /*--- SERVICIOS ---*/
