@@ -41,15 +41,6 @@ module.exports = {
             });
         })
         .catch(error => res.send(error))
-    },
-    create : (req,res)=>{
-        let
-    
-    }, 
-    edit : (req,res)=>{
-
-    },
-    delete : (req,res)=>{
 
     }
 }

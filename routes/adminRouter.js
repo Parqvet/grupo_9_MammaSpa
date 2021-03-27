@@ -24,7 +24,7 @@ router.post('/products/new-product', upload.any(), createNewProduct);
 // renderizar vista para editar
 router.get('/products/edit/:id', adminCheck, renderEditProduct);
 // procesar la edición del producto
-router.put('/products/update/:id', updateProduct);
+router.put('/products/update/:id',upload.any(), updateProduct);
 
 // eliminar producto
 router.delete('/products/delete/:id', adminCheck, deleteProduct);

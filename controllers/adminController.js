@@ -51,16 +51,24 @@ module.exports = {
     
     },
     updateProduct: (req, res) => {
-        const { title, description, img, category, brand, price } = req.body;
-        db.Product.update({
-            product:title,
-            product:description,
-            product:img,
-            product:category,
-            product:brand,
-            productprice,
+        const { title, description, imgOriginal, category, brand, price } = req.body;
+       
+        db.Product.update(
+            {
+            title:title,
+            description:description,
+            img:req.files[0]? req.files[0].filename:imgOriginal,
+            category:category,
+            brand:brand,
+            price:price,
+        },
+       {
+           where:{
+               id:req.params.id
+           }
+       }
+        )
 
-        })
         .then(function (){
             return res.redirect('/admin/products/list');
         })
