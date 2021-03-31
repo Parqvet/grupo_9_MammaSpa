@@ -44,6 +44,7 @@ processRegister :(req,res) => {
                 }
             })
             .then(user => {
+               // res.send(user)
                 if(user && bcrypt.compareSync(password, user.password)){
                     req.session.userLogin = {
                         id :user.id,
@@ -89,4 +90,4 @@ processRegister :(req,res) => {
 
     }
 
-
+}
