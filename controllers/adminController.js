@@ -37,8 +37,8 @@ module.exports = {
         })
         .catch(err => console.log(err))
 
-    }
-    /* renderEditProduct: (req, res) => {
+    },
+    renderEditProduct: (req, res) => {
         const product = products.find(product => product.id === +req.params.id);
 
         res.render('admin/products-edit', {
@@ -78,7 +78,87 @@ module.exports = {
 
         setProducts(products);
         res.redirect('/admin/products/list');
-    } */
+    },
+
+    renderServicesList: (req, res) => {
+        res.render('admin/services-list', {
+            services
+        });
+    },
+
+    renderServicesForm: (req, res) => {
+        res.render('admin/services-create');
+    }, 
+
+    createNewService: (req, res) => {
+        let lastID = 1;
+        services.forEach(service => {
+            if (service.id > lastID) {
+                lastID = servis.id;
+            }
+        });
+
+        const { title, description, img, category, bodypart, price } = req.body;
+
+        const newService = {
+            id: Number(lastID + 1),
+            title,
+            description,
+            img,
+            category,
+            bodypart,
+            price
+        }
+
+        services.push(newService);
+
+        setServices(services);
+        res.redirect('/admin/services/list');
+    },
+
+    renderEditService: (req, res) => {
+        const service = services.find(service => service.id === +req.params.id);
+
+        res.render('admin/services-edit', {
+            services
+        });
+    },
+
+    updateService: (req, res) => {
+        const { title, description, img, category, bodypart, price } = req.body;
+
+        services.forEach(service => {
+            if(service.id === +req.params.id) {
+                service.id = Number(req.params.id);
+                service.title = title;
+                service.description = description;
+                service.img = img;
+                service.category = category;
+                service.bodypart = bodypart;
+                service.price = price;
+            }
+        });
+
+        setServices(services);
+        res.redirect('/admin/services/list');
+    },
+
+    deleteService: (req, res) => {
+        services.forEach(service => {
+            if(servis.id === +req.params.id) {
+
+                if(fs.existsSync(path.join('public', 'images', 'autos', auto.img))) {
+                    fs.unlinkSync(path.join('public', 'images', 'autos', auto.img))
+                }
+
+                let indexService = services.indexOf(service);
+                services.splice(indexService, 1);
+            }
+        });
+
+        setServices(services);
+        res.redirect('/admin/services/list');
+    }
 }
 
 

@@ -9,12 +9,14 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        rostro: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+        createdAt: {
+            type: dataTypes.DATE
         },
-        manos: {
-            type: dataTypes.STRING(45),
+        updatedAt: {
+            type: dataTypes.DATE
+        },
+        type: {
+            type: dataTypes.STRING,
             allowNull: false
         }
     }

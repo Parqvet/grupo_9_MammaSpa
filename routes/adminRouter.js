@@ -6,27 +6,36 @@ const upload = require('../middlewares/multerProducts');
 
 // middleware para protección de rutas del admin
 const adminCheck = require('../middlewares/adminCheck');
-
-// metodos del admin controller
+        
+// controlador del amin: metodos de los productos
 const { 
     renderProductsList,
     createNewProduct,
     storeNewProduct,
-    
+    renderEditProduct,
+    updateProduct,
+    deleteProduct
 } = require('../controllers/adminController');
 
-// metodos de los servicios
-const { renderServicesList, renderServicesForm, createNewService, renderEditService, updateService, deleteService } = require('../controllers/adminController');
+// controlador del amin: metodos de los servicios
+const { 
+    renderServicesList,
+    renderServicesForm,
+    createNewService,
+    renderEditService,
+    updateService,
+    deleteService
+} = require('../controllers/adminController');
 
 // renderizar listado de productos
 router.get('/products/list', adminCheck, renderProductsList);
 
-// renderizar vista para agregar producto
+// renderizar vista/formulario para agregar producto
 router.get('/products/add', adminCheck, createNewProduct);
 // procesar el agregado del nuevo producto
-router.post('/products/new-product', upload.any(), createNewProduct);
+router.post('/products/new-product', upload.any(), storeNewProduct);
 
-// renderizar vista para editar
+// renderizar vista para editar producto
 router.get('/products/edit/:id', adminCheck, renderEditProduct);
 // procesar la edición del producto
 router.put('/products/update/:id',upload.any(), updateProduct);
