@@ -20,7 +20,7 @@ router.get('/products/detalle/:id', renderDetailProduct);
 
 // rencerizar vista de servicios
 router.get('/services', renderServicesMain);
-//renderiza la vista de detalle de servicio
+//renderiza vista de detalle de servicio
 router.get('/services/detalle/:id', renderDetailService);
 
 module.exports = router;

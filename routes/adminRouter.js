@@ -7,7 +7,7 @@ const upload = require('../middlewares/multerProducts');
 // middleware para protección de rutas del admin
 const adminCheck = require('../middlewares/adminCheck');
         
-// controlador del amin: metodos de los productos
+// controlador del admin: metodos de los productos
 const { 
     renderProductsList,
     createNewProduct,
@@ -17,7 +17,7 @@ const {
     deleteProduct
 } = require('../controllers/adminController');
 
-// controlador del amin: metodos de los servicios
+// controlador del admin: metodos de los servicios
 const { 
     renderServicesList,
     renderServicesForm,

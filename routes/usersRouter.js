@@ -7,10 +7,15 @@ const registerValidation = require('../validation/register.validation');
 // middleware de validación para login de usuarios
 const loginValidation = require('../validation/login.validation');
 
-const { renderRegister, renderLogin, processLogout } = require('../controllers/users-controller/usersController');
+const { 
+    renderRegister,
+    processRegister,
+    renderLogin,
+    processLogout
+} = require('../controllers/usersControllers');
 
 // controlador para registro de users
-const { processRegister } = require('../controllers/users-controller/processUsersRegister');
+// const { processRegister } = require('../controllers/users-controller/processUsersRegister');
 
 // controlador para login de users y admin
 const { processUsersAdminLogin } = require('../controllers/users-controller/processUsersLogin');
