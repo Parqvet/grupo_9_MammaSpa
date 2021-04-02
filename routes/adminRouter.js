@@ -8,7 +8,17 @@ const upload = require('../middlewares/multerProducts');
 const adminCheck = require('../middlewares/adminCheck');
 
 // metodos de los productos
-const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct, deleteProduct } = require('../controllers/adminController');
+const { /* renderProductsList */
+        /* renderProductForm, */
+        /* createNewProduct, */
+        renderEditProduct,
+        updateProduct,
+        deleteProduct } = require('../controllers/adminController');
+
+const { renderProductsList,
+        createNewProduct,
+        storeNewProduct
+    } = require('../controllers/admin-controller/adminProducts');
 
 // metodos de los servicios
 const { renderServicesList, renderServicesForm, createNewService, renderEditService, updateService, deleteService } = require('../controllers/adminController');
@@ -16,10 +26,10 @@ const { renderServicesList, renderServicesForm, createNewService, renderEditServ
 // renderizar listado de productos
 router.get('/products/list', adminCheck, renderProductsList);
 
-// renderizar vista para agregar producto
-router.get('/products/add', adminCheck, renderProductForm);
+// renderizar vista/formulario para agregar producto
+router.get('/products/add', adminCheck, createNewProduct);
 // procesar el agregado del nuevo producto
-router.post('/products/new-product', upload.any(), createNewProduct);
+router.post('/products/new-product', upload.any(), storeNewProduct);
 
 // renderizar vista para editar
 router.get('/products/edit/:id', adminCheck, renderEditProduct);
