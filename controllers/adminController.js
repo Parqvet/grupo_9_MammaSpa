@@ -39,11 +39,20 @@ module.exports = {
 
     },
     renderEditProduct: (req, res) => {
-        const product = products.find(product => product.id === +req.params.id);
+
+        db.Products.findPk(req.params.id)
+            .then( product => {
+                return res.render('admin/products-edit', {
+                    product
+                })
+            })
+            .catch( err => console.log(err))
+
+        /* const product = products.find(product => product.id === +req.params.id);
 
         res.render('admin/products-edit', {
             product
-        });
+        }); */
     },
     updateProduct: (req, res) => {
         const { title, description, img, category, brand, price } = req.body;

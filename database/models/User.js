@@ -39,9 +39,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(50),
             allowNull: true
         },
-        rol: {
+        role: {
             type: dataTypes.STRING(30),
-            allowNull: true
+            allowNull: true,
+            defaultValue: 'user'
         }
     }
 

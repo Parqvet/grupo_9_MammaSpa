@@ -22,7 +22,7 @@ module.exports = [
     })
     .withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
 
-    body('email')
+    /* body('email')
         .custom(value => {
             return db.Users.findOne({
                 were: {
@@ -34,15 +34,7 @@ module.exports = [
                     return Promise.reject('Este email ya está registrado');
                 }
             })
-            /* let result = users.find(user => user.email === value.trim());
-
-            // para verificar si el usuario ya está registrado
-            if(result) {
-                return false;
-            } else {
-                return true;
-            } */
-        }).withMessage('El email ya está registrado'),
+        }).withMessage('El email ya está registrado'), */
 
     body('password2')
         .custom( (value, {req}) => {

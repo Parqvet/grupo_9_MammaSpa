@@ -40,18 +40,21 @@ module.exports = {
 
         if (errors.isEmpty()) {
             const { email, password, remember } = req.body;
-
+            
+            console.log(email);
             db.Users.findOne({
-                were: {
-                    email
+                where: {
+                    email: email
                 }
             })
             .then( user => {
                 if(user && bcrypt.compareSync(password, user.password)) {
+                    console.log(user);
                     req.session.userLogin = {
                         id: user.id,
                         name: user.firstname,
-                        avatar: user.avatar
+                        role: user.role,
+                        avatar: user.avatar,
                     }
 
                     if(remember) {
