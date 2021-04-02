@@ -1,14 +1,19 @@
 const { Router } = require('express');
 const router = Router();
 
-// middleware multer para carga de imágenes de productos
+// middleware: multer para carga de imágenes de productos
 const upload = require('../middlewares/multerProducts');
 
 // middleware para protección de rutas del admin
 const adminCheck = require('../middlewares/adminCheck');
 
-// metodos de los productos
-const { renderProductsList, renderProductForm, createNewProduct, renderEditProduct, updateProduct, deleteProduct } = require('../controllers/adminController');
+// metodos del admin controller
+const { 
+    renderProductsList,
+    createNewProduct,
+    storeNewProduct,
+    
+} = require('../controllers/adminController');
 
 // metodos de los servicios
 const { renderServicesList, renderServicesForm, createNewService, renderEditService, updateService, deleteService } = require('../controllers/adminController');
@@ -17,7 +22,7 @@ const { renderServicesList, renderServicesForm, createNewService, renderEditServ
 router.get('/products/list', adminCheck, renderProductsList);
 
 // renderizar vista para agregar producto
-router.get('/products/add', adminCheck, renderProductForm);
+router.get('/products/add', adminCheck, createNewProduct);
 // procesar el agregado del nuevo producto
 router.post('/products/new-product', upload.any(), createNewProduct);
 
