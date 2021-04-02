@@ -36,11 +36,108 @@ module.exports = {
     },
     
     processLogin: (req, res) => {
+        const errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            const { email, password, remember } = req.body;
+
+            db.Users.findOne({
+                were: {
+                    email
+                }
+            })
+            .then( user => {
+                if(user && bcrypt.compareSync(password, user.password)) {
+                    req.session.userLogin = {
+                        id: user.id,
+                        name: user.firstname,
+                        avatar: user.avatar
+                    }
+
+                    if(remember) {
+                        res.cookie('userMmSpa', req.session.userLogin, {
+                            maxAge: 1000 * 60
+                        })
+                    }
+
+                    return res.redirect('/');
+                } else {
+                    return res.render('login-view', {
+                        error: 'Credenciales inválidas'
+                    })
+                }
+            })
+
+            
+        }
+
+
+        // buscar si existe el admin
+        /* let adminResult = admins.find(admin => admin.email === email.trim());
+
+        if(adminResult) {
+            if(bcrypt.compareSync(password, adminResult.password)) {
+                
+                // levantamos sesión
+                req.session.adminSession = {
+                    id: adminResult.id,
+                    name: adminResult.firstname,
+                    email: adminResult.email
+                }
+
+                // creamos cookie
+                if(remember != 'undefined') {
+                    res.cookie('adminSession', req.session.adminSession, {
+                        maxAge: 1000 * 60
+                    })
+                }
+
+                res.redirect('/admin/products/list');
+            } else {
+                res.render('login-view');
+            }
+        }
+
+        
+
+        // buscar si existe el usuario
+        let result = users.find(user => user.email === email.trim());
+
+        // si el usuario está registrado
+        if(result) {
+            // se comparan contraseñas
+            if(bcrypt.compareSync(password, result.password)) {
+
+                // una vez que se confirma autorización, almacenamos datos del usuario en session
+                req.session.userSession = {
+                    id: result.id,
+                    name: result.firstname,
+                    email: result.email
+                }
+
+                if(remember != 'undefined') {
+                    res.cookie('userSession', req.session.userSession, {
+                        maxAge: 1000 * 60
+                    })
+                }
+
+                return res.redirect('/');
+            } else {
+                res.render('login-view', {
+                    error: 'Credenciales inválidas'
+                });
+            }
+
+        } else {
+            return res.render('login-view', {
+                error: 'Credenciales inválidas'
+            })
+        } */
         
     },
 
     processLogout: (req, res) => {
-        req.session.destroy();
+        /* req.session.destroy();
 
         if(req.cookies.adminSession) {
             res.cookie('adminSession', '', {
@@ -54,6 +151,6 @@ module.exports = {
             })
         }
 
-        res.redirect('/');
+        res.redirect('/'); */
     },
 }
