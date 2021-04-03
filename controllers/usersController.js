@@ -2,6 +2,7 @@ const{validationResult} = require('express-validator');
 const db =require ('../../database/models');
 const bcrypt = require('bcrypt');
 const servicesController = require('./servicesController');
+let sequelize = db.sequelize;
 
 
 module.exports = {
