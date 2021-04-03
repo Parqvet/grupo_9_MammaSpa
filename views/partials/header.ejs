@@ -8,11 +8,11 @@
 
             <div class="navbar-nav">
                 
-                <% if (typeof adminSession != 'undefined') { %>
+                <% if (typeof userLogin != 'undefined' && userLogin.role == 'admin') { %>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span>Hola! <%= adminSession.name %></span> 
+                            <span>Hola! <%= userLogin.name %></span> 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="/admin/services/list">Mis Servicios</a>
@@ -28,11 +28,11 @@
                 <a class="nav-link link-n" href="/services">Servicios</a>
                 <a class="nav-link link-n" href="/products">Productos</a>
                 <a class="nav-link link-n" href="/users/login">Login</a>
-                <% if (typeof userSession != 'undefined') { %>
+                <% if (typeof userLogin != 'undefined' && 'admin' != userLogin.role) { %>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span>Hola! <%= userSession.name %></span> 
+                            <span>Hola! <%= userLogin.name %></span> 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="">Perfil</a>

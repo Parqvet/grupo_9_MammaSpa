@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = 'User';
+    const alias = 'Users';
 
     const cols = {
         id: {
@@ -8,6 +8,12 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
         },
         firstname: {
             type: dataTypes.STRING(45),
@@ -25,13 +31,18 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(30),
             allowNull: false
         },
-        avatar: {
-            type: dataTypes.STRING(50),
-            allowNull: false
-        },
-        rol: {
+        password2: {
             type: dataTypes.STRING(30),
             allowNull: false
+        },
+        avatar: {
+            type: dataTypes.STRING(50),
+            allowNull: true
+        },
+        role: {
+            type: dataTypes.STRING(30),
+            allowNull: true,
+            defaultValue: 'user'
         }
     }
 
