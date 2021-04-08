@@ -238,6 +238,11 @@ html {
         height: 230px;
         border: 0.5px solid rgb(211, 211, 211);
     }
+    /* Box de la imagen de manos en el home */
+    .box-img-two {
+        grid-row: 4 / 5;
+        grid-column: 3 / 5;
+    }
 }
 
 @media screen and (min-width: 426px) and (max-width: 767px) {
