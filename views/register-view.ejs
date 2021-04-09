@@ -35,7 +35,7 @@
                       <label for="exampleInputEmail1">Correo electrónico</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         name="email">
-                      <span class="text-danger">
+                      <span class="text-danger" id="emailErrors">
                         <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : "" %>
                       </span>
                     </div>
