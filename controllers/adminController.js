@@ -84,9 +84,13 @@ module.exports = {
     },
 
     renderServicesList: (req, res) => {
-        res.render('admin/services-list', {
-            services
-        });
+        db.Services.findAll()
+            .then( services => {
+                return res.render('admin/services-list', {
+                    services
+                })
+            })
+            .catch( err => console.log(err))
     },
 
     renderServicesForm: (req, res) => {

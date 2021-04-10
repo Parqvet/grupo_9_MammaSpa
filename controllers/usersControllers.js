@@ -155,5 +155,5 @@ module.exports = {
         }
 
         res.redirect('/'); */
-    },
+    }
 }
