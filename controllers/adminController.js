@@ -39,14 +39,18 @@ module.exports = {
 
     },
     renderEditProduct: (req, res) => {
+        let product = db.Products.findByPk(req.params.id);
+        let categories = db.Category.findByPk(req.params.id);
 
-        db.Products.findByPk(req.params.id)
-            .then( product => {
+        Promise.all([product, categories])
+            .then( ([product, categories]) => {
                 return res.render('admin/products-edit', {
-                    product
+                    product,
+                    categories
                 })
             })
             .catch( err => console.log(err))
+            
     },
     updateProduct: (req, res) => {
         const { title, description, img, category, brand, price } = req.body;

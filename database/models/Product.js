@@ -36,7 +36,9 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         category_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            defaultValue: null,
+            allowNull: true
         }
     }
 
@@ -47,12 +49,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config);
 
-    /* Product.associate = function(models) {
+    Product.associate = function(models) {
         Product.belongsTo(models.Category, {
             as: 'category',
-            foreingKey: 'category_id'
+            foreignKey: 'category_id'
         })
-    } */
+    }
 
     return Product;
 }
