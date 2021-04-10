@@ -37,14 +37,14 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER,
-            defaultValue: null,
             allowNull: true
         }
     }
 
     const config = {
         tableName: 'products',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     }
 
     const Product = sequelize.define(alias, cols, config);
