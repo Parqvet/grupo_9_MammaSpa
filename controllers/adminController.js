@@ -22,13 +22,13 @@ module.exports = {
             .catch( err => console.log(err));
     },
     storeNewProduct: (req, res) => {
-        const { title, price, brand, genre_id, description, img } = req.body;
+        const { title, price, brand, category_id, description, img } = req.body;
 
         db.Products.create({
             title,
             price,
             brand,
-            genre_id,
+            category_id,
             description,
             img: req.files[0].filename
         })
@@ -46,29 +46,32 @@ module.exports = {
                     .then( categories => {
                         return res.render('admin/products-edit', {
                             product,
-                            categories
+                            categories: product.id
                         })
                     })
             })
             .catch( err => console.log(err))
     },
     updateProduct: (req, res) => {
-        const { title, description, img, category, brand, price } = req.body;
+        const { title, description, img, category_id, brand, price } = req.body;
 
-        products.forEach(product => {
-            if(product.id === +req.params.id) {
-                product.id = Number(req.params.id);
-                product.title = title;
-                product.description = description;
-                product.img = img;
-                product.category = category;
-                product.brand = brand;
-                product.price = price;
+        db.Products.update({
+            title,
+            description,
+            img,
+            category_id,
+            brand,
+            price
+        },
+        {
+            where: {
+                id: req.params.id
             }
-        });
-
-        setProducts(products);
-        res.redirect('/admin/products/list');
+        })
+        .then(() => {
+            return res.redirect('/admin/products/list')
+        })
+        .catch( err => console.log(err))
     },
     deleteProduct: (req, res) => {
         db.Products.destroy({
