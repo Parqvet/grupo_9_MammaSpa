@@ -5,28 +5,25 @@ const router = Router();
 const registerValidation = require('../validation/register.validation');
 
 // middleware de validación para login de usuarios
-const loginValidation = require('../validation/login.validation');
 
-const { renderRegister, renderLogin, processLogout } = require('../controllers/users-controller/usersController');
 
-// controlador para registro de users
-const { processRegister } = require('../controllers/users-controller/processUsersRegister');
-
-// controlador para login de users y admin
-const { processUsersAdminLogin } = require('../controllers/users-controller/processUsersLogin');
+const { 
+    renderRegister,
+    processRegister,
+    renderLogin,
+    processLogin,
+    processLogout
+} = require('../controllers/usersControllers');
 
 // renderizar y procesar login
 router.get('/login', renderLogin);
-router.post('/login', loginValidation, processUsersAdminLogin);
-
+router.post('/login', processLogin);
 
 // renderizar y procesar register
 router.get('/register', renderRegister);
 router.post('/register', registerValidation, processRegister);
 
-
-
-router.get('/register/profile',)
+router.get('/register/profile',);
 //uploadImages debe coincidir con el nombre del middleware
 
 // cerrar sesión

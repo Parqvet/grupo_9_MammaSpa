@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = 'Service';
+    const alias = 'Services';
 
     const cols = {
         id: {
@@ -8,6 +8,12 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
         },
         title: {
             type: dataTypes.STRING(45),

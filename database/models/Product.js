@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = 'Product';
+    const alias = 'Products';
 
     const cols = {
         id: {
@@ -9,12 +9,18 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
+        /* createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        }, */
         title: {
             type: dataTypes.STRING(45),
             allowNull: false
         },
         description: {
-            type: dataTypes.STRING(150),
+            type: dataTypes.STRING,
             allowNull: false
         },
         price: {
@@ -26,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         img: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(70),
             allowNull: false
         },
         category_id: {
@@ -36,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: 'products',
-        timeStamps: true
+        timestamps: false
     }
 
     const Product = sequelize.define(alias, cols, config);
