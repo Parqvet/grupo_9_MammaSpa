@@ -40,9 +40,9 @@ module.exports = {
 
     renderDetailService: (req, res) => {
         db.Services.findByPk(req.params.id)
-        .then(services=>{
+        .then(service => {
             return res.render('detalle-servicios', {
-                services
+                service
             });
         })
         .catch(error => res.send(error))

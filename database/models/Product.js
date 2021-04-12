@@ -36,16 +36,25 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         category_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: true
         }
     }
 
     const config = {
         tableName: 'products',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     }
 
     const Product = sequelize.define(alias, cols, config);
+
+    Product.associate = function(models) {
+        Product.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'category_id'
+        })
+    }
 
     return Product;
 }

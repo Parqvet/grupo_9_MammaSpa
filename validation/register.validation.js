@@ -25,7 +25,7 @@ module.exports = [
     /* body('email')
         .custom(value => {
             return db.Users.findOne({
-                were: {
+                where: {
                     email: value
                 }
             })

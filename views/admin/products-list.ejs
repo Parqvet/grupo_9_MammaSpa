@@ -18,12 +18,14 @@
                             <div class="card-body">
                               <h5 class="card-title"><%= product.title %> </h5>
                               <p class="card-text"><%= product.description %> </p>
+
                               <div class="row px-3">
-                                  <a href="/admin/products/edit/<%= product.id %>" class="btn btn-dark mr-3">Editar</a>
-                                  <form action="/admin/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                <a href="/admin/products/edit/<%= product.id %>" class="btn btn-dark mr-3">Editar</a>
+                                <form action="/admin/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                                     <button class="btn btn-danger" type="submit">Eliminar</button>
-                                    </form>
+                                </form>
                               </div>
+
                             </div>
                         </div>
                     </div>
