@@ -46,7 +46,7 @@ module.exports = {
                     .then( categories => {
                         return res.render('admin/products-edit', {
                             product,
-                            categories: product.id
+                            categories
                         })
                     })
             })
@@ -58,7 +58,7 @@ module.exports = {
         db.Products.update({
             title,
             description,
-            img,
+            img: req.files[0].filename,
             category_id,
             brand,
             price
