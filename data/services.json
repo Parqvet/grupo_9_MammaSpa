@@ -9,7 +9,7 @@
          "price":2500
     },
     {
-        "id": 2,
+        "id": 3,
          "title" : "Manos Spa",
          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
          "img": "manos-04.jpeg",
@@ -18,7 +18,7 @@
          "price":1000
     },
     {
-        "id": 2,
+        "id": 4,
          "title" : "Manos Spa",
          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
          "img": "manos-04.jpeg",
@@ -27,7 +27,7 @@
          "price":1000
     },
     {
-        "id": 2,
+        "id": 4,
          "title" : "Manos Spa",
          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
          "img": "manos-04.jpeg",
