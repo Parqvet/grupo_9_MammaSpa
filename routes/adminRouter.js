@@ -20,8 +20,8 @@ const {
 // controlador del admin: metodos de los servicios
 const { 
     renderServicesList,
-    renderServicesForm,
     createNewService,
+    storeNewService,
     renderEditService,
     updateService,
     deleteService
@@ -48,9 +48,9 @@ router.delete('/products/delete/:id', adminCheck, deleteProduct);
 router.get('/services/list', renderServicesList);
 
 // renderizar vista para agregar servicio
-router.get('/services/add', renderServicesForm);
+router.get('/services/add', createNewService);
 // procesar el agregado del nuevo servicio
-router.post('/services/new-servis', createNewService);
+router.post('/services/new-servis', storeNewService);
 
 // renderizar vista para editar servicio
 router.get('/services/edit/:id', renderEditService);

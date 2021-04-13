@@ -94,11 +94,18 @@ module.exports = {
             .catch( err => console.log(err))
     },
 
-    renderServicesForm: (req, res) => {
-        res.render('admin/services-create');
+    createNewService: (req, res) => {
+
+        db.Category.findAll()
+            .then( categories => {
+                return res.render('admin/services-create', {
+                    categories
+                })
+            })
+            .catch( err => console.log(err));
     }, 
 
-    createNewService: (req, res) => {
+    storeNewService: (req, res) => {
         let lastID = 1;
         services.forEach(service => {
             if (service.id > lastID) {
