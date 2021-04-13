@@ -1,0 +1,65 @@
+#mockups {
+padding-left: 60px;
+margin: 0px;
+}
+
+ul.next{
+    padding: 0%;
+    padding-left: 0%;
+    margin: 0%;
+    width: 800px;
+}
+
+
+ul.slider{
+    padding: 0%;
+    padding-left: 0%;
+    margin: 0%;
+    position: relative;
+    width: 800px;
+    height: 300px;
+    list-style: none;
+}
+
+ul.slider li{
+    position: absolute;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+
+}
+
+
+
+ul.slider li:first-child{
+    opacity: 1;
+
+}
+
+ul.slider li:target{
+    opacity: 1;
+
+}
+.next{
+    text-align: center;
+    margin-top: 300px;
+}
+
+.next li{
+    display: inline-block;
+    text-align: center;
+}
+
+.next li a{
+    list-style: none;
+    display: inline-block;
+    color: #fcfaf6;
+    text-decoration: none;
+    background-color: #d3b8a3;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    border-radius: 100%;
+}
+
