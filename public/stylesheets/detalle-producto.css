@@ -1,5 +1,9 @@
 #DetalleProductosGral{
     background-color: #fcfaf6;
+    
+}
+body{
+    color:#666666
 }
 
 .container-d-products {
@@ -8,6 +12,7 @@
     margin: 0 auto;
     width: 60vw;
     padding: 30px;
+    
 }
 
 .box-img-product {
@@ -23,7 +28,11 @@
     width: 85%;
     height: 90%;
 }
-
+.btn-danger {
+    color: #fff;
+    background-color: #d3b8a3;
+    border-color: #fbe2ce;
+}
 /* Medias Queries */
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .title-dp {
