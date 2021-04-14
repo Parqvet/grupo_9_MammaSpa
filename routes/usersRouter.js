@@ -12,7 +12,8 @@ const {
     processRegister,
     renderLogin,
     processLogin,
-    processLogout
+    processLogout,
+    profile
 } = require('../controllers/usersControllers');
 
 // renderizar y procesar login
@@ -23,7 +24,7 @@ router.post('/login', processLogin);
 router.get('/register', renderRegister);
 router.post('/register', registerValidation, processRegister);
 
-router.get('/register/profile',);
+router.get('/profile', profile);
 //uploadImages debe coincidir con el nombre del middleware
 
 // cerrar sesión

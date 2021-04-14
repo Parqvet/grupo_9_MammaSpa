@@ -85,7 +85,7 @@ processRegister :(req,res) => {
         return res.redirect('/')
     },
     profile :(req,res) => {
-        res.render('profile')
+        res.render('profileUser-view')
     },
     processRegister :(req,res) => {
 
