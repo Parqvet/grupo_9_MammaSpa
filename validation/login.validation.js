@@ -5,8 +5,11 @@ module.exports = [
     check('email')
         .notEmpty()
         .withMessage('El email es requerido'),
+    check('email')
+        .isEmail()
+        .withMessage('Debes escribir un email válido'),
 
-    body('email')
+    /* body('email')
         .custom(value => {
         let userResult = users.find(user => user.email === value);
         let adminResult = admins.find(user => user.email === value);
@@ -17,7 +20,7 @@ module.exports = [
         } else {
             return false;
         }
-    }).withMessage('El email no está registrado'),
+    }).withMessage('El email no está registrado'), */
 
     check('password')
         .notEmpty()

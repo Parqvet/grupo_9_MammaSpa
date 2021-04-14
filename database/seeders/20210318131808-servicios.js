@@ -10,6 +10,7 @@ servicesJson.forEach(item => {
     title : item.title,
     description : item.description,
     price : item.price,
+    brand : item.brand,
     img : item.img
    
   }

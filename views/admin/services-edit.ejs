@@ -1,19 +1,69 @@
-<div class="row">
-    <% services.forEach(service => { %>
-        <div class="col-12 col-md-4 col-lg-4">
-            <div class="card" style="width: 18rem;">
-                <img src="/images/img-services/<%= service.img %>" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><%= service.title %> </h5>
-                  <p class="card-text"><%= service.description %> </p>
-                  <div class="row px-3">
-                      <a href="/admin/services/edit/<%= service.id %>" class="btn btn-dark mr-3">Editar</a>
-                      <form action="/admin/services/delete/<%= service.id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger" type="submit">Eliminar</button>
-                        </form>
-                  </div>
-                </div>
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Head -->
+<%- include('./partials/head') %>
+
+   <body>
+      <%- include('./partials/header') %>
+
+         <div class="registroabm mb-5">
+            <div class="container">
+               <div class="shadow mb-5 mt-5 bg-white rounded text-center">
+                  <h4 id="abm">Panel de Control</h4>
+               </div>
+
+               <div class="container-abm">
+                  <form action="/admin/services/update/<%= service.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                     <div class="row justify-content-center box-form">
+                        <div class="col-12 col-md-6 col-lg-5">
+                           <div class="abm">
+                              <label class="form-label" for="nombre">Título:</label>
+                              <input type="text" class="form-control mb-3" name="title" id="title"
+                                 value="<%= service.title %>">
+
+                              <label for="valor">Valor:</label>
+                              <input type="number" class="form-control mb-3" name="price" id="valor"
+                                 value="<%= service.price %>">
+
+                              <label for="">Marca:</label>
+                              <input type="text" class="form-control mb-3" name="brand" value="<%= service.brand %>">
+
+                              <label for="">Categoría:</label>
+                              <select class="form-control" name="category_id" id="">
+                                 <option class="form-label" value="">Elige la categoría</option>
+                                 <% categories.forEach(category => { %>
+                                     <option value="<%= category.id %>"><%= category.type %></option>
+                                 <% }) %>
+                             </select>
+
+                              <label for="" class="form-label">Descripción:</label>
+                              <textarea class="form-control" id="textarea1" rows="5" name="description"
+                                 value=""><%= service.description %></textarea>
+                           </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-5">
+                           <div class="abm">
+                              <img src="/images/img-services/<%= service.img %>"
+                                 class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
+                           </div>
+                           <label for="" class="">Imagen:</label>
+                           <input type="file" class="form-control" value="<%= service.img %>" name="img">
+                        </div>
+
+                     </div>
+
+                     <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-success mt-4">Guardar Cambios</button>
+                     </div>
+                  </form>
+               </div>
             </div>
-        </div>
-    <% }) %>
-</div>
+         </div>
+
+         <%- include('partials/footer') %>
+
+   </body>
+
+</html>

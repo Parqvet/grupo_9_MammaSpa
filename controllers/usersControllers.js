@@ -66,9 +66,14 @@ module.exports = {
                     return res.redirect('/');
                 } else {
                     return res.render('login-view', {
-                        error: 'Credenciales inválidas'
+                        errors: 'Credenciales inválidas'
                     })
                 }
+            })
+        } else {
+            return res.render('login-view', {
+                errors: errors.mapped(),
+                old: req.body
             })
         }
     },
