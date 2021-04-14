@@ -106,72 +106,66 @@ module.exports = {
     }, 
 
     storeNewService: (req, res) => {
-        let lastID = 1;
-        services.forEach(service => {
-            if (service.id > lastID) {
-                lastID = servis.id;
-            }
-        });
+        const { title, price, brand, category_id, description, img } = req.body;
 
-        const { title, description, img, category, bodypart, price } = req.body;
-
-        const newService = {
-            id: Number(lastID + 1),
+        db.Services.create({
             title,
+            price,
+            brand,
+            category_id,
             description,
-            img,
-            category,
-            bodypart,
-            price
-        }
-
-        services.push(newService);
-
-        setServices(services);
-        res.redirect('/admin/services/list');
+            img: req.files[0].filename
+        })
+        .then(() => {
+            return res.redirect('/admin/services/list');
+        })
+        .catch(err => console.log(err))
     },
 
     renderEditService: (req, res) => {
-        const service = services.find(service => service.id === +req.params.id);
-
-        res.render('admin/services-edit', {
-            services
-        });
+        db.Services.findByPk(req.params.id)
+            .then( service => {
+                db.Category.findAll()
+                    .then( categories => {
+                        return res.render('admin/services-edit', {
+                            service,
+                            categories
+                        })
+                    })
+            })
+            .catch( err => console.log(err))
     },
 
     updateService: (req, res) => {
-        const { title, description, img, category, bodypart, price } = req.body;
+        const { title, description, img, category_id, brand, price } = req.body;
 
-        services.forEach(service => {
-            if(service.id === +req.params.id) {
-                service.id = Number(req.params.id);
-                service.title = title;
-                service.description = description;
-                service.img = img;
-                service.category = category;
-                service.bodypart = bodypart;
-                service.price = price;
+        db.Services.update({
+            title,
+            description,
+            img: req.files[0].filename,
+            category_id,
+            brand,
+            price
+        },
+        {
+            where: {
+                id: req.params.id
             }
-        });
-
-        setServices(services);
-        res.redirect('/admin/services/list');
+        })
+        .then(() => {
+            return res.redirect('/admin/services/list')
+        })
+        .catch( err => console.log(err))
     },
 
     deleteService: (req, res) => {
-        services.forEach(service => {
-            if(servis.id === +req.params.id) {
-
-                if(fs.existsSync(path.join('public', 'images', 'autos', auto.img))) {
-                    fs.unlinkSync(path.join('public', 'images', 'autos', auto.img))
-                }
-
-                let indexService = services.indexOf(service);
-                services.splice(indexService, 1);
+        
+        db.Services.destroy({
+            where : {
+                id : req.params.id
             }
-        });
-
-        setServices(services);
-        res.redirect('/admin/services/list');
+        })
+        .then(()=> res.redirect('/admin/services/list'))
+        .catch(error => res.send(error))
     }
 }

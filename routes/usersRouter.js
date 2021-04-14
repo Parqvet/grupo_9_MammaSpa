@@ -5,7 +5,7 @@ const router = Router();
 const registerValidation = require('../validation/register.validation');
 
 // middleware de validación para login de usuarios
-
+const loginValidation = require('../validation/login.validation');
 
 const { 
     renderRegister,
@@ -18,7 +18,7 @@ const {
 
 // renderizar y procesar login
 router.get('/login', renderLogin);
-router.post('/login', processLogin);
+router.post('/login', loginValidation, processLogin);
 
 // renderizar y procesar register
 router.get('/register', renderRegister);
