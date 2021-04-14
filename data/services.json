@@ -1,38 +1,38 @@
 [
     {
         "id": 1,
-         "title" : "Facial Skin",
-         "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
+         "title": "Facial Skin",
+         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
          "img": "face-b-02.jpg",
-         "category":"servicio",
-         "bodypart":"Rostro",
-         "price":2500
+         "category": "Rostro",
+         "brand": "Natura",
+         "price": 2500
     },
     {
         "id": 2,
+         "title": "Manos Spa",
+         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
+         "img": "manos-04.jpeg",
+         "category": "Manos",
+         "brand": "Natura",
+         "price": 1000
+    },
+    {
+        "id": 3,
          "title" : "Manos Spa",
          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
          "img": "manos-04.jpeg",
-         "category":"servicio",
-         "bodypart":"Manos",
+         "category":"Manos",
+         "brand": "Natura",
          "price":1000
     },
     {
-        "id": 2,
+        "id": 4,
          "title" : "Manos Spa",
          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
          "img": "manos-04.jpeg",
-         "category":"servicio",
-         "bodypart":"Manos",
-         "price":1000
-    },
-    {
-        "id": 2,
-         "title" : "Manos Spa",
-         "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ad beatae incidunt sed velit, debitis voluptatibus! Saepe quis accusamus ea?",
-         "img": "manos-04.jpeg",
-         "category":"servicio",
-         "bodypart":"Manos",
+         "category":"Manos",
+         "brand": "Natura",
          "price":1000
     }
 
