@@ -2,7 +2,9 @@
     <nav class="navbar navbar-expand-lg bg-nav-mms">
         <button class="navbar-toggler bg-mms" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
@@ -35,7 +37,7 @@
                             <span>Hola! <%= userLogin.name %></span> 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="">Perfil</a>
+                            <a class="dropdown-item" href="/users/profile">Perfil</a>
                             <a class="dropdown-item" href="/users/logout">Cerrar sesión</a>
                             </div>
                         </li>

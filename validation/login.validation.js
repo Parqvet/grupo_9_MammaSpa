@@ -1,9 +1,5 @@
 const { check, body } = require('express-validator');
-const { getUsers } = require('../data/users');
-const users = getUsers();
-
-const { getAdmins } = require('../data/admins');
-const admins = getAdmins();
+const db = require('../database/models')
 
 module.exports = [
     check('email')
