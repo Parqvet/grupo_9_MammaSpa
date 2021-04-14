@@ -70,93 +70,15 @@ module.exports = {
                     })
                 }
             })
-
-            
         }
-
-        
-   
-
-        // buscar si existe el admin
-        /* let adminResult = admins.find(admin => admin.email === email.trim());
-
-        if(adminResult) {
-            if(bcrypt.compareSync(password, adminResult.password)) {
-                
-                // levantamos sesión
-                req.session.adminSession = {
-                    id: adminResult.id,
-                    name: adminResult.firstname,
-                    email: adminResult.email
-                }
-
-                // creamos cookie
-                if(remember != 'undefined') {
-                    res.cookie('adminSession', req.session.adminSession, {
-                        maxAge: 1000 * 60
-                    })
-                }
-
-                res.redirect('/admin/products/list');
-            } else {
-                res.render('login-view');
-            }
-        }
-
-        
-
-        // buscar si existe el usuario
-        let result = users.find(user => user.email === email.trim());
-
-        // si el usuario está registrado
-        if(result) {
-            // se comparan contraseñas
-            if(bcrypt.compareSync(password, result.password)) {
-
-                // una vez que se confirma autorización, almacenamos datos del usuario en session
-                req.session.userSession = {
-                    id: result.id,
-                    name: result.firstname,
-                    email: result.email
-                }
-
-                if(remember != 'undefined') {
-                    res.cookie('userSession', req.session.userSession, {
-                        maxAge: 1000 * 60
-                    })
-                }
-
-                return res.redirect('/');
-            } else {
-                res.render('login-view', {
-                    error: 'Credenciales inválidas'
-                });
-            }
-
-        } else {
-            return res.render('login-view', {
-                error: 'Credenciales inválidas'
-            })
-        } */
-        
     },
 
     processLogout: (req, res) => {
-        /* req.session.destroy();
-
-        if(req.cookies.adminSession) {
-            res.cookie('adminSession', '', {
-                maxAge: -1
-            })
+        req.session.destroy();
+        if(req.cookies.userLogin) {
+            res.cookie('userComision4', '' , { maxAge : -1 })
         }
-
-        if(req.cookies.userSession) {
-            res.cookie('userSession', '', {
-                maxAge: -1
-            })
-        }
-
-        res.redirect('/'); */
+        return res.redirect('/')
     },
     profile :(req,res) => {
         res.render('profileUser-view')

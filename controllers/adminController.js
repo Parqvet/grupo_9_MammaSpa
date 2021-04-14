@@ -22,13 +22,13 @@ module.exports = {
             .catch( err => console.log(err));
     },
     storeNewProduct: (req, res) => {
-        const { title, price, brand, genre_id, description, img } = req.body;
+        const { title, price, brand, category_id, description, img } = req.body;
 
         db.Products.create({
             title,
             price,
             brand,
-            genre_id,
+            category_id,
             description,
             img: req.files[0].filename
         })
@@ -39,36 +39,39 @@ module.exports = {
 
     },
     renderEditProduct: (req, res) => {
-        let product = db.Products.findByPk(req.params.id);
-        let categories = db.Category.findByPk(req.params.id);
-
-        Promise.all([product, categories])
-            .then( ([product, categories]) => {
-                return res.render('admin/products-edit', {
-                    product,
-                    categories
-                })
+        
+        db.Products.findByPk(req.params.id)
+            .then( product => {
+                db.Category.findAll()
+                    .then( categories => {
+                        return res.render('admin/products-edit', {
+                            product,
+                            categories
+                        })
+                    })
             })
             .catch( err => console.log(err))
-
     },
     updateProduct: (req, res) => {
-        const { title, description, img, category, brand, price } = req.body;
+        const { title, description, img, category_id, brand, price } = req.body;
 
-        products.forEach(product => {
-            if(product.id === +req.params.id) {
-                product.id = Number(req.params.id);
-                product.title = title;
-                product.description = description;
-                product.img = img;
-                product.category = category;
-                product.brand = brand;
-                product.price = price;
+        db.Products.update({
+            title,
+            description,
+            img: req.files[0].filename,
+            category_id,
+            brand,
+            price
+        },
+        {
+            where: {
+                id: req.params.id
             }
-        });
-
-        setProducts(products);
-        res.redirect('/admin/products/list');
+        })
+        .then(() => {
+            return res.redirect('/admin/products/list')
+        })
+        .catch( err => console.log(err))
     },
     deleteProduct: (req, res) => {
         db.Products.destroy({
@@ -91,11 +94,18 @@ module.exports = {
             .catch( err => console.log(err))
     },
 
-    renderServicesForm: (req, res) => {
-        res.render('admin/services-create');
+    createNewService: (req, res) => {
+
+        db.Category.findAll()
+            .then( categories => {
+                return res.render('admin/services-create', {
+                    categories
+                })
+            })
+            .catch( err => console.log(err));
     }, 
 
-    createNewService: (req, res) => {
+    storeNewService: (req, res) => {
         let lastID = 1;
         services.forEach(service => {
             if (service.id > lastID) {

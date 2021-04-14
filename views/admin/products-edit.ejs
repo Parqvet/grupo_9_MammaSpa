@@ -30,7 +30,7 @@
                               <input type="text" class="form-control mb-3" name="brand" value="<%= product.brand %>">
 
                               <label for="">Categoría:</label>
-                              <select class="form-control" name="genre_id" id="">
+                              <select class="form-control" name="category_id" id="">
                                  <option class="form-label" value="">Elige la categoría</option>
                                  <% categories.forEach(category => { %>
                                      <option value="<%= category.id %>"><%= category.type %></option>
@@ -49,8 +49,7 @@
                                  class="img-fluid shadow p-3 mb-5 bg-white rounded" alt="foto">
                            </div>
                            <label for="" class="">Imagen:</label>
-                           <input type="text" name="imgOriginal" value="<%= product.img %>" hidden>
-                           <input type="file" class="form-control" value="<%=product.img %>" name="img">
+                           <input type="file" class="form-control" value="<%= product.img %>" name="img">
                         </div>
 
                      </div>
