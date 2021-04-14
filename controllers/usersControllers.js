@@ -74,6 +74,8 @@ module.exports = {
             
         }
 
+        
+   
 
         // buscar si existe el admin
         /* let adminResult = admins.find(admin => admin.email === email.trim());
@@ -155,5 +157,8 @@ module.exports = {
         }
 
         res.redirect('/'); */
+    },
+    profile :(req,res) => {
+        res.render('profileUser-view')
     }
 }
