@@ -27,6 +27,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
+        brand: {
+            type: dataTypes.STRING(30),
+            allowNull: false
+        },
         img: {
             type: dataTypes.STRING(50),
             allowNull: false
