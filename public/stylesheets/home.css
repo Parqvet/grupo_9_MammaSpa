@@ -354,6 +354,8 @@ html {
 
     .btn-service {
         margin-bottom: 5px;
+        text-decoration: none;
+        color: #212529;
     }
 
 }
