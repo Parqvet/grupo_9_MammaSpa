@@ -47,5 +47,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Service = sequelize.define(alias, cols, config);
 
+    Service.associate = function(models) {
+        Service.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'category_id'
+        })
+    }
+
     return Service;
 }

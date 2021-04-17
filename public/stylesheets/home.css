@@ -166,6 +166,14 @@ html {
     height: 0.8rem;
 }
 
+.face-box-title a {
+    color: rgb(252, 128, 114);
+}
+
+.hands-box-title a {
+    color: rgb(252, 128, 114);
+}
+
 .box-products {
     display: flex;
     justify-content: center;
@@ -192,6 +200,10 @@ html {
 
 .box-s-main .btn {
     background-color: rgb(252, 128, 114);
+}
+
+.btn-service a {
+    color: black;
 }
 
 /* Sección de Productos */
