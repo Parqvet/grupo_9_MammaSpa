@@ -31,3 +31,20 @@
 .header-main .i-bag {
     margin-top: 3px;
 }
+
+/* Medias Queries */
+
+@media (min-width: 1024px) {
+    .mobile-title {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .header-nav-main {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    
+}
