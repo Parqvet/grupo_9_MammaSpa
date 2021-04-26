@@ -271,6 +271,7 @@ html {
         height: 230px;
         border: 0.5px solid rgb(211, 211, 211);
     }
+
     /* Box de la imagen de manos en el home */
     .box-img-two {
         grid-row: 4 / 5;
@@ -347,6 +348,25 @@ html {
 }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
+    .box-title {
+        display: none;
+    }
+
+    .box-img-home {
+        grid-row: 1 / 5;
+        grid-column: 1 / 6;
+    }
+
+    .box-img-two {
+        grid-row: 4 / 5;
+        grid-column: 3 / 6;
+    }
+
+    .hands-home-img {
+        width: 40%;
+        height: 65%;
+    }
+
     /* Nuestros Servicios Home */
     .ns-box {
         height: 100%;
@@ -429,4 +449,16 @@ html {
         padding-left: 15px;
     }
 
+}
+
+@media (max-width: 375px) {
+    .box-img-two {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .box-img-two {
+        display: none;
+    }
 }
