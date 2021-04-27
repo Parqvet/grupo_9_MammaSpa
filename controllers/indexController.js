@@ -1,8 +1,18 @@
 const db = require('../database/models');
+var Sequelize = require('sequelize');
 
 module.exports = {
     renderHome: (req, res) => {
-        res.render('index');
+        const destacados = db.Products.findAll({limit : 4,
+            order: Sequelize.literal('rand()'),
+         
+         })
+        .then(destacados => { 
+            return res.render('index', {
+                destacados
+            })
+        })
+        .catch( err => console.log(err))
     },
 
     renderProductsMain: (req, res) => {
