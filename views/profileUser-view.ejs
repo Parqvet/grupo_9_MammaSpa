@@ -9,34 +9,48 @@
     <div class="container">
         <h2 class="text-center mt-5">Perfil de Usuario</h2>
         <div class="row justify-content-center mt-5">
-            <div class="card mb-3" style="max-width: 80%;">
-                <div class="row no-gutters">
-                  
-                  <div class="col-md-8">
-                    <div class="card-body">
-                        <form action="" method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="">Nombre</label>
-                                <input type="text" class="form-control" name="firstname">
-                                <span class="text-danger"><%= (typeof errors != 'undefined' && errors.firstname) ? errors.firstname.msg : "" %></span>
-                            </div>
+          <div class="card mb-3" style="max-width: 80%;">
+            <div class="row no-gutters">
 
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Correo electrónico</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                              <span class="text-danger"><%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %></span>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1">Contraseña</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-                              <span class="text-danger"><%= (typeof errors != 'undefined' && errors.password) ? errors.password.msg : "" %></span>
-                            </div>
-                            <div class="form-group">
-                                <input type="file" name="avatar">
-                            </div>
+              <div class="col-md-8">
+                <div class="card-body">
+
+                  <form action="" method="POST">
+                    <div class="form-group">
+                      <label for="">Nombre</label>
+                      <input type="text" class="form-control" name="firstname">
+                      <span class="text-danger">
+                        <%= (typeof errors != 'undefined' && errors.firstname) ? errors.firstname.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Apellido</label>
+                      <input type="text" class="form-control" name="lastname">
+                      <span class="text-danger">
+                        <%= (typeof errors != 'undefined' && errors.lastname) ? errors.lastname.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Correo electrónico</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        name="email">
+                      <span class="text-danger">
+                        <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : "" %>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Contraseña</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                      <span class="text-danger">
+                        <%= (typeof errors != 'undefined' && errors.password) ? errors.password.msg : "" %>
+                      </span>
+                    </div>
+                    
+                    
         
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                                <p class="">xxxxxx<a href="">Home</a></p>
+                                <button type="submit" class="btn btn-primary">Aceptar cambios</button>
                             </div>
                         </form>
                     </div>
@@ -50,6 +64,6 @@
 
         </div>
     </div>
-    <%- include('partials/footer') %>
+    <%- include('partials/footer') %>  
 </body>    
 </html>
