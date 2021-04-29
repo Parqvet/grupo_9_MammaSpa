@@ -210,7 +210,7 @@ html {
 .container-products {
     margin: 0 auto;
     height: 90vh;
-    width: 50vw;
+    width: 60vw;
 }
 
 .box-t-product {
@@ -262,8 +262,8 @@ html {
     /* Sección de Productos */
     .container-products {
         margin: 0 auto;
-        height: 500px;
-        width: 500px;
+        height: 900px;
+        width: 800px;
     }
 
     .box-product {

@@ -98,29 +98,33 @@
     </div>
 
     <!-- Sección de Productos -->
-    <div class="container-products mb-5">
+    <div class="container-products">
 
       <div class="box-t-product">
-        <div class="box-product-1">
-          <img src="/images/products/producto-01.png" alt="" class="img-p">
-        </div>
-        <div class="box-product-2">
-          <img src="/images/products/producto-02.png" alt="" class="img-p">
-        </div>
-        <div>
-        </div>
-      </div>
+        <div class="row">
+          <% destacados.forEach(destacado => { %>
+              <div class="col-12 col-md-6 col-lg-6 mb-5 ">
+             
+                  
+                          <div class="card h-100 shadow rounded" >
+                          
+                              <img src="/images/products/<%= destacado.img %>" class="card-img-top img-fluid" alt="...">
+                              <div class="card-body">
+                                  <h5 class="card-title"><%= destacado.title %> </h5>
+                                  <a href="/products/list/<%= destacado.id %>" class="btn btn-primary ">Ver mas</a>
+                                  <a href="/products/detalle/<%= destacado.id %>" class="btn btn-danger ">Detalle</a>
+                              </div>
+                          
+                          </div>
 
-      <div class="box-b-product">
-        <div class="box-product-3">
-          <img src="/images/products/producto-03.png" alt="" class="img-p">
-        </div>
-        <div class="box-product-4">
-          <img src="/images/products/producto-01.png" alt="" class="img-p">
-        </div>
+              </div>
+          <% }) %>
       </div>
-
-    </div>
+        
+      </div>
+        
+       
+     
 
     <div class="d-flex justify-content-end mt-5 mb-3 mr-3">
       <h5>
