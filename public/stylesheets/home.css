@@ -453,6 +453,107 @@ html {
 
 }
 
+@media (max-width: 425px) {
+    .container-ns {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-right-ns {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1.2fr) 0.4fr 0.5fr;
+        width: 100%;
+    }
+    
+    .box-hands {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: 1 / 6;
+        grid-column: 1 / 5;
+    }
+    
+    .hands-img-ns {
+        height: 95%;
+        width: 85%;
+        border-radius: 3px;
+    }
+    
+    .hands-box-title {
+        grid-row: 4 / 5;
+        grid-column: 1 / 5;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8rem;
+        background: rgb(252, 128, 114, 0.20);
+        box-shadow: 0 8px 16px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 0.3rem;
+    }
+    
+    .hands-title {
+        /* font-family: 'Roboto', sans-serif; */
+        color: rgb(0, 0, 0, .75);
+        font-size: 1rem;
+        height: 1rem;
+    }
+    
+    /* Contenedor de rostro y productos */
+    .box-left-ns {
+        
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .box-face {
+        display: flex;
+        justify-content: center;
+        height: 90%;
+        width: 85%;
+        grid-row: 1 / 5;
+        grid-column: 1 / 7;
+    }
+    
+    .face-img-ns {
+        width: 90%;
+        height: 100%;
+        border: 0.5px solid rgb(252, 128, 114, 0.25);
+        border-radius: 3px;
+    }
+    
+    .face-box-title {
+        grid-row: 4 / 5;
+        grid-column: 1 / 6;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 16px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 0.3rem;
+    }
+    
+    .face-title {
+        /* font-family: 'Roboto', sans-serif; */
+        color: rgb(0, 0, 0, .75);
+        font-size: 1.1rem;
+        height: 0.8rem;
+    }
+}
+
 @media (max-width: 375px) {
     .box-img-two {
         display: none;
