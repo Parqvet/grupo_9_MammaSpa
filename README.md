@@ -1,11 +1,9 @@
 # Grupo_9_MammaSpa:
 
 
-"Mamma Spa" es un emprendimiento de estética que ofrece servicios para tratamientos estético facial. El negocio apunta principalmente a mujeres adolescentes-adultas que busquen cuidar su cutis, mejorar el aspecto de su piel y sentirse bellas con el cutis luminoso y rejuvenecido gracias a los servicios que ofrece Mamma Spa. 
+"Mamma Spa" es un emprendimiento de estética que ofrece servicios para tratamientos estético facial y cuidado personal. El negocio apunta principalmente a mujeres adolescentes-adultas que busquen cuidar su cutis y mejorar el aspecto de su piel.
 
-El centro de estética ofrece limpieza facial profunda, extracción manual y microdermoabrasión. Entre los tratamientos específicos también podemos encontrar peeling, rejuvenecimiento facial, adiós manchas, shock de hidratación, firmeza Triple V, S.O.S ojos, facial calming y stop poros. 
-
-Los procedimientos faciales se enfocan en la renovación celular, ideal para eliminar impurezas, oxigenar la piel, eliminar manchas, cicatrices o arrugas y lograr un aspecto brilloso, juvenil y limpio para el rostro. 
+Los procedimientos faciales se enfocan en la renovación celular, ideal para eliminar impurezas, oxigenar la piel, eliminar manchas, cicatrices o arrugas.
 
 Mamma Spa realiza sus servicios con los mejores productos cosméticos que también podrán ser encontrados en el sitio web del emprendimiento.
 
@@ -26,9 +24,7 @@ Decidimos elegir este emprendimiento para el proyecto porque nos pareció una bu
 * https://balcon.com.ar/
    • Sitio que nos gustó por el concepto del home, el uso de imágenes y la versión mobile. 
 
-* https://www.seoptimer.com/es/blog/9-paginas-con-mejor-diseno-web-responsive/
-   • Sitio que contiene nueve páginas con mejor diseño web responsive, las utilizamos como fuente de inspiración en cuanto a la estética que representan. Nos gustó el estilo minimalista de cada sitio. 
 ---
 
-Se elegieron estas paginas como referencia porque acordamos orientarnos a crear un sitio web que sea claro, conciso y limpio. Fácil de usar y donde se resalte el servicio y concepto que se ofrece.
+Se elegieron estas paginas como referencia porque acordamos orientarnos a crear un sitio web que sea intuitivo, conciso y minimalista. Fácil de usar y donde se resalte el servicio y concepto que se ofrece.
 
